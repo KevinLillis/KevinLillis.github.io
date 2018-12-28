@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	<meta name="author" content="Your Name" />
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="inland.css" />
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+    <style type="text/css">
+		div.prayer
+		{margin: 3em;}
+
+		table.withBorders
+		{text-align: center;
+		font-family: Verdana;
+		font-weight: normal;
+		font-size: 11px;
+		color: #404040;
+		width: 360px;
+		/*background-color: #fafafa;*/
+		border: 1px #181818 solid;
+		border-collapse: collapse;
+		border-spacing: 1px;
+		}
+		
+		th.withBorders, td.withBorders
+		{border: 1px #181818 solid;
+		padding: 3px;}
+	
+    	table.noBorders
+		{text-align: left;
+		font-family: Verdana;
+		font-weight: normal;
+		font-size: 11px;
+		color: #404040;
+		width: 180px;
+        border: none;
+		border-collapse: collapse;
+		border-spacing: 1px;}
+		
+		td.noBorders
+		{border: none;}
+
+		ul.a{list-style-type:disc;margin-top:0px;padding:0;}
+		ul.a li{background:none!important;display:list-item;text-align:left;height:auto;line-height:25px;margin-bottom:0;margin-left:25px;position:relative;}
+	
+		ul.b{list-style-type:circle;margin-bottom:0px;padding:0;}
+		ul.b li{background:none!important;display:list-item;text-align:left;height:auto;line-height:25px;margin-bottom:0;margin-left:25px;position:relative;}
+		
+		table.calendar {
+		color:#333333;
+		width: 70%;
+		border-width: 1px;
+		border-color: #666666;
+		border-collapse: collapse;
+	}
+	th.calendar {
+		border-width: 1px;
+		/*padding: 8px;*/
+		border-style: solid;
+		border-color: #666666;
+		font-weight: bold;
+	}
+	td.calendar {
+		text-align: center;
+		border-width: 1px;
+		/*padding: 2px;*/
+		border-style: solid;
+		border-color: #666666;
+		height: 40px;
+		vertical-align: middle;
+	}	
+	.hangingindent {
+    	padding-left: 8em;
+    	text-indent: -4em;
+	}		
+	.noClass {
+		background-color: #FDA835;
+		/*text-align:center;
+		font-weight:bold;*/	
+	}
+
+	</style>
+    
+<title>CSCI 400 - Spring 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+<div id="toplinks">
+		<ul class="toplinks_links">
+		<li><a href="http://www.sau.edu/">SAU</a></li>
+			<li><a href="http://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
+   			<li><a href="http://web.sau.edu/LillisKevinM/">Dr. Lillis</a></li>	
+		</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1><a href="index.html">CSCI 400 A</a></h1><br>
+			Programming Language Concepts<br>
+			Fall 2015
+		</div>
+
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="current" href="syllabus.html">Syllabus</a></li>
+				<li><a href="assignments.html">Assignments</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="extended">
+		<img src="images/header.png" alt="" />
+	</div>
+
+	<!--<div id="content">
+	</div>-->
+
+<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+	<h1>Syllabus</h1>
+</div>
+<!------------------------------------------------------>
+<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+    <h2>Professor</h2><h3>Dr. Kevin Lillis</h3>
+    429 Ambrose<br>
+    <a href="http://web.sau.edu/LillisKevinM/">web.sau.edu/LillisKevinM</a><br>
+    <a href="mailto:LillisKevinM@sau.edu?subject=CSCI 295&body=Dear Dr. Lillis,%0A%0A">LillisKevinM@sau.edu</a><br>
+    563-333-6429
+    </p>
+<!------------------------------------------------------>
+    <h2>Office Hours</h2>		
+    <p>I am in my office Monday through Friday during the day. My door is always open. Please feel free to stop in any time. You can also make an appointment to meet with me at a specific time. Here are my official office hours:
+    <table class="noBorders">
+    <tr>
+       <td class="noBorders"  style="padding-left:4em">M W</td>
+       <td class="noBorders">2:00 &mdash; 2:30</td></tr>
+    <tr>
+       <td class="noBorders"  style="padding-left:4em;">W</td>
+       <td class="noBorders">9:00 &mdash; 12:00</td></tr>
+    <tr>
+      <td class="noBorders"  style="padding-left:4em;">T Th</td>
+      <td class="noBorders">2:00 &mdash; 2:30 </td>
+    </tr>
+    </table>
+    </p>
+<!------------------------------------------------------>
+    <h2>Course Description</h2>		
+    <p>
+    This course studies the theoretical aspects of programming languages. Topics include general syntax and semantics, axiomatic semantics, context free grammars, regular expressions, finite automata, Turing machines, and parameter passing. Imperative, Functional and Logic programming paradigms will be explored.
+    </p>
+<!------------------------------------------------------>
+    <h2>Objectives</h2>
+    <p>Upon completion of this course students will be able to:</p>
+    <ul>
+<li>Identify the different ways of evaluation and comparing programming languages</li>
+<li>Distinguish between the syntax and semantics of a programming language</li>
+<li>Create a formal grammar for a programming language</li>
+<li>Explain how parsers operate and how they relate to parse trees</li>
+<li>Distinguish between parsing and lexical analysis</li>
+<li>Use axiomatic semantics to prove partial program correctness</li>
+<li>Describe the different parameter passing mechanisms</li>
+<li>Explain the relationships among regular expressions, context free languages, finite automata, and Turing machines</li>
+    </ul>
+<!------------------------------------------------------>
+    <h2>Prerequisites</h2>
+    <p>CSCI 185 or CSCI 195</p>
+<!------------------------------------------------------>
+    <h2>Schedule</h2>
+    <p>The class meets on Tuesdays and Thursdays from 9:25 to 10:40 in room 007 of McMullen Hall. There will be no class on the following days:
+    <ul style="padding-left:4em">
+    <li>Tuesday, November 24</li>
+    <li>Thursday, November 26</li>
+    </ul>
+    </p>
+<!------------------------------------------------------>
+    <h2>Required Textbook</h2>		
+    <h3>Concepts of Programming Languages, 11<sup><em>th</em></sup> Edition</h3>
+
+    <table>
+    <tr>
+    	<td style="vertical-align:top">
+      Robert Sebesta<br>
+    &copy; 2016 by CRC Press<br>
+    ISBN: 978-0133943023<br>
+    Available at: <a href="http://www.bkstr.com/webapp/wcs/stores/servlet/CourseMaterialsResultsView?catalogId=10001&categoryId=9604&storeId=286406&langId=-1&programId=3323&termId=100036959&divisionDisplayName= &departmentDisplayName=CSCI&courseDisplayName=400&sectionDisplayName=A&demoKey=d&purpose=browse">Bookstore</a>&nbsp;&nbsp;&nbsp;<a href="http://www.amazon.com/Concepts-Programming-Languages-Robert-Sebesta/dp/013394302X/ref=sr_1_3?s=books&ie=UTF8&qid=1428695542&sr=1-3&keywords=Sebesta+programming">Amazon.com </a></td>
+        <td>
+    <img  style="margin-left:30px;" width="100" src="images/book.png">
+    </td>
+    </tr>
+    </table>
+<!------------------------------------------------------>
+    <h2>Class Web Site &amp; Blackboard</h2>
+    <p>A class web site has been created for this class. A link to the class web site can be found at <a href="http://web.sau.edu/LillisKevinM">web.sau.edu/LillisKevinM</a>. Students should check the class web site regularly throughout the semester. The Blackboard course management system (<a href="https://blackboard.sau.edu">blackboard.sau.edu</a>) will be used to post grades for this class. All other course information will be provided through the class web site.</p>
+<!------------------------------------------------------>
+    <h2>Communicating with Me</h2>
+    <p>You are welcome to ask me questions by e-mail. I will try to answer your e-mails within 12 hours from the time they are received. You should make sure to include "CSCI-400" in the subject line to help me get to your e-mail quickly. I will occasionally send e-mail announcements to all students in the class and you are responsible for all official correspondence sent to your St. Ambrose address (@sau.edu). Make sure that you check this e-mail account regularly. I would also prefer receiving e-mails from your sau account, rather than from commercial e-mail providers such as hotmail, gmail etc. I will try to call you by your preferred name. As a matter of professionalism, I’d prefer you call me "Prof. Lillis" or "Dr. Lillis". I will insist that we all start our e-mails with the recipient’s name (not "Hey" or just blank) and end our e-mails with the sender's name.</p>
+<!------------------------------------------------------>
+    <h2>Methods of Evaluation</h2>
+    <p>There will be a midterm exam, a comprehensive final exam, and regular homework assignments.</p>
+    
+    <p><b>Midterm Exam</b> The midterm exam is open book open notes.</p>
+    
+    <p><b>Final Exam</b> The final exam is comprehensive and includes all topics covered during the semester. This is an open book, open notes.</p>
+    
+    <p><b>Homework Assignments</b> Each assignment will be given a date and a time when the assignment is due. You are expected to complete all assignments on time.</p>
+    
+    <p><strong>Language of the Week (LotW)</strong> From October 8 through November 19, the last 45 minutes of each Tuesday class will be devoted to learning about a different, usually non-mainstream, language. Each language will be covered by a small grouop of students (2 - 3) who work together to present the unique features of the language through handouts, demonstrations, and hands-on exercises. At the end of the presentation, a programming exercise using the language will be assigned to the class by the presenters. This assignment will be due by the following Sunday night at 11:59 p.m.</p>
+    <p><b>Attendance</b> Attendance is mandatory. You are expected to attend all classes and to arrive on time. Missed lectures are the responsibility of the student.</p>
+    
+<!------------------------------------------------------>
+    <h2>Make-Up Policy</h2>
+    <p><b>Exams</b> Make-up exams will only be given in the event of a documented excused absence (for example, medical absences required a signed note on letterhead paper from your doctor.) You must notify me of an excused absence within 48 hours after the missed exam or no make-up will be allowed. Normally make-up exams are somewhat more difficult that the original exam.</p>
+
+    <p><b>Homework Assignments</b> A late assignment will be accepted only up to the time when I start to grade that particular assignment for the class. At that time the homework assignment will no longer be available on Blackboard.    
+<!------------------------------------------------------>    </p>
+    <h2>Academic Integrity</h2>
+    <p>You are encouraged to discuss homework and other parts of the class with other students. Such discussions about ideas are not cheating, whereas the exchange of finished, written answers is cheating. Never give finished answers to someone else or use someone else’s finished answers. Plagiarism and cheating are both considered grounds for a failing grade for that particular piece of work. Furthermore, they would weigh heavily in the final grade, possibly resulting in a failing grade for the entire course. Please see the St. Ambrose <a href="http://www.sau.edu/Documents/Offices/Records-and-Registration/Academic-Integrity-Policy.pdf">Academic Integrity Policy</a> for further details.</p>
+    
+<!------------------------------------------------------>
+    <h2>Grading</h2><table class="noBorders">
+    <tr>
+      <td class="noBorders">Homework</td>
+      <td align="right" class="noBorders">27%</td></tr>
+    <tr>
+        <td class="noBorders">Language of the Week</td>
+        <td align="right" class="noBorders">15%</td>
+      </tr>
+      <td class="noBorders">Midterm Exam</td>
+      <td align="right" class="noBorders">29%</td></tr>
+      <tr>
+        <td class="noBorders">Final Exam</td>
+        <td align="right" class="noBorders">29%</td>
+      </tr>
+      </table>
+    </p>
+    
+    <p>Letter grades will be assigned based on the following:    </p>
+    <table class="withBorders">
+    <tr>
+    <td class="withBorders">Grade</td><td class="withBorders">Minimum Score</td><td class="withBorders">Grade</td><td class="withBorders">Minimum Score</td><td class="withBorders">Grade</td><td class="withBorders">Minimum Score</td><td class="withBorders">Grade</td><td class="withBorders">Minimum Score</td>
+    </tr>
+    <td class="withBorders">A+</td><td class="withBorders">97</td><td class="withBorders">B+</td><td class="withBorders">87</td><td class="withBorders">C+</td><td class="withBorders">77</td><td class="withBorders">D+</td><td class="withBorders">67</td>
+    <tr>
+    </tr>
+    <td class="withBorders">A</td><td class="withBorders">93</td><td class="withBorders">B</td><td class="withBorders">83</td><td class="withBorders">C</td><td class="withBorders">73</td><td class="withBorders">D</td><td class="withBorders">63</td>
+    <tr>
+    </tr>
+    <td class="withBorders">A-</td><td class="withBorders">90</td><td class="withBorders">B-</td><td class="withBorders">80</td><td class="withBorders">C-</td><td class="withBorders">70</td><td class="withBorders">D-</td><td class="withBorders">60</td>
+    <tr>
+    </tr>
+    </table></p>
+    
+    <p>In determining borderline grades, I reserve the right to consider perceived student initiative and class participation.</p>
+    
+    <p>An incomplete will be given only when a student meets the requirements of the latest St. Ambrose University policies. Earning a low grade is not a valid reason for an incomplete.</p>
+<!------------------------------------------------------>
+
+    <h2>Classroom Decorum</h2>
+    <p>This is mainly a lecture course with a substantial amount of work required outside of class. Occasionally you may be given class time to work on your programs.</p>
+    
+    <p>All reading is to be completed <i>prior to</i> the class in which the material is to be covered. Students are expected to participate in class discussions. I will not repeat material in class that you could have learned by reading.</p>
+    
+    <p>Students are asked to arrive on time for class. If you do arrive late, please be quiet and unobtrusive when taking your seat so as not to distract from the ongoing lecture.</p>
+    
+    <p>Please do not talk during class meetings. Talking is distracting and makes it difficult for others to hear.</p>
+    
+    <p>Please do not read or view unassigned materials (novels, newspapers, magazines, etc). This is also distracting and disruptive.</p>
+    
+    <p>Please do not bring food to class.</p>
+    
+    <p>Please do not use electronic devices (laptops, cell phones, MP3 players, etc.) during class. If you use an electronic device during class for anything other that taking notes (with my permission) I will ask you to turn it off. If the problem persists you may be asked to leave class. Please silence your cell phone prior to class. If your cell phone rings, I will answer it for you. You do not want this to happen.</p>
+    
+    <p>During lectures you are not allowed to use the lab computers unless directed to do so. If I see you using a lab computer during lecture time I will turn the computer off for you, without saving your work first.</p>
+    
+<!------------------------------------------------------>
+    <h2>Students with Disabilities</h2>
+    <p>Students with disabilities who believe that they may need accommodations in this class are encouraged to contact Student Disability Services at 333-6275 as soon as possible to better ensure that such accommodations are implemented in a timely fashion. Students may also want to visit SDS on line at: <a href="http://www.sau.edu/Student_Disability_Services.html">http://www.sau.edu/Student_Disability_Services.html</a>.</p>
+<!------------------------------------------------------>
+    <h2>How to Succeed in this Class</h2>
+    <p><b>Attend Class</b> Showing up on time for every class is the easiest way to improve your grade &mdash; not merely because of the credit for attendance, but also because of exposure to the content presented in class.</p>
+    
+    <p><b>Level of Effort</b> Normally a student can expect to spend about two hours of work, outside of class, for each credit unit. Thus a typical expected workload would be about six hours per week outside of class. This is not a course where students read or write essays. Most of your time will be spent experimenting with programs and studying programming language conventions and techniques to understand concepts.</p>
+    
+    <p><b>Prepare for Class</b> Read the chapter sections ahead of time for each class. When reading the textbook, enter and compile as many of the sample programs as possible. You may be surprised at how much this reinforces the chapter material. Reading ahead of time will make it easier to follow the lecture and it will help you decide what to ask about in class. Unless asked, I will not repeat material in class that you could have learned by reading.</p>
+    
+    <p><b>Do the Homework</b> Start working on the homework problems as soon as possible. Often, a problem that stumps you one day will seem obvious a day later. You should view the homework assignments as preparation for the exams. It is imperative that you understand and complete the homework.</p>
+    
+    <p><b>Manage Your Time</b> I encourage you to develop a system to actively manage you priorities and time. You should schedule time each week to complete assignments and to complete readings in advance of class. Effective time management will help you not only in this class but also in the rest of your studies and in your career. Poor time management and late completion of assignments will be detrimental to your learning experience and will be reflected in your grade for the class.</p>
+    
+    <p><b>Stay Organized</b> Organize your class notes and save all of your graded homework assignments. These will be a great resource when studying for the exams. Also be sure to keep your computer files organized. You will write a plethora of programs for this class; it is easy or them to quickly become disorganized.</p>
+    
+    <p><b>Visit Me</b> If you have problems during the semester that affect your coursework, please see me as soon as possible so we can discuss your options for the course. If you find yourself falling behind in the class, please see me. It is likely we can work together to get you back on track.</p>
+    
+    <p><b>Visit the Student Success Center</b> If you feel you need additional support for this class, you are encouraged to go to the Student Success Center in Ambrose Hall 243 or to call 333-6631 for information regarding tutoring in this class. The SSC provides free peer tutoring for most 100 and 200 level courses, writing tutorials for papers in all classes, and study strategy advice. Supplemental Instruction and study groups are also available in some classes. The center staff suggests that students seek help early, although drop in and contractual tutorials are arranged throughout the semester.</p>
+    
+    <p><b>Ask for Help From the Source of All Knowledge</b> There is a prayer written By St. Thomas Aquinas over 700 years ago. This prayer help me immensely when I was studying for my Ph.D. I thought it might help you in your studies as well. It is called the Prayer Before Study:</p>
+
+<div class="prayer">
+    <h3>Prayer Before Study</h3>
+    <p>
+    Creator of all things,<br>
+    true source of light and wisdom,<br>
+    lofty origin of all being,</p>
+    
+    <p>graciously let a ray of your brilliance<br>
+    penetrate into the darkness of my understanding</p>
+    
+    <p>and take from me the double darkness in<br>
+    which I have been born,<br>
+    an obscurity of both sin and ignorance.</p>
+    
+    <p>Give me a sharp sense of understanding,<br>
+    a retentive memory,<br>
+    and the ability to grasp things correctly and fundamentally.</p>
+    
+    <p>Grant me the talent of being exact in my explanations,<br> 
+    and the ability to express myself with<br>
+    thoroughness and charm.</p>
+    
+    <p>Point out the beginning, direct the progress,<br>
+    and help in completion;</p>
+    
+    <p>Through Christ our Lord.<br> 
+    Amen.</p>
+    
+    <p><i>~Saint Thomas Aquinas</i></p>
+</div>
+
+<h2>Tentative Course Outline <span style="font-size:70%;">(subject to change)</span></h2>
+</div>
+	<!--<div id="content">
+	<br>
+	</div>-->
+
+
+<div id="footer" class="shadow">&nbsp;</div>
+</div>
+
+<!--<script type="text/javascript">
+	$(window).load(function() {
+		$('#slider').nivoSlider();
+	});
+</script>
+-->
+</body>
+</html>
