@@ -1,172 +1,397 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <meta name="description" content="CSCI 400, Programming Language Concepts, Spring 2019">
-    <meta name="keywords" content="CSCI 400, Programming, Programming Languages, Programming Language Concepts">
-    <meta name="author" content="Kevin Lillis">
-    <link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans"
-      rel="stylesheet"
-      type="text/css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../inland.css">
-    <script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
-    <style>
-	table {
-		font-family: verdana,arial,sans-serif;
-		/*color:#333333;*/
-		width: 100%;
-		border-width: 1px;
-		border-color: #666666;
-		border-collapse: collapse;
-		vertical-align: top;
-	}
-	th {
-		font-weight:bold;
-		vertical-align:bottom;
-		height:50px;
-	}
-	td {
-		text-align: left;
-		vertical-align: top;
-		border-width: 1px;
-		/*padding: 8px;*/
-		border-style: solid;
-		border-color: #666666;
-	}
-	td.weeknum {
-		font-weight:bold;
-		text-align: center;
-		vertical-align: middle;
-		width:5%;
-		border-left-width:5px;
-		border-top-width:5px;
-		border-bottom-width:5px;
-	}
-	td.tuedate {
-	font-weight: bold;
-	text-align: center;
-	vertical-align: middle;
-	width: 10%;
-	border-top-width: 5px;
-	}
-	td.thudate {
-		font-weight:bold;
-		text-align:center;
-		vertical-align: middle;
-		border-bottom-width:5px;
-	}
-	td.tueann {
-		border-top-width: 5px;
-		width: 40%;
-	}
-	td.thuann {
-		border-bottom-width:5px;
-	}
-	td.tuehw {
-		border-top-width:5px;
-		border-right-width:5px;
-	}
-	td.thuhw {
-		border-right-width:5px;
-		border-bottom-width:5px;
-	}
-	td.finaldate{
-		font-weight:bold;
-		text-align:center;
-		vertical-align: middle;
-		border-top-width:5px;
-		border-bottom-width:5px;
-	}
-	td.finalann{
-		border-top-width:5px;
-		border-bottom-width:5px;
-		border-right-width:5px;
-	}
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans"
+	rel="stylesheet"
+	type="text/css">
+	
+	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="thisclass.css">
 
-	.noClass {
-		background-color: #FDA835;
-		/*text-align:center;
-		font-weight:bold;*/	
-	}
-	</style>
-    <title>CSCI 400 - Fall 2015</title>
-  </head>
-  <body>
-    <div id="wrapper960" class="clearfix">
-      <div id="toplinks">
-        <ul class="toplinks_links">
-          <li><a href="http://www.sau.edu/">SAU</a></li>
-          <li><a href="http://www.sau.edu/cis/">CIS</a></li>
-          <li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
-          <li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
-          <li><a href="../../">Dr. Lillis</a></li>
-        </ul>
-      </div>
-      <div id="header" class="clearfix shadow">
-        <div id="sitetitle" class="clearfix">
-          <h1><a href="index.html">CSCI 400 A</a></h1>
-          <br>
-          Programming Language Concepts<br>
-          Spring 2019 </div>
-        <div id="nav" class="clearfix">
-          <ul>
-            <li><a class="current" href="index.html">Home</a></li>
-            <li><a href="syllabus.html">Syllabus</a></li>
-            <li><a href="assignments.html">Assignments</a></li>
-          </ul>
-        </div>
-      </div>
-      <div id="extended"> <img src="images/header.png" alt=""> </div>
-      <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
-        <table>
-          <tbody>
-            <tr>
-              <td style="border:none;">
-                <p></p>
-                <h3>Dr. Kevin Lillis</h3>
-                429 Ambrose Hall<br>
-                <a href="https://kevinlillis.github.io/">https://kevinlillis.github.io</a><br>
-                <a href="mailto:LillisKevinM@sau.edu?subject=CSCI%20400&amp;body=Dear%20Dr.%20Lillis,%0A%0A">LillisKevinM@sau.edu</a><br>
-                563-333-6429
-                <p></p>
-              </td>
-              <td style="border:none;" width="33%">
-                <h3>Textbook</h3>
-                <b>Concepts of Programming Languages, 11<sup>th</sup> Edition</b><br>
-                by Robert Sebesta<br>
-                © 2016 by CRC Press<br>
-                ISBN: 978-0133943023</td>
-              <td style="border:none; vertical-align:bottom" width="34%"> <img
-                  src="images/book.png"
-                  height="125">
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <table>
-          <tbody>
-            <tr>
-              <th colspan="2">Week</th>
-              <th width="40%">Reading and Announcements</th>
-              <th width="45%">In-Class Activities</th>
-            </tr>
-            <!-- Week 1 --------------------------------------------------------->
-            <tr>
-              <td class="weeknum" rowspan="2">1</td>
-              <td class="tuedate noClass">Day date</td>
-              <td class="tueann noClass">&nbsp;</td>
-              <td class="tuehw noClass">&nbsp;</td>
-            </tr>
-            <tr>
-              <td class="thudate">Day date</td>
-              <td class="thuann">First day of class.</td>
-              <td class="thuhw">&nbsp;</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="footer" class="shadow">&nbsp;</div>
-    </div>
-  </body>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+	
+	<title>CSCI 400</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+		<ul class="toplinks_links">
+			<li><a href="http://www.sau.edu/">SAU</a></li>
+			<li><a href="http://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
+			<li><a href="../../">Dr. Lillis</a></li>
+		</ul>
+	</div>
+	
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1><a href="index.html">CSCI 400 A</a></h1>
+			<br>
+			Programming Language Concepts<br>
+			Spring 2019
+		</div>
+		
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><a class="current" href="index.html">Home</a></li>
+				<li><a href="syllabus.html">Syllabus</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div id="extended">
+		<img src="images/header.png" alt="">
+	</div>
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+		<table>
+			<tbody>
+				<tr>
+					<td style="border:none;">
+						<h3>Dr. Kevin Lillis</h3>
+						<p>429 Ambrose Hall<br>
+							<a href="https://kevinlillis.github.io/">https://kevinlillis.github.io</a><br>
+							<a href="mailto:LillisKevinM@sau.edu?subject=CSCI%20400&amp;body=Dear%20Dr.%20Lillis,%0A%0A">LillisKevinM@sau.edu</a><br>
+							563-333-6429
+						</p>
+					</td>
+					<td style="border:none;" width="33%">
+						<h3>Textbook</h3>
+						<b>Concepts of Programming Languages, 11<sup>th</sup> Edition</b><br>
+						by Robert Sebesta<br>
+						© 2016 by CRC Press<br>
+						ISBN: 978-0133943023
+					</td>
+					<td style="border:none; vertical-align:bottom" width="34%">
+						<img src="images/book.png" height="125">
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		
+		<table>
+			<tbody>
+				<!-- Header Row ------------------------------------------------------>
+				<tr>
+					<th colspan="2">Week</th>
+					<th width="40%">Reading and Announcements</th>
+					<th width="45%">Homework Assignments</th>
+				</tr>
+				
+				<!-- Week 17 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">17</td>
+					<td class="mondate noClass">Mon 5/6</td>
+					<td class="monann noClass">&nbsp;</td>
+					<td class="monhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate noClass">Wed 5/8</td>
+					<td class="wedann noClass">Final Exam Week</td>
+					<td class="wedhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate noClass">Fri 5/10</td>
+					<td class="friann noClass">&nbsp;</td>
+					<td class="frihw noClass">&nbsp;</td>
+				</tr>
+
+				<!-- Week 16 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">16</td>
+					<td class="mondate">Mon 4/29</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 5/1</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 5/3</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 15 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">15</td>
+					<td class="mondate noClass">Mon 4/22</td>
+					<td class="monann noClass">Easter Monday — No Class</td>
+					<td class="monhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 4/24</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 4/26</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 14 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">14</td>
+					<td class="mondate">Mon 4/15</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 4/17</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate noClass">Fri 4/19</td>
+					<td class="friann noClass">Good Friday — No Class</td>
+					<td class="frihw noClass">&nbsp;</td>
+				</tr>
+
+				<!-- Week 13 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">13</td>
+					<td class="mondate">Mon 4/8</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 4/10</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+						<td class="fridate">Fri 4/12</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+		
+				<!-- Week 12 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">12</td>
+					<td class="mondate">Mon 4/1</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 4/3</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 4/5</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 11 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">11</td>
+					<td class="mondate">Mon 3/25</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 3/27</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 3/29</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 10 --------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">10</td>
+					<td class="mondate">Mon 3/18</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 3/20</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 3/22</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 9 ---------------------------------------------------------
+				<tr>
+				<td class="weeknum" rowspan="3">9</td>
+					<td class="mondate noClass">Mon 3/11</td>
+					<td class="monann noClass">&nbsp;</td>
+					<td class="monhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate noClass">Wed 3/13</td>
+					<td class="wedann noClass">Spring Break </td>
+					<td class="wedhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate noClass">Fri 3/15</td>
+					<td class="friann noClass">&nbsp;</td>
+					<td class="frihw noClass">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 8 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">8</td>
+					<td class="mondate">Mon 3/4</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 3/6</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 3/8</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+			
+				<!-- Week 7 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">7</td>
+					<td class="mondate">Mon 2/25</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 2/27</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 3/1</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 6 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">6</td>
+					<td class="mondate">Mon 2/18</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 2/20</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 2/22</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 5 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">5</td>
+					<td class="mondate">Mon 2/11</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 2/13</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 2/15</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 4 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">4</td>
+					<td class="mondate">Mon 2/4</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 2/6</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 2/8</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 3 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">3</td>
+					<td class="mondate">Mon 1/28</td>
+					<td class="monann">&nbsp;</td>
+					<td class="monhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 1/30</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 2/1</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 2 ---------------------------------------------------------
+				<tr>
+					<td class="weeknum" rowspan="3">2</td>
+					<td class="mondate noClass">Mon 1/21</td>
+					<td class="monann noClass">MLK Day — No Class</td>
+					<td class="monhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 1/23</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 1/25</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				
+				<!-- Week 1 --------------------------------------------------------->
+				<tr>
+					<td class="weeknum" rowspan="3">1</td>
+					<td class="mondate noClass">Mon 1/14</td>
+					<td class="monann noClass">&nbsp;</td>
+					<td class="monhw noClass">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="weddate">Wed 1/16</td>
+					<td class="wedann">&nbsp;</td>
+					<td class="wedhw">&nbsp;</td>
+				</tr>
+				<tr>
+					<td class="fridate">Fri 1/18</td>
+					<td class="friann">&nbsp;</td>
+					<td class="frihw">&nbsp;</td>
+				</tr>
+				<!------------------------------------------------------------------->
+			</tbody>
+		</table>
+	</div>
+	<div id="footer" class="shadow">&nbsp;</div>
+</div>
+</body>
 </html>
