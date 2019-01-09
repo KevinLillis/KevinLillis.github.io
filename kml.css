@@ -1,0 +1,277 @@
+@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans");
+@import "inland.css";
+
+sup{
+	vertical-align: super;
+	font-size: 80%;
+}
+
+table {
+	font-family: verdana,arial,sans-serif;
+	/*color:#333333;*/
+	width: 100%;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+	vertical-align: top;
+}
+
+th {
+	font-weight:bold;
+	vertical-align:bottom;
+	height:50px;
+}
+
+td {
+	text-align: left;
+	vertical-align: top;
+	border-width: 1px;
+	/*padding: 8px;*/
+	border-style: solid;
+	border-color: #666666;
+}
+
+/* --------------- Week Number --------------- */
+
+td.weeknum {
+	font-weight:bold;
+	text-align: center;
+	vertical-align: middle;
+	width:5%;
+	border-left-width:5px;
+	border-top-width:5px;
+	border-bottom-width:5px;
+}
+
+/* --------------- Date Column --------------- */
+
+td.mondate {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	border-top-width: 5px;
+}
+
+td.tuedate {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	border-top-width: 5px;
+}
+
+td.weddate {
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+}
+
+td.thudate {
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+	border-bottom-width:5px;
+}
+
+td.fridate {
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+	border-bottom-width:5px;
+}
+
+td.finaldate{
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+	border-top-width:5px;
+	border-bottom-width:5px;
+}
+
+/* --------------- Announcement Column --------------- */
+
+td.monann {
+	border-top-width: 5px;
+	width: 40%;
+}
+
+td.tueann {
+	border-top-width: 5px;
+	width: 40%;
+}
+
+td.wedann {
+}
+
+td.thuann {
+	border-bottom-width:5px;
+}
+
+td.friann {
+	border-bottom-width:5px;
+}
+
+td.finalann{
+	border-top-width:5px;
+	border-bottom-width:5px;
+	border-right-width:5px;
+}
+
+/* --------------- Homework Column --------------- */
+
+td.monhw {
+	border-top-width:5px;
+	border-right-width:5px;
+}
+
+td.tuehw {
+	border-top-width:5px;
+	border-right-width:5px;
+}
+
+td.wedhw {
+	border-right-width:5px;
+}
+
+td.thuhw {
+	border-right-width:5px;
+	border-bottom-width:5px;
+}
+
+td.frihw {
+	border-right-width:5px;
+	border-bottom-width:5px;
+}
+
+/* --------------- No Class --------------- */
+
+.noClass {
+	/* background-color: #FFE577; */ /*see individual page for color*/
+	text-align:center;
+	font-weight:bold;		
+}
+
+/* Prayer Before Study */
+div.prayer {
+	margin: 3em;
+}
+
+table.withBorders {
+	text-align: center;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 11px;
+	color: #404040;
+	width: 360px;
+	/*background-color: #fafafa;*/
+	border: 1px #181818 solid;
+	border-collapse: collapse;
+	border-spacing: 1px;
+}
+	
+th.withBorders, td.withBorders {
+	border: 1px #181818 solid;
+	padding: 3px;
+}
+
+table.noBorders {
+	text-align: left;
+	font-family: Verdana;
+	font-weight: normal;
+	font-size: 11px;
+	color: #404040;
+	width: 180px;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 1px;
+}
+	
+td.noBorders {
+	border: none;
+}
+
+ul.a {
+	list-style-type:disc;
+	margin-top:0px;
+	padding:0;
+}
+
+ul.a li {
+	background:none!important;
+	display:list-item;
+	text-align:left;
+	height:auto;
+	line-height:25px;
+	margin-bottom:0;
+	margin-left:25px;
+	position:relative;
+}
+
+ul.b{
+	list-style-type:circle;
+	margin-bottom:0px;
+	padding:0;
+}
+
+ul.b li {
+	background:none!important;
+	display:list-item;
+	text-align:left;
+	height:auto;
+	line-height:25px;
+	margin-bottom:0;
+	margin-left:25px;
+	position:relative;
+}
+	
+table.calendar {
+	color:#333333;
+	width: 70%;
+	border-width: 1px;
+	border-color: #666666;
+	border-collapse: collapse;
+}
+
+th.calendar {
+	border-width: 1px;
+	/*padding: 8px;*/
+	border-style: solid;
+	border-color: #666666;
+	font-weight: bold;
+	
+}
+td.calendar {
+	text-align: center;
+	border-width: 1px;
+	/*padding: 2px;*/
+	border-style: solid;
+	border-color: #666666;
+	height: 40px;
+	vertical-align: middle;
+}	
+
+.hangingindent {
+	padding-left: 8em;
+	text-indent: -4em;
+}
+
+dl {
+	padding-left: 4em;
+}
+
+dt {
+	display: list-item;
+	list-style-type: disc;
+	float: left;
+	clear: left;
+	margin-right: 5px;
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 0px;
+	padding: 0 0 1em 0;
+}	
+
+
