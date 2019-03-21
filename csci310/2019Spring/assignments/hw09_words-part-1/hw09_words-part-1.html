@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 310 - Spring 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks">
+		<ul class="toplinks_links">
+			<li><a href="http://www.sau.edu/">SAU</a></li>
+			<li><a href="http://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
+			<li><a href="../../../../">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="index.html">CSCI 310 A</a></h1>
+			<br>
+			Data Structures<br>
+			Spring 2019
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+<h1>HW 09 - Words Part 1</h1>
+<p>In homework 8 you got the <code>StringGraph</code> class up and running. In this assignment you will write a program to begin using that class. Your program is to construct a graph in which each vertex is a 5-letter word and there is an edge between two vertices if they start with the same letter. Here is a file called <a href="wordsABCDEF.txt">wordsABCDEF.txt</a> that contains 5-letter words starting with the letters a-f. Your program is to randomly select eight of these words as the vertices for the graph.</p>
+
+<p>Your program should print the graph using the appropriate <code>toString</code> method in the <code>StringGraph</code> class. A sample output is provided below (you will likely have different words when your program runs).</p>
+
+<p>Your program must include the following methods:</p>
+
+<p><code>String[] getVertices()</code><br>
+    This method takes no parameters and returns a String array containing eight words selected randomly from those provided. This method is responsible for interacting with the input file to select the words.</p>
+
+
+<p><code>boolean areNeighbors(String v1, String v2)</code><br>
+    This method takes two strings and returns <code>true</code> only if the two strings begin with the same letter.
+</p>
+
+
+<h2>What To Turn In</h2>
+<p>Create a single zip file that contains the entire project folder created by NetBeans.</p>
+
+
+<h2>Sample Output</h2>
+<table border="0" bordercolor="#000000">
+
+  <tr>
+
+    <td valign="middle" width="635" bgcolor="#000000">
+     <code><pre><font color="#FFFFFF">
+
+                    drams  bulge  burns  agone  court  dater  doled  count
+                      0      1      2      3      4      5      6      7
+
+        drams 0       -      -      -      -      -      T      T      -
+        bulge 1       -      -      T      -      -      -      -      -
+        burns 2       -      T      -      -      -      -      -      -
+        agone 3       -      -      -      -      -      -      -      -
+        court 4       -      -      -      -      -      -      -      T
+        dater 5       T      -      -      -      -      -      T      -
+        doled 6       T      -      -      -      -      T      -      -
+        count 7       -      -      -      -      T      -      -      -
+
+     </font>
+     </pre></code>
+    </td>
+  </tr>
+
+</table>
+
+
+
+	</div>
+	<div id="footer" class="shadow">
+        &nbsp;
+	</div>
+</div>
+</body>
+</html>
