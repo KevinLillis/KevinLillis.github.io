@@ -6,6 +6,11 @@ sup{
 	font-size: 80%;
 }
 
+sub{
+    vertical-align: sub;
+    font-size: 80%;
+}
+
 table {
 	font-family: verdana,arial,sans-serif;
 	/*color:#333333;*/
