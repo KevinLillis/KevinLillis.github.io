@@ -1,25 +1,14 @@
 
 <html>
-
-<head>
 <head>
 	<meta http-equiv="content-type" content="text/html; charset=utf-8">
-	<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans"
-	rel="stylesheet"
-	type="text/css">
-	
 	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css">
-	<link rel="stylesheet" type="text/css" mecia="all" href="../../kml.css">
-
-	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
-	
-	<title>Pseudo-Code For Recursive Descent Parser</title>
-
+	<link rel="stylesheet" type="text/css" media="all" href="thisclass.css">
+	<title>CSCI 400 - Spring 2019</title>
 </head>
 
 <body>
-<div id="wrapper960" class="clearfix">
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
 	<div id="toplinks">
 		<ul class="toplinks_links">
 			<li><a href="http://www.sau.edu/">SAU</a></li>
@@ -28,30 +17,30 @@
 			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
 			<li><a href="../../">Dr. Lillis</a></li>
 		</ul>
-	</div>
+	</div> <!-- End toplinks -->
 	
-	<div id="header" class="clearfix shadow">
-		<div id="sitetitle" class="clearfix">
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
 			<h1><a href="index.html">CSCI 400 A</a></h1>
 			<br>
 			Programming Language Concepts<br>
-			Spring 2019
-		</div>
-		
-		<div id="nav" class="clearfix">
+			Spring 2019<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
 			<ul>
-				<li><a class="current" href="index.html">Home</a></li>
-				<li><a href="syllabus.html">Syllabus</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a class="current" href="syllabus.html">Syllabus</a></li>
+                <li><a href="./lotw/lotw.html">LotW</a></li>
 			</ul>
-		</div>
-	</div>
-	
-	<div id="extended">
-		<img src="images/header.png" alt="">
-	</div>
-
-
-<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="images/header.png">
+		</div> <!-- End Header Image -->
+		
+		<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- single word syllabus -->
 <h1>Pseudo-Code for Recursive Descent Parser</h1>
 <pre>
 Token lookAhead;
