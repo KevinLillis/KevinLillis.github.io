@@ -1,0 +1,207 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+
+# Integer Literals
+4
+4
+
+type(4)
+<class 'int'>
+
+23
+23
+
+-9
+-9
+
+type(-9)
+<class 'int'>
+
+# Integer Expressions - Operators
+
+3 + 27
+30
+
+# Integer vs. FP Division
+
+12 / 3
+4.0
+
+10 / 4
+2.5
+
+12 // 3
+4
+
+10 // 4
+2
+
+35 / 12
+2.9166666666666665
+
+35 // 12
+2
+
+int(2.9999999999999)
+2
+
+# Mod operator, % - Remainder after division
+
+7 % 3
+1
+
+3 % 7
+3
+
+0 % 4
+0
+
+1 % 4
+1
+
+2 % 4
+2
+
+# Power operator
+
+2 ** 3
+8
+
+4 ** 2
+16
+
+# No limit on the size of an int
+
+2 ** 107
+162259276829213363391578010288128
+
+55 ** 321
+4533392561138954809944291335896626983724252240939068746203761124607712944508747182458426703270433690896460725357223331266345914826950153949356382631156049145982259832205853771275619230630765254302252207001652585731298580703166716148376715478877402932664532087894644173259538500747034022415388858653695385476032246694606357609875390253169473221071159420500039075713416883452425149810118916300864467428934311524955352909504723465525616103530637869964734552836801105872763275741619617257983404029502275917861802401911236991283171704480992048047482967376708984375
+
+# Floating Point Numbers
+
+10 / 3
+3.3333333333333335
+
+.1 + .1 + .1
+0.30000000000000004
+
+# FP Literals
+
+1.232
+1.232
+
+3e4
+30000.0
+
+type(3E4)
+<class 'float'>
+
+4.234E3
+4234.0
+
+4.234E-3
+0.004234
+
+2 ** 500
+3273390607896141870013189696827599152216642046043064789483291368096133796404674554883270092325904157150886684127560071009217256545885393053328527589376
+
+2.0 ** 500.0
+3.273390607896142e+150
+
+# Complex numbers
+
+9 + 4j
+(9+4j)
+
+type(9 + 4j)
+<class 'complex'>
+
+1j
+1j
+
+type(1j)
+<class 'complex'>
+
+1j * 1j
+(-1+0j)
+
+3j
+3j
+
+34.23 + 4.3j
+(34.23+4.3j)
+
+(34.23 + 4.3j).real
+34.23
+
+(34.23 + 4.3j).imag
+4.3
+
+type((34.23 + 4.3j).imag)
+<class 'float'>
+
+# The type for an expression
+
+# If either argument is complex, answer is also complex
+
+9j * 10
+90j
+
+9j * (10.1 + 7)
+153.9j
+
+# If either argument is float, then the answer is also a float
+4 ** 5.1
+1176.2671155169633
+
+4.5 % 3
+1.5
+
+# Otherwise, both must be int, and the answer is an int
+35 % 23
+12
+
+# Exception: FP division, /
+23 / 23
+1.0
+
+# Manually converting types - Casting
+
+float(19)
+19.0
+
+float(7 // 3)
+2.0
+
+7//3
+2
+
+7/3
+2.3333333333333335
+
+
+float(7 / 3)
+2.3333333333333335
+
+int(4.34)
+4
+
+complex(32)
+(32+0j)
+
+complex(43.43)
+(43.43+0j)
+
+# Can't convert complex to either int or float
+int(1j)
+Traceback (most recent call last):
+  Python Shell, prompt 78, line 1
+builtins.TypeError: can't convert complex to int
+
+float(32+5j)
+Traceback (most recent call last):
+  Python Shell, prompt 79, line 1
+builtins.TypeError: can't convert complex to float
+

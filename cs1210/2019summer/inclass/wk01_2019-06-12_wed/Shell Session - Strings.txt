@@ -1,0 +1,66 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+# Strings
+
+'She said good-bye'
+'She said good-bye'
+
+"She said good-bye"
+'She said good-bye'
+
+'''She said good-bye'''
+'She said good-bye'
+
+'She said "I'm out of here" and left'
+Traceback (most recent call last):
+  Python Shell, prompt 5, line 1
+Syntax Error: invalid syntax: <string>, line 1, pos 14
+
+"She said "I'm out of here" and left"
+Traceback (most recent call last):
+  Python Shell, prompt 7, line 1
+Syntax Error: invalid syntax: <string>, line 1, pos 12
+
+'''She said "I'm out of here" and left'''
+'She said "I\'m out of here" and left'
+
+'this is a message
+Traceback (most recent call last):
+  Python Shell, prompt 10, line 1
+Syntax Error: EOL while scanning string literal: <string>, line 1, pos 19
+
+'this is a message\non two lines'
+'this is a message\non two lines'
+
+print('this is a message\non two lines')
+this is a message
+on two lines
+
+'this has a\tTab character'
+'this has a\tTab character'
+
+print('this has a\tTab character')
+this has a	Tab character
+
+"She said \"I'm out of here\" and left"
+'She said "I\'m out of here" and left'
+
+print("She said \"I'm out of here\" and left")
+She said "I'm out of here" and left
+
+'She said "I\'m out of here" and left'
+'She said "I\'m out of here" and left'
+
+print('She said "I\'m out of here" and left')
+She said "I'm out of here" and left
+
+'c:\newdocs'
+'c:\newdocs'
+
+print('c:\newdocs')
+c:
+ewdocs
+
+print('c:\\newdocs')
+c:\newdocs
