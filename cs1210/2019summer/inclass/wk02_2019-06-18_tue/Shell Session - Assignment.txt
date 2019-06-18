@@ -1,0 +1,128 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+
+# Multiple references to the same object
+x = 12
+
+id(x)
+4362382768
+
+y = 12
+
+x
+12
+
+y
+12
+
+id(x)
+4362382768
+
+id(y)
+4362382768
+
+id(6+6)
+4362382768
+
+print(6+6)
+12
+
+id(12)
+4362382768
+
+print(12)
+12
+
+x = x + 1
+
+print(x)
+13
+
+id(x)
+4362382800
+
+print(x)
+13
+
+id(y)
+4362382768
+
+# Other cool assignment things
+x = 4
+
+x = x + 8
+
+x
+12
+
+x += 3 # same as x = x + 3
+
+x
+15
+
+y = 2
+
+y **= 5 # same as y = y ** 5
+
+y
+32
+
+# Multiple assignment
+a, b, c = 1, 2, 3
+
+a
+1
+
+b
+2
+
+c
+3
+
+# I want to swap a and b
+a
+1
+
+b
+2
+
+a, b = b, a
+
+a
+2
+
+b
+1
+
+a = 100
+
+b = 404
+
+# incorrect way to swap (doesn't work!!!!!)
+a = b
+b = a
+
+a
+404
+
+b
+404
+
+# Chainign Assignment
+a = b = c = d = e = 700
+
+a
+700
+
+b
+700
+
+c
+700
+
+d
+700
+
+e
+700
