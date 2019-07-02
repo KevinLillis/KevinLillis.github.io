@@ -1,0 +1,100 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+ch = 'L'
+
+ord(ch)
+76
+
+for ch in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ':
+    print(ord(ch), end=' ')
+
+65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 
+
+chr(72)
+'H'
+
+str(72)
+'72'
+
+ord('hi')
+Traceback (most recent call last):
+  Python Shell, prompt 7, line 1
+builtins.TypeError: ord() expected a character, but string of length 2 found
+
+# Converting an int to a string - including a different radix
+x = 92
+
+# Decimal
+str(x)
+'92'
+
+# Binary
+bin(x)
+'0b1011100'
+
+# This is decimal, not binary
+str(1011100)
+'1011100'
+
+# Octal
+oct(x)
+'0o134'
+
+# Hex
+hex(x)
+'0x5c'
+
+# Convert a string to an int
+userEntered = '101010'
+
+int(x)
+101010
+
+# But the user was entering a binary value!
+int(x, 2)
+42
+
+octValue = int('52', 8)
+
+octValue
+42
+
+decValue = int('42')
+
+decValue
+42
+
+hexValue = int('2a', 16)
+
+hexValue
+42
+
+# Letters can be upper or lower case
+hexValue = int('2A', 16)
+
+hexValue
+42
+
+# Entering numeric integers in other bases
+
+bValue = 0b1010
+
+bValue
+10
+
+oValue = 0o52
+
+oValue
+42
+
+dValue = 42
+
+dValue
+42
+
+hValue = 0x2A
+
+hValue
+42
+
