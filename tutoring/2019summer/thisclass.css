@@ -3,3 +3,8 @@
 	/* This style specification starts in KML.css */
 	background-color: #E66A30;
 }
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
