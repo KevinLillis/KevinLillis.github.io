@@ -1,0 +1,60 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+# Splitting a string
+
+river = 'mississippi river'
+
+# Default splits on any number of white space characters
+river.split()
+['mississippi', 'river']
+
+river = 'mississippi       river'
+
+river.split()
+['mississippi', 'river']
+
+river = 'mississippi\nriver'
+
+river.split()
+['mississippi', 'river']
+
+river = 'mississippi\n\t\t   \n  \triver'
+print(river)
+mississippi
+		   
+  	river
+
+river.split()
+['mississippi', 'river']
+
+river = 'mississippi river'
+
+# Can split on other substrings as well
+river.split('ss')
+['mi', 'i', 'ippi river']
+
+# Using split with multiple assignment
+
+a, b, c = 'Python is great'.split()
+
+a
+'Python'
+
+b
+'is'
+
+c
+'great'
+
+# It's similar to doing this
+a, b, c = [7, 8, 9]
+
+a
+7
+
+b
+8
+
+c
+9

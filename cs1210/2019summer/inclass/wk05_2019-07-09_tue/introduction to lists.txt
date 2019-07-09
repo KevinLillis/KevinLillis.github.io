@@ -1,0 +1,196 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+
+L = ['Rebekah', 23.4, 4 < 9]
+
+len(L)
+3
+
+L[0]
+'Rebekah'
+
+L[-1]
+True
+
+L1 = [2, 4, 6, 8, 10]
+
+L2 = ['newt', 'stone', 'witch']
+
+L1 + L2
+[2, 4, 6, 8, 10, 'newt', 'stone', 'witch']
+
+L1 * 3
+[2, 4, 6, 8, 10, 2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
+
+'newt' in L2
+True
+
+'stone' not in L1
+True
+
+'stone' not in L2
+False
+
+L1
+[2, 4, 6, 8, 10]
+
+L1[2:]
+[6, 8, 10]
+
+# List are muteable (can be changed)
+
+# Delete things from a list
+del L1[1]
+
+L1
+[2, 6, 8, 10]
+
+# Multiple references to a mutable object
+L1 = [1, 2, 3]
+
+L2 = L1
+
+L1[1] = 13
+
+L1
+[1, 13, 3]
+
+L2
+[1, 13, 3]
+
+L1
+[1, 13, 3]
+
+L1 = [1, 2, 3]
+
+L2 = [L1, L1, L1, L1, L1]
+
+L2
+[[1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]]
+
+L2[-1][0] = 19
+
+L2
+[[19, 2, 3], [19, 2, 3], [19, 2, 3], [19, 2, 3], [19, 2, 3]]
+
+
+# Copying Lists - You need to be careful
+
+L1 = [1, 2, 3, 4]
+
+# Regular copying isn't too useful because lists are mutable
+L2 = L1
+
+L1[0] += 1000
+
+L1
+[1001, 2, 3, 4]
+
+L2
+[1001, 2, 3, 4]
+
+# Can use a "copy slice"
+
+L1 = [1, 2, 3, 4]
+
+L2 = L1[:]
+
+L2
+[1, 2, 3, 4]
+
+L1[0] = 156
+
+L1
+[156, 2, 3, 4]
+
+L2
+[1, 2, 3, 4]
+
+# Copy slice has issues when we use nested lists (a list of lists)
+
+L1 = [[1,2,3], [4,5,6], [7,8,9]]
+
+L2 = L1[::]
+
+L1
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L2
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L1[-1] = 'Juneo'
+
+L1
+[[1, 2, 3], [4, 5, 6], 'Juneo']
+
+L2
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L1[0][-1] = 7
+
+L1
+[[1, 2, 7], [4, 5, 6], 'Juneo']
+
+L2
+[[1, 2, 7], [4, 5, 6], [7, 8, 9]]
+
+# Bottom line - you can use Deep Copy
+import copy
+
+L1 = [[1,2,3],[4,5,6],[7,8,9]]
+
+L2 = copy.deepcopy(L1)
+
+L1
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L2
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L1[-1] = 'Zita'
+
+L1
+[[1, 2, 3], [4, 5, 6], 'Zita']
+
+L2
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L1[0][-1] = 11
+
+L1
+[[1, 2, 11], [4, 5, 6], 'Zita']
+
+L2
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+# Processing this 2D list
+for row in L2:
+    for item in row:
+        print(item)
+
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+# Do the same thing using indexes
+
+for r in range(len(L2)):
+    for c in range(len(L2[r])):
+        print(L2[r][c])
+
+1
+2
+3
+4
+5
+6
+7
+8
+9

@@ -1,0 +1,63 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+# Tuples
+
+T = (1,2,3)
+
+type(T)
+<class 'tuple'>
+
+# Singleton (just one element)
+
+# Lists with one element are no problem
+L = [2]
+
+type(L)
+<class 'list'>
+
+# But tuples with just one element are tricky
+T = (2)
+
+type(T)
+<class 'int'>
+
+(1 + 3)
+4
+
+(4)
+4
+
+# to write a tuple withjust one element
+
+T = (4,)
+
+T
+(4,)
+
+type(T)
+<class 'tuple'>
+
+len(T)
+1
+
+# Tuples with no elements are not a problem
+T = ()
+
+type(T)
+<class 'tuple'>
+
+# the parentheses can be left off for a tuple
+T = 1,2,3,4
+
+type(T)
+<class 'tuple'>
+
+# So this multiple assignment
+a, b, c = 1, 2, 3
+
+# This is realy this
+a, b, c = (1, 2, 3)
+
+# Which is similar what we did with lists
+a, b, c = [1, 2, 3]

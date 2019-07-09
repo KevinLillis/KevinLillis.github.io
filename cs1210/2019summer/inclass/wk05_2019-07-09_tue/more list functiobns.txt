@@ -1,0 +1,90 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+
+# More List Functions
+import random # so we can shuffle a list
+
+L = list(range(20))
+
+L
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+random.shuffle(L)
+
+L
+[15, 18, 13, 1, 10, 17, 12, 0, 7, 9, 3, 2, 19, 8, 14, 4, 11, 16, 5, 6]
+
+L.sort()
+
+L
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+L1 = list(range(20))
+
+L2 = list(reversed(L1))
+
+L1
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+
+L2
+[19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
+random.shuffle(L1)
+
+L1
+[14, 6, 0, 8, 11, 10, 17, 16, 9, 13, 12, 7, 4, 2, 1, 5, 18, 15, 3, 19]
+
+max(L1)
+19
+
+min(L1)
+0
+
+sum(L1)
+190
+
+# Using max and min on a list of strings
+
+L = 'category cat dog catolic catalog'.split()
+
+L
+['category', 'cat', 'dog', 'catolic', 'catalog']
+
+max(L)
+'dog'
+
+min(L)
+'cat'
+
+L.sort()
+
+L
+['cat', 'catalog', 'category', 'catolic', 'dog']
+
+# Sum only works for a list of numbers
+
+sum([])
+0
+
+# All
+
+all([True, True, True, True])
+True
+
+all([True, True, False, True])
+False
+
+all([4 < 9, 'at' in 'cat', 4 == abs(-4)])
+True
+
+# Any
+any([True, True, True, True])
+True
+
+any([False, False, True, False])
+True
+
+any([False, False, False, False])
+False
+

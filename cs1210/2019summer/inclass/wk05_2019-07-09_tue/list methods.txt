@@ -1,0 +1,140 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+# Look at list methods
+
+L1 = [10, 20, 30]
+
+# append(item)
+L1.append(40)
+
+L1
+[10, 20, 30, 40]
+
+# Can accomplish the same thing like this
+L1 += [50]
+
+L1
+[10, 20, 30, 40, 50]
+
+# Remove item by giving its intex
+del L1[-1]
+
+L1
+[10, 20, 30, 40]
+
+# insert(i, item)
+L1.insert(3, 35)
+
+L1
+[10, 20, 30, 35, 40]
+
+L1.insert(-2, 32)
+
+L1
+[10, 20, 30, 32, 35, 40]
+
+# pop()
+
+value = L1.pop()
+
+L1
+[10, 20, 30, 32, 35]
+
+value
+40
+
+# pop(i)
+value = L1.pop(-2)
+
+L1
+[10, 20, 30, 35]
+
+value
+32
+
+L1 = [4, 3, 5, 4, 5, 7, 1, 5, 2]
+
+# Soring a list
+L1.sort()
+
+L1
+[1, 2, 3, 4, 4, 5, 5, 5, 7]
+
+L1 = [4, 3, 5, 4, 5, 7, 1, 5, 2]
+
+# Sorting with a function, not a list method
+
+sorted(L1)
+[1, 2, 3, 4, 4, 5, 5, 5, 7]
+
+L1
+[4, 3, 5, 4, 5, 7, 1, 5, 2]
+
+L2 = sorted(L1)
+
+L1
+[4, 3, 5, 4, 5, 7, 1, 5, 2]
+
+L2
+[1, 2, 3, 4, 4, 5, 5, 5, 7]
+
+# reverse()
+
+L1 = [10, 20, 30, 40]
+
+L1.reverse()
+
+L1
+[40, 30, 20, 10]
+
+# index(item)   There is no find, like there is for strings
+L1.index(30)
+1
+
+L1.index(99)
+Traceback (most recent call last):
+  Python Shell, prompt 39, line 1
+builtins.ValueError: 99 is not in list
+
+# count(item)
+L1.count(10)
+1
+
+L1.count(99)
+0
+
+# remove(item)
+
+L1
+[40, 30, 20, 10]
+
+L1.remove(20)
+
+L1
+[40, 30, 10]
+
+# extend(another List)
+
+L1
+[40, 30, 10]
+
+L1 = [1, 2, 3, 4]
+
+L2 = [5, 6, 7, 8]
+
+L1.extend(L2)
+
+L1
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+# Can do the same thing with +=
+
+L1 = [1, 2, 3, 4]
+
+L2 = [5, 6, 7, 8]
+
+L1 += L2
+
+L1
+[1, 2, 3, 4, 5, 6, 7, 8]
