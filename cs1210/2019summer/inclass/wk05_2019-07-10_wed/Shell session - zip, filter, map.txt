@@ -1,0 +1,132 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+# zip - takes two lists
+Z = zip(['a', 'b', 'c'], [1, 2, 3, 4])
+
+Z
+<zip object at 0x10d8e5308>
+
+type(Z)
+<class 'zip'>
+
+L = list(Z)
+
+L
+[('a', 1), ('b', 2), ('c', 3)]
+
+
+# Filter
+def isPos(x):
+    return x > 0
+
+isPos(12)
+True
+
+isPos(-4)
+False
+
+isPos(0)
+False
+
+L = [2, 4, -5, 0, 8, -3, 4, -9]
+
+F = filter(isPos, L)
+
+type(isPos(0))
+<class 'bool'>
+
+type(isPos)
+<class 'function'>
+
+list(F)
+[2, 4, 8, 4]
+
+def isNonPos(x):
+   return not isPos(x)
+
+F = filter(isNonPos, L)
+
+list(F)
+[-5, 0, -3, -9]
+
+def isVowel(ch):
+    return ch in 'aeiouAEIOU'
+
+F = filter(isVowel, 'Iowa')
+
+list(F)
+['I', 'o', 'a']
+
+F = filter(isPos, range(-5, 5))
+
+list(F)
+[1, 2, 3, 4]
+
+
+# The built-in map funcion
+
+def square(x):
+    return x * x
+
+def double(x):
+    return x + x
+
+
+L = [-2, -1, 0, 1, 2]
+
+M = map(square, L)
+
+list(M)
+[4, 1, 0, 1, 4]
+
+M = map(double, L)
+
+list(M)
+[-4, -2, 0, 2, 4]
+
+M = map(double, 'Iowa')
+
+list(M)
+['II', 'oo', 'ww', 'aa']
+
+# More useful example using map
+
+a = input('Enter some numbers separated by white space: ')
+Enter some numbers separated by white space: 1 2 3 4 5 6 7 8 9 10
+
+a
+'1 2 3 4 5 6 7 8 9 10'
+
+b = a.split()
+
+b
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+# We can't sum the values because they are strings
+
+sum(b)
+Traceback (most recent call last):
+  Python Shell, prompt 41, line 1
+builtins.TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+M = map(int, b)
+
+L = list(M)
+
+L
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+sum(L)
+55
+
+# Do this all at the same time
+
+a = input('Enter some numbers separated by white space: ')
+Enter some numbers separated by white space: 1 2 3 4 5 6 7 8 9 10
+
+answer = sum(map(int,a.split()))
+
+answer
+55
+
