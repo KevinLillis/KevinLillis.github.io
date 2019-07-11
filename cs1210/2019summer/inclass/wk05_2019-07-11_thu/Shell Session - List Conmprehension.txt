@@ -1,0 +1,83 @@
+3.7.1 (v3.7.1:260ec2c36a, Oct 20 2018, 03:13:28) 
+[Clang 6.0 (clang-600.0.57)]
+Python Type "help", "copyright", "credits" or "license" for more information.
+
+# List Comprehension
+
+['Z' for i in range(5)]
+['Z', 'Z', 'Z', 'Z', 'Z']
+
+
+[[] for i in range(5)]
+[[], [], [], [], []]
+
+
+[0 for i in range(15)]
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
+[x for x in range(1, 11)]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+
+[x*2 for x in range(1, 11)]
+[2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+[x*2 for x in 'Iowa']
+['II', 'oo', 'ww', 'aa']
+
+
+[ch * 3 for ch in 'Iowa']
+['III', 'ooo', 'www', 'aaa']
+
+
+[f'>{ch}<' for ch in 'Brave Sir Robin ran away']
+['>B<', '>r<', '>a<', '>v<', '>e<', '> <', '>S<', '>i<', '>r<', '> <', '>R<', '>o<', '>b<', '>i<', '>n<', '> <', '>r<', '>a<', '>n<', '> <', '>a<', '>w<', '>a<', '>y<']
+
+
+[word + '!' for word in 'Brave Sir Robin ran away'.split()]
+['Brave!', 'Sir!', 'Robin!', 'ran!', 'away!']
+
+
+[x * 3 for x in [1, 2, 3, 'a', 'b', 'c']]
+[3, 6, 9, 'aaa', 'bbb', 'ccc']
+
+
+[(x, x > 5) for x in range(1, 8)]
+[(1, False), (2, False), (3, False), (4, False), (5, False), (6, True), (7, True)]
+
+
+# Add a condition
+
+[p for p in range(21) if p % 2 == 0]
+[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+
+
+# Use multiple sources
+
+A = 'abc'
+B = '123'
+C = 'QR'
+
+[x+y for x in A for y in B]
+['a1', 'a2', 'a3', 'b1', 'b2', 'b3', 'c1', 'c2', 'c3']
+
+
+[x+y+z for x in A for y in B for z in C]
+['a1Q', 'a1R', 'a2Q', 'a2R', 'a3Q', 'a3R', 'b1Q', 'b1R', 'b2Q', 'b2R', 'b3Q', 'b3R', 'c1Q', 'c1R', 'c2Q', 'c2R', 'c3Q', 'c3R']
+
+
+L1 = [1, 2, 3, 4, 5]
+L2 = [90, 91, 92, 93, 94]
+
+
+L = [(x,y) for x in L1 if x >=3 for y in L2 if y <= 92]
+
+
+[(x,y) for x in L1 if x >=3 for y in L2 if y <= 92]
+[(3, 90), (3, 91), (3, 92), (4, 90), (4, 91), (4, 92), (5, 90), (5, 91), (5, 92)]
+
+
+[(x,y) for x in L1 for y in L2 if x >= 3 and y <= 92]
+[(3, 90), (3, 91), (3, 92), (4, 90), (4, 91), (4, 92), (5, 90), (5, 91), (5, 92)]
