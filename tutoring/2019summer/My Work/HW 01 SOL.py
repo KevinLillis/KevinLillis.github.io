@@ -63,7 +63,7 @@ def main():
     w, h = 100, 50
     for value in range(-50, 50, 5):
         x, y = value, value
-        linedRetangle(jason, x, y, w, h)
+        linedRectangle(jason, x, y, w, h)
         
     # We're done using the turtle.    
     turtle.done()
