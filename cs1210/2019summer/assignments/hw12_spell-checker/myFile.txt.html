@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Spell Check - myFile.txt</title>
+<style type="text/css">
+<!--
+.misspelled {
+	color: red;
+}
+.corrected {
+	color: blue;
+}
+-->
+</style>
+</head>
+
+<body>
+This is a sample file showing how the spell checker should work. <br>
+<br>
+Color of <span class="misspelled">words</span> that are not <span class="misspelled">spelled</span> correctly <br>
+These <span class="misspelled">words</span> are <span class="misspelled">rendered</span> in red. <br>
+<br>
+<span class="misspelled">Things</span> not in the dictionary: <br>
+There are many <span class="misspelled">things</span> that <span class="misspelled">aren't</span> in our dictionary. These include <span class="misspelled">plurals</span>, <span class="misspelled">contractions</span>, and other <span class="misspelled">things</span>. <span class="misspelled">That's</span> <span class="misspelled">OK</span> for this assignment. <br>
+<br>
+Spacing on a line: <br>
+White space on a single line is always shown as a single space in the output file. For example: <br>
+Here are three <span class="misspelled">spaces</span>: Next we have a single tab character: Notice that the white space <span class="misspelled">shows</span> up as a single space. <br>
+<br>
+Case: <br>
+When a word is <span class="misspelled">looked</span> up in the dictionary file, it is first converted to lower case. However, the original word, with the case in tact, is used. That is why the first word of each sentence has an upper case letter. This also <span class="misspelled">makes</span> proper <span class="misspelled">names</span>, like <span class="misspelled">Kramden</span> and Iowa, and ALL <span class="misspelled">CAPS</span> work correctly. <br>
+<br>
+Word with a digit: <br>
+If a word has a digit in it, the word is automatically considered correct. So BIX7 is seen as correct. We can also use this to enter a phone number, like 555-1212. <br>
+<br>
+Punctuation: <br>
+Notice that the last word in a sentence is considered independently of the punctuation character. So if the last word in a sentence is <span class="misspelled">misspelled</span>, only the word itself is colored red, not the punctuation. In fact, this is true for any word <span class="misspelled">followed</span> by a punctuation character. Here is an example: <br>
+<br>
+This <span class="misspelled">sentenc</span>, in addition to <span class="misspelled">having</span> poor grammar, has some <span class="misspelled">misspelled</span> <span class="misspelled">wrods</span>!.?, Do you think it works with a question mark <span class="misspelled">aslo</span>? <br>
+<br>
+Word Replacement: <br>
+The spell checker does some auto replacement. Each word that is <span class="misspelled">replaced</span> is colored blue. Can you tell what <span class="corrected">the</span> <span class="misspelled">worng</span> word was in this sentence? <br>
+<br>
+</body>
+</html>

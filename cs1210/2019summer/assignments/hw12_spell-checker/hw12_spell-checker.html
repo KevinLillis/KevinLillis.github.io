@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CS:1210 - Summer 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks">
+		<ul class="toplinks_links">
+			<li><a href="http://www.uiowa.edu">U Iowa</a></li>
+			<li><a href="http://www.cs.uiowa.edu">CS</a></li>
+			<li><a href="https://icon.uiowa.edu/">ICON</a></li>
+			<li><a href="../../../../">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CS:1210:0AAA</a></h1>
+			<br>
+			Computer Science I: Fundamentals<br>
+			Summer 2019<br>
+            <br>
+            The University of Iowa<br>
+            The College of Liberal Arts and Sciences<br>
+            Department of Computer Science
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+                <li><a href="../../rubric.html">Rubric</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+		
+		<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- Homework Title -->
+			<h1>HW 12 &mdash; Spell Checker</h1>
+		</div> <!-- Homework Title -->
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- Assignment Details --> 
+        
+
+<p>For this assignment you are to write a spell checker. Below are the requirements for your spell checker:</p>
+<ol>
+   <li>The spell checker should first ask the user to enter the name of a text file to be checked; let's call this the <em>check file</em>. The program then opens the check file and checks for spelling mistakes. The spell checker creates an HTML file in which misspelled words are shown in red. The name of the HTML file should be the same as the name of the check file, only with <code>.html</code> added to the end. The spell checker has the capability of auto correcting some words. These corrected words are shown in blue in the HTML file.<br>
+      <br>
+   </li>
+   <li>The text file <a href="wordsLower.txt"><code>wordsLower.txt</code></a> contains a list of correctly spelled words, one per line. Your spell checker should use this file as its dictionary.<br>
+      <br>
+   </li>
+   <li>The text file <a href="autoCorrect.txt"><code>autoCorrect.txt</code></a> contains pairs of words, one pair per line. Each pair consists of a misspelled word followed by the correct spelling. This is the file your spell checker should use for its auto correct feature.<br>
+      <br>
+   </li>
+   <li>Here are some things to keep in mind about how your spell checker should work:   </li>
+</ol>
+<ul style="padding-left:6em">
+   <li>There are many words not included in <code>wordsLower.txt</code>, such as plurals and contractions. That's OK for this assignment. They can simply be considered misspelled.</li>
+   <li>When writing to the HTML file, all white space on a given line of input can be written as a single space in the HTML file.</li>
+   <li>The words in the dictionary are in lower case. The words you look up may sometimes be capitalized. This should be handled correctly (see the second example below).</li>
+   <li>Words containing digits should be ignored.</li>
+   <li>Punctuation is tricky. When a word is followed by a punctuation mark, like <code>why?</code>, the word and the punctuation mark need to be separated in order to check the spelling of the word. The colorization should only be applied to the word, not the punctuation mark. This should work for multiple punctuation marks, like <code>Wow!?!</code></li>
+</ul>
+<ol start = "5">
+   <li>Notes on HTML - See the HTML files shown in the examples below.</li>
+</ol>
+<ul style="padding-left:6em">
+   <li>The beginning of the file, starting from <code>&lt;html&gt;</code> all the way down to <code>&lt;body&gt;</code> can be written before you even start checking the spelling. Notice that the name of the input file is used in the title.</li>
+   <li>As each word is examined it will  fall into one of the following three cases:
+      <ol>
+         <ol style="padding-left:-4em" type="a">
+            <li>A correctly spelled word - can be written directly to the HTML file</li>
+            <li>A misspelled word - written as red like this<br>
+            <code>&lt;span class=&quot;misspelled&quot;&gt;word&lt;/span&gt;</code></li>
+            <li>A word that will be replaced - write the replacement word like this<br>
+            <code>&lt;span class=&quot;corrected&quot;&gt;word&lt;/span&gt;</code></li>
+         </ol>
+      </ol>
+   </li>
+   <li>At the end of each line a <code>&lt;br&gt;</code> tag should be written to the HTML file.</li>
+   <li>After all of the lines from the input file have been processed, the final <code>&lt;/body&gt;</code> and <code>&lt;/html&gt;</code> tags can be written.</li>
+</ul>
+<h2>Example</h2>
+<p>If an input file named <a href="myFile1.txt"><code>myFile1.txt</code></a>  contains the following:</p>
+
+<table border="2" width="87%" bordercolor="#000000">
+<tr>
+<td width="188%" bgcolor="#000000">
+<pre style="color: white">
+
+It was the besst of times,
+it was teh worst of times
+
+</pre>
+</td>
+</tr>
+</table>
+
+<p><br>
+  Then the following HTML file would be produced. The HTML file is named <a href="myFile1.txt.html"><code>myFile1.txt.html</code></a>.</p>
+<table border="2" width="87%" bordercolor="#000000">
+<tr>
+<td width="188%" bgcolor="#000000">
+<pre style="color: white">
+
+   &lt;html&gt;
+   &lt;head&gt;
+   &lt;title&gt;Spell Check - myFile1.txt&lt;/title&gt;
+   &lt;style type=&quot;text/css&quot;&gt;
+   &lt;!--
+       .misspelled {
+           color: red;
+       }
+       .corrected {
+           color: blue;
+       }
+   --&gt;
+   &lt;/style&gt;
+   &lt;/head&gt;<br>
+   &lt;body&gt;
+   It was the &lt;span class=&quot;misspelled&quot;&gt;besst&lt;/span&gt; of times, &lt;br&gt;
+   it was &lt;span class=&quot;corrected&quot;&gt;the&lt;/span&gt; worst of times &lt;br&gt;
+   &lt;/body&gt;
+   &lt;/html&gt;
+   
+</pre>
+</td>
+</tr>
+</table>
+
+
+<h2>Another Example</h2>
+<p>Here is a larger example that shows how the spell checker should work. The input file is called <a href="myFile.txt"><code>myFile.txt</code></a>. The spell checker should produce the HTML file <a href="myFile.txt.html"><code>myFile.txt.html</code></a>.</p>
+
+
+    </div> <!-- Assignment Details -->
+
+    <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+        <h3>What to Turn In</h3>
+        <p>
+            A Dropbox Folder has been created for this assignment in ICON. Please submit your Python program through ICON using that folder.
+        </p>
+    </div>
+
+
+<div id="footer" class="shadow"> <!-- Footer -->
+		&nbsp;
+</div> <!-- End footer -->
+	
+	
+</div> <!-- End entire body -->
+</body>
+</html>
