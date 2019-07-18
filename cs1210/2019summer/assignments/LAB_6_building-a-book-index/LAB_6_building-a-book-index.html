@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<h1>Week 6 Lab &mdash; Building a Book Index</h1>
+
+<p>If you flip to the back of our textbook you will find the index, which consists of an alphabetical list of terms. Following each term is a list of page numbers, given in order, where the term appears. To build such an index, someone must go through the book and record which terms appear on which pages. Let's assume they record this information in a text file called <a href="terms.txt">terms.txt</a>. Below is an example of what this file might contain.</p>
+    
+<p><pre style="padding-left: 4em">
+3:degree
+4:vertex
+54:connected
+93:adjacent
+54:vertex
+40:vertex
+19:edge
+64:neighbor
+72:path
+55:shortest path
+127:tree
+99:spanning tree
+19:path
+30:vertex
+28:connected
+3:degree
+55:graph
+64:adjacent
+44:breadth first search
+77:neighbor
+55:degree
+3:vertex
+55:depth first search
+19:degree
+27:neighbor
+16:Spanning Tree
+</pre></p>
+    
+<p>With this example file, the following index would be created:</p>
+
+<p><pre  style="padding-left: 4em">
+adjacent, 64, 93
+breadth first search, 44
+connected, 28, 54
+degree, 3, 19, 55
+depth first search, 55
+edge, 19
+graph, 55
+neighbor, 27, 64, 77
+path, 19, 72
+shortest path, 55
+spanning tree, 16, 99
+tree, 127
+vertex, 3, 4, 30, 40, 54    
+</pre></p>
+
+<h2>Assignment</h2>
+
+<p>Write a program that reads the terms from an input file called <code>terms.txt</code> (formatted as shown above) and displays the associated index (formatted as shown above).</p>
+
+</body>
+</html>
