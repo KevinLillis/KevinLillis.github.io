@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CS:1210 - Summer 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks">
+		<ul class="toplinks_links">
+			<li><a href="http://www.uiowa.edu">U Iowa</a></li>
+			<li><a href="http://www.cs.uiowa.edu">CS</a></li>
+			<li><a href="https://icon.uiowa.edu/">ICON</a></li>
+			<li><a href="../../../../">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CS:1210:0AAA</a></h1>
+			<br>
+			Computer Science I: Fundamentals<br>
+			Summer 2019<br>
+            <br>
+            The University of Iowa<br>
+            The College of Liberal Arts and Sciences<br>
+            Department of Computer Science
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+                <li><a href="../../rubric.html">Rubric</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+		
+		<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- Homework Title -->
+			<h1>HW 15 &mdash; Clock Class</h1>
+		</div> <!-- Homework Title -->
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- Assignment Details --> 
+
+<p>In class we discussed <em>encapsulation</em>, <em>information hiding</em>, and the importance of developing and using a class' <em>public interface</em>. This assignment is intended to illustrate the importance of these concepts.</p>
+
+<h2>Part I</h2>
+<p>Create a class called <code>Clock</code> that represents a simple military style clock in which  hours range from 0 to 23. This class should store the time using three integers, one each for <code>hours</code>, <code>minutes</code>, and <code>seconds</code>. The Clock class should have the following public interface:</p>
+
+<h3>Initializer</h3>
+<p>The initializer takes three parameters, one each for the <code>hour</code>, <code>minute</code>, and <code>second</code>. The default value for each is zero.</p>
+
+<h3>Accessors</h3>
+<p>There should be a separate <em>get</em> method for the hour, minute, and second. These should be called <code>getHour</code>, <code>getMinute</code>, and <code>getSecond</code>.</p>
+
+<p>There should also be a method that returns all three as a tuple. This method should be called <code>getTime</code>.</p>
+
+<h3>Mutators</h3>
+<p>There should be a separate <em>set</em> method for the hour, minute, and second. These should be called <code>setHour</code>, <code>setMinute</code>, and <code>setSecond</code>.</p>
+
+<p>There should also be a method that sets all three at once. This method should be called <code>setTime</code>. This method can take from zero to three parameters and sets only those parameters provided. The parameter names should be <code>hour</code>, <code>minute</code>, and <code>second</code>. For example, the instruction <code>myClock.setTime(minute=10)</code> should change the minutes to 10 while leaving the hours and seconds unchanged. This means that the instruction <code>myClock.setTime()</code> would not change the time at all.</p>
+
+<p>There should be a <code>reset</code> method that takes no parameters and sets the hours, minuets, and seconds all to zero, which is midnight.</p>
+
+
+<h3>Special Methods</h3>
+<p>Provide the <code>__str__</code> method to return a string representation of the clock. This method should return a string showing the hours, minutes, and seconds separated by colons. A leading zeros must added to single-digit values. So the starting time for our class would be displayed as <code>09:30:00</code>.
+</p>
+
+<p>
+<p>Provide the <code>__repr__</code> method to return a string representation of the clock. This should return teh exact same thing as the <code>__str__</code> method.
+</p>
+
+
+<h2>Grading</h2>
+<p>You should test your Clock class using the program <a href="ClockTester.py">ClockTester.py</a>. This program uses only the public interface of Clock class described above. This is the program that will be used to grade your Clock class. If the <code>Clock</code> class is working properly, then the clockTester program simply prints the message <code>No Errors Found</code>. If errors are found, then a message is printed for each error.</p>
+
+</pre></b>
+
+<h2>Part II</h2>
+
+<p>For this part of the assignment you are to change the way in which the Clock class internally stores the time. The time should now be stored using only one integer that represents the number of seconds since midnight. The public interface for the Clock class <em><strong>Should Not Change</strong></em>. The exact same <a href="ClockTester.py">ClockTester</a> program, without being modified in any way, should produce the exact same output as before.</p>
+
+
+    </div> <!-- Assignment Details -->
+
+
+    <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+        <h3>What to Turn In</h3>
+<p>You need to turn in both versions of your Clock class. To make things easier, you should rename your first version (from Part I) to <code>Clock1.py</code> and rename your second version (from Part II) to <code>Clock2.py</code>.</p>
+
+        <p>
+            A Dropbox Folder has been created for this assignment in ICON. Please submit your files through ICON using that folder.
+        </p>
+    </div>
+
+
+<div id="footer" class="shadow"> <!-- Footer -->
+		&nbsp;
+</div> <!-- End footer -->
+	
+	
+</div> <!-- End entire body -->
+</body>
+</html>
