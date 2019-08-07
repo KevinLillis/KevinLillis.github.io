@@ -182,6 +182,7 @@ th.withBorders, td.withBorders {
 
 table.noBorders {
 	text-align: left;
+    align: right;
 	font-family: Verdana;
 	font-weight: normal;
 	font-size: 11px;
@@ -195,6 +196,23 @@ table.noBorders {
 td.noBorders {
 	border: none;
 }
+
+table.officeHours {
+	/*text-align: left;*/
+	font-family: Verdana;
+	font-weight: normal;
+	/*font-size: 11px;*/
+	color: #404040;
+	width: 300px;
+	border: none;
+	border-collapse: collapse;
+	border-spacing: 1px;
+}
+
+td.officeHours {
+	border: none;
+}
+
 
 ul.a {
 	list-style-type:disc;
