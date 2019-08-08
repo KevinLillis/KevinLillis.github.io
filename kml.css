@@ -48,6 +48,16 @@ td.weeknum {
 	border-bottom-width:5px;
 }
 
+td.gradweeknum {
+	font-weight:bold;
+	text-align: center;
+	vertical-align: middle;
+	width:10%;
+	border-left-width:5px;
+	border-top-width:5px;
+	border-bottom-width:5px;
+}
+
 /* --------------- Date Column --------------- */
 
 td.mondate {
@@ -94,6 +104,14 @@ td.finaldate{
 	border-bottom-width:5px;
 }
 
+td.onddaydate{
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+	border-top-width:5px;
+	border-bottom-width:5px;
+}
+
 /* --------------- Announcement Column --------------- */
 
 td.monann {
@@ -123,6 +141,14 @@ td.finalann{
 	border-right-width:5px;
 }
 
+
+td.onedayann{
+	border-top-width:5px;
+	border-bottom-width:5px;
+	border-right-width:5px;
+}
+
+
 /* --------------- Homework Column --------------- */
 
 td.monhw {
@@ -149,11 +175,17 @@ td.frihw {
 	border-bottom-width:5px;
 }
 
+td.onedayhw {
+	border-right-width:5px;
+	border-bottom-width:5px;
+}
+
 /* --------------- No Class --------------- */
 
 .noClass {
 	/* background-color: #FFE577; */ /*see individual page for color*/
 	text-align:center;
+    vertical-align:middle;
 	font-weight:bold;		
 }
 
