@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	<meta name="author" content="Your Name" />
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css" />
+	<script type="text/javascript" src="../../js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../../js/jquery.nivo.slider.js"></script>
+	<style>
+		sup{
+			vertical-align: super;
+			font-size: 80%;			
+		}
+	table {
+		font-family: verdana,arial,sans-serif;
+		/*color:#333333;*/
+		width: 100%;
+		border-width: 1px;
+		border-color: #666666;
+		border-collapse: collapse;
+		vertical-align: top;
+	}
+	th {
+		font-weight:bold;
+		vertical-align:bottom;
+		height:50px;
+	}
+	td {
+		text-align: left;
+		vertical-align: top;
+		border-width: 1px;
+		/*padding: 8px;*/
+		border-style: solid;
+		border-color: #666666;
+	}
+	td.tuedate {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	border-top-width: 5px;
+	}
+	td.thudate {
+		font-weight:bold;
+		text-align:center;
+		vertical-align: middle;
+		border-bottom-width:5px;
+	}
+	td.tueann {
+		border-top-width: 5px;
+		width: 40%;
+	}
+	td.thuann {
+		border-bottom-width:5px;
+	}
+	td.tuehw {
+		border-top-width:5px;
+		border-right-width:5px;
+	}
+	td.thuhw {
+		border-right-width:5px;
+		border-bottom-width:5px;
+	}
+	td.finaldate{
+		font-weight:bold;
+		text-align:center;
+		vertical-align: middle;
+		border-top-width:5px;
+		border-bottom-width:5px;
+	}
+	td.finalann{
+		border-top-width:5px;
+		border-bottom-width:5px;
+		border-right-width:5px;
+	}
+
+
+
+	td.weeknum {
+		font-weight:bold;
+		text-align: center;
+		vertical-align: middle;
+		width:5%;
+		border-left-width:5px;
+		border-top-width:5px;
+		border-bottom-width:5px;
+	}
+	td.mondate {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	border-top-width: 5px;
+	}
+	td.weddate {
+		font-weight:bold;
+		text-align:center;
+		vertical-align: middle;
+	}
+	td.fridate {
+		font-weight:bold;
+		text-align:center;
+		vertical-align: middle;
+		border-bottom-width:5px;
+	}
+	td.monann {
+	border-top-width: 5px;
+	width: 40%;
+	}
+	td.wedann {
+	}
+	td.friann {
+		border-bottom-width:5px;
+	}
+	td.monhw {
+		border-top-width:5px;
+		border-right-width:5px;
+	}
+	td.wedhw {
+		border-right-width:5px;
+	}
+	td.frihw {
+		border-right-width:5px;
+		border-bottom-width:5px;
+	}
+
+
+	</style>
+    <title>CSCI 195 - Spring 2017</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+	<div id="toplinks">
+		<ul class="toplinks_links">
+		<li><a href="http://www.sau.edu/">SAU</a></li>
+			<li><a href="http://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
+   			<li><a href="http://cis4.sau.edu/lillis/">Dr. Lillis</a></li>	
+		</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1><a href="../../index.html">CSCI 195</a></h1><br>
+			Object Oriented Programming I<br>
+			Spring 2017<br>
+			(3 Credits)
+        </div>
+
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="extended">
+		<img src="../../images/header.png" alt="" />
+	</div>
+
+	<!--<div id="content">
+	</div>-->
+
+<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+<h1>HW 06 - Two Circles</h1>
+
+<p>Write a program that prompts the user to enter the center coordinates and radius of two circles. The program should then display which of the following situations exists (see figure):</p>
+<ul style="padding-left: 2em;">
+   <li>The smaller circle is completely inside of the larger circle.</li>
+   <li>The smaller circle is completely outside of the larger circle.</li>
+   <li>The two circles overlap (two circles that touch at exactly one point are considered overlapping).</li>
+   </ul>
+<p style="padding-left:4em"><img src="cases.png" width="643" height="198"></p>
+<p>Below are three samples of the program. It may help if you use graph paper and draw the circles from the three examples below.</p>
+<table border="0" bordercolor="#000000">
+   <tr>
+    <td valign="middle" width="635" bgcolor="#000000">
+     <pre><font color="#FFFFFF">
+     Circle 1 - Center is (x1, y1), radius is r1
+     Enter x1: <font color="#00FF00">4</font>
+     Enter y1: <font color="#00FF00">4</font>
+     Enter r1: <font color="#00FF00">4</font>
+     Circle 2 - Center is (x2, y2), radius is r2
+     Enter x2: <font color="#00FF00">4</font>
+     Enter y2: <font color="#00FF00">2</font>
+     Enter r2: <font color="#00FF00">1</font>
+     </font>
+     </pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table border="0" bordercolor="#000000">
+   <tr>
+    <td valign="middle" width="635" bgcolor="#000000">
+     <pre><font color="#FFFFFF">
+     Circle 1 - Center is (x1, y1), radius is r1
+     Enter x1: <font color="#00FF00">3</font>
+     Enter y1: <font color="#00FF00">2</font>
+     Enter r1: <font color="#00FF00">1</font>
+     Circle 2 - Center is (x2, y2), radius is r2
+     Enter x2: <font color="#00FF00">8</font>
+     Enter y2: <font color="#00FF00">4</font>
+     Enter r2: <font color="#00FF00">2</font>
+     Small Circle Outside Big Circle
+     </font>
+     </pre>
+    </td>
+  </tr>
+</table>
+<br>
+<table border="0" bordercolor="#000000">
+   <tr>
+    <td valign="middle" width="635" bgcolor="#000000">
+     <pre><font color="#FFFFFF">
+     Circle 1 - Center is (x1, y1), radius is r1
+     Enter x1: <font color="#00FF00">4</font>
+     Enter y1: <font color="#00FF00">4</font>
+     Enter r1: <font color="#00FF00">4</font>
+     Circle 2 - Center is (x2, y2), radius is r2
+     Enter x2: <font color="#00FF00">9</font>
+     Enter y2: <font color="#00FF00">4</font>
+     Enter r2: <font color="#00FF00">2</font>
+     Circles Overlap
+     </font>
+     </pre>
+    </td>
+  </tr>
+</table>
+
+</div>
+
+
+<div id="content">
+<h2>What to Turn In</h2>
+
+<p>Create a single zip file containing the complete directory created by NetBeans and submit your zip file through <a href="https://blackboard.sau.edu">Blackboard</a>.</p>
+</div>
+
+<div id="footer" class="shadow">&nbsp;</div>
+</div>
+
+</body>
+</html>
