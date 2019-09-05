@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="thisclass.css">
+	<title>CSCI 630 - Fall 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks">
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li>
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="index.html">CSCI 630 M</a></h1>
+			<br>
+			Information Assurance<br>
+			Fall 2019<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="articleReview.html">Article Review</a></li>
+				<li><a href="researchPaper.html">Research Paper</a></li>
+				<li><a href="raProject.html">RA Project</a></li>
+				<li><a href="syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="images/header.png">
+		</div> <!-- End Header Image -->
+		
+		<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- single word syllabus -->
+			<h1>Google Dorking In-Class Activity</h1>
+		</div> <!-- End single word "Syllabus" -->
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div  id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- Main Points -->
+
+        <p>
+            Perform Google searches using various search operators to see if you can find documents that might be sensitive in nature. 
+            By selecting different operators and combining them together you can see Google hacking can be effective in exposing sensitive materials. 
+
+            Start by looking at this article: <a href="https://securitytrails.com/blog/google-hacking-techniques">Exploring Google Hacking Techniques</a>
+            
+            Here are some examples from the article:
+            <ul>
+            <li><strong><pre>allintext:username filetype:log myBB sql</pre></strong>
+            Exposes user names and passwords
+            </li>
+
+
+            <li><strong><pre>inurl:/proc/self/cwd</pre></strong>
+            Vulnerable server results will appear, along with their exposed directories that can be surfed from your own browser.
+            </li>
+
+            <li><strong><pre>intitle:"index of" inurl:ftp</pre></strong>
+            	Lists public FTP servers
+            </li>
+
+
+            <li><strong><pre>filetype:log username putty</pre></strong>
+            The PUTTY SSH client on windows always logs username. This shows them.
+            </li>
+
+
+            <li><strong><pre>filetype:xls inurl:"email.xls"</pre></strong>
+            Look for email lists
+            </li>
+            </ul>
+            
+
+	</div> <!-- Main Points -->
+	
+	<div id="footer" class="shadow"> <!-- Footer -->
+		&nbsp;
+	</div> <!-- End footer -->
+	
+	
+</div> <!-- End entire body -->
+</body>
+</html>
