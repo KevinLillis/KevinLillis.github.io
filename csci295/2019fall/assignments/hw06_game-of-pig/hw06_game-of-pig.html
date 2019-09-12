@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 295 - Fall 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 295 A</a></h1>
+			<br>
+			Programming II<br>
+			Fall 2019<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 06 &mdash; Game of Pig</h1>
+
+        <p>
+            Pig is a simple one-player dice game were a player tries to accumulate as many points as possible. The
+            game consists of five turns. The final score is the sum of the scores from each turn.
+        </p>
+        
+        <p>
+            During each turn, the player repeatedly rolls the die until either a 1 is rolled or
+            the player decides not to roll any more for that turn.
+            <ul>
+                <li>If a 1 is rolled, the player gets zero points for the turn and the turn immediately ends.</li>
+                <li>It the player rolls any other number, it is added to their total and the player has the option
+                    whether or not to roll again for that turn.</li>
+            </ul>
+        </p>
+        
+        <p>
+            At the end of the game, the players score is evaluation as follows:
+            <ul>
+                <li>Over 50: Excellent</li>
+                <li>31 &ndash; 50: Average</li>
+                <li>0 &ndash; 30: Poor</li>
+            </ul>
+        </p>
+        
+        <h2>Assignment</h2>
+        <p>
+            Write a Java program that allows the user to play a game of Pig. For this assignment you are provided with the skeleton
+            of a Java class that contains sevaral methods. You are required to start with this class and complete the methods
+            as described below. Here is the class to download: <a href="Pig.java">Pig.java</a>.
+        </p>
+        
+        <h2>Method Descriptions</h2>
+        <code>public static void main(String[] args)</code>
+        <p style = "padding-left:4em">
+            Your program should include this method exactly as it is. <strong>Do not change this method</strong>.
+        </p>
+        
+        <code>public static String evaluateScore(int score)</code>
+        <p style = "padding-left:4em">
+            Once the game game is finisehd, the score is passed to this method. The method evaluates the score and returns
+            one of the following: <code>excellent</code>, <code>average</code>, <code>poor</code>.
+        </p>
+        
+        <code>public static int playGame(Random gen, Scanner input)</code>
+        <p style = "padding-left:4em">
+            This method contains the main game and includes a loop that executes five times, once for each turn. The
+            body of the loop should include, among other things, a call to the <code>playTurn</code> method. This method 
+            should return the final score for the game.
+        </p>
+        
+        <code>public static int playTurn(Random gen, Scanner input)</code>
+        <p style = "padding-left:4em">
+            This method is responsible for playing a single turn and returning the points earned for that turn.
+        </p>
+        
+        <code>public static void printWelcome()</code>
+        <p style = "padding-left:4em">
+            This method simply prints the welcome message at the start of the game. See the Sample Run below for what the 
+            message should say.
+        </p>
+        
+        <code>public static boolean rollAgain()</code>
+        <p style = "padding-left:4em">
+            This method is used to determine if the player wants to roll again or end a turn. It returns <code>true</code> to roll
+            again and return <code>false</code> to end the turn.
+        </p>
+
+        <p style = "padding-left:4em">
+            The syntax for reading a <code>String</code> using a <code>Scanner</code> named <code>in</code> is: <code>in.next()</code>.
+        </p>
+        <p style = "padding-left:4em">
+            The syntax to see if a <code>String</code> named <code>value</code> equals <code>"y"</code> is: <code>value.equals("y")</code>.
+        </p>
+
+
+        <code>public static int rollDie(Random gen)</code>
+        <p style = "padding-left:4em">
+            This method uses the random number generator to return a value from 1 to 6, inclusive.
+        </p>
+        
+        
+        <h2>Sample Run</h2>
+        <p>
+            Below is an example of how your program should look when it runs. The things that the user 
+            types in are shown in green. You program<em><strong> does not</strong></em> need to use any 
+            colors. Other than that though, your program should look like the sample run.
+        </p>
+
+
+        <table border="0" bordercolor="#000000">
+           <tr>
+            <td valign="middle" width="635" bgcolor="#000000">
+
+            <pre><font color="#FFFFFF">
+            --== Welcome to the Game of Pig ==--
+
+            You get five turns to accumulate points by rolling a six-sided die.
+            In each turn, you may roll the die as many times as you want,
+            with the values of the rolls added to your score.
+            If, however, you roll a one, the score for that turn is zero.
+
+            At the end of the game, I will evaluate your score as follows:
+                    Below 30  Poor
+                    31 to 50  Average
+                    Above 50  Excellent
+
+            Good luck.
+
+            Turn 1
+               The roll is 6
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 6
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 5
+               Roll again? <font color="#00FF00">n</font>
+               Your score for this turn is 17
+               Your total score is 17
+
+            Turn 2
+               The roll is 3
+               Roll again? <font color="#00FF00">n</font>
+               Your score for this turn is 3
+               Your total score is 20
+
+            Turn 3
+               The roll is 5
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 4
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 6
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 5
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 2
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 1
+               Your score for this turn is 0
+               Your total score is 20
+
+            Turn 4
+               The roll is 3
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 4
+               Roll again? <font color="#00FF00">n</font>
+               Your score for this turn is 7
+               Your total score is 27
+
+            Turn 5
+               The roll is 6
+               Roll again? <font color="#00FF00">y</font>
+               The roll is 4
+               Roll again? <font color="#00FF00">n</font>
+               Your score for this turn is 10
+               Your total score is 37
+
+            That's the end of the game.
+            Your final score is 37.
+            You score is average.
+            </font>
+            </pre>
+            </td>
+          </tr>
+        </table>
+
+
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	    <p>
+            Create a single zip file that contains the entire project folder 
+            created by NetBeans and then submit your zip file through Blackboard.
+        </p>
+	</div>
+</div>
+</body>
+</html>
