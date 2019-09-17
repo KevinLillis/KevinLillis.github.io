@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 295 - Fall 2019</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 295 A</a></h1>
+			<br>
+			Programming II<br>
+			Fall 2019<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 07 &mdash; Pig Heuristics</h1>
+
+        <p>
+            When playing the game of Pig you created in <a href="../hw06_game-of-pig/hw06_game-of-pig.html">Homework  06</a>, 
+            there are several different strategies you can use. For example, you can choose to continue rolling on a turn 
+            until you get ten or more points. Or you may choose to flip a coin whenever you need to decide whether or not 
+            to roll again. These different strategies are sometime called <em>heuristics</em>. It might be interesting to 
+            simulate playing the game of Pig using some different heuristics. That is what you are going to do for this assignment.
+        </p>
+                
+        <h2>Assignment</h2>
+        <ol>
+            <li>
+                Modify the <code>rollAgain</code> method in your game of Pig so that instead of asking the user to decide whether 
+                or not to roll again, a turn continues until 10 or more points are earned for that turn. This will mean adding
+                some parameters to the method.
+            </li>
+            
+            <li>
+                Run the game 10,000 times using this heuristic. Display a summary showing the percent of Poor, Average, and
+                Excellent games produced when using this heuristic (see the sample run below). You should remove the print 
+                statements since the game will run 10,000 times.
+            </li>
+
+            <li>
+                Now change the game to randomly choose whether or not to keep rolling the dice on a turn. This will also involve
+                changing the parameters of the <code>rollAgain</code> method. Again run the game 10,000 times. Is this heuristic 
+                better or worse than the heuristic from Part 2 (answer using comments at the top of yoru program)?
+            </li>
+            
+            <li>
+                Devise and implement a heuristic that gives better results than either of the above heuristics.
+            </li>
+            <br>
+            <em>Note</em>: For this assignment you are not required to keep the methods proscribed in Homework 06. You can feel
+                free to structure your program as you wish.
+        </ol>
+        
+        
+        
+        
+        <h2>Sample Run</h2>
+        <p>
+            Below is an example of how your program should look when it runs. Pay special attention to the number formatting. You will
+            need to use <code>System.out.printf</code> for the formatting.
+        </p>
+
+
+        <table border="0" bordercolor="#000000">
+           <tr>
+            <td valign="middle" width="635" bgcolor="#000000">
+
+            <pre>
+            <font color="#FFFFFF">
+            <code>
+            Results after 100000 games
+            Poor      33.9%
+            Average   56.4%
+            Excellent  9.7%
+            </code>
+            </font>
+            </pre>
+            </td>
+          </tr>
+        </table>
+
+
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	    <p>
+            Create a single zip file that contains the entire project folder 
+            created by NetBeans and then submit your zip file through Blackboard.
+        </p>
+	</div>
+</div>
+</body>
+</html>
