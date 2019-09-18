@@ -42,6 +42,7 @@ public class PrintfExamples {
             %S  String, converts to uppercase
         
             %n  This isn't a format specifier, it inserts a new line character
+            %%  Gives the % sign
         */
         
         // Boolean values
@@ -93,8 +94,9 @@ public class PrintfExamples {
         System.out.printf("Double value scientific notation: %e %n", doubleValue);
         
         System.out.println(); // Just a blank line
-        System.out.printf("My message is --> %s <---%n", "Class of '80");
-        System.out.printf("In uppercase it's --> %S <---%n", "Class of '80");
+        String message = "Class of '80'";
+        System.out.printf("My message is --> %s <---%n", message);
+        System.out.printf("In uppercase it's --> %S <---%n", message);
     }
     
     /**
@@ -210,7 +212,7 @@ public class PrintfExamples {
         System.out.print("Enter y: ");
         double y = in.nextDouble();
 
-                System.out.print("Enter z: ");
+        System.out.print("Enter z: ");
         double z = in.nextDouble();
         
         String formatString = "The average of %.2f, %.2f, and %.2f is %.2f";
