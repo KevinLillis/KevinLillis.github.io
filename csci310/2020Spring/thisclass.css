@@ -3,3 +3,8 @@
 	/* This style specification starts in KML.css */
 	background-color: #5596DC;
 }
+
+.topic {
+    font-variant: small-caps;
+    font-weight: bold;
+}
