@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 310 - Spring 2020</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 310 A</a></h1>
+			<br>
+			Data Structures<br>
+			Spring 2020<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 01 &mdash; Treasure Map</h1>
+
+        <p>
+            For this assignment you are to write a Java program that will search a &quot;Treasure Map&quot; looking for the hidden treasure. The treasure map is a 9 &times; 9 grid, with the rows and columns numbered from 1 to 9. Each grid cell contains a two-digit integer that can be either positive or negative. The <em>treasure</em> is one of the negative numbers, but you don't know which one. If you start in the right cell, the positive numbers are clues which you can follow to the treasure. For each clue (which will always be positive) the ten's digit represents the row number and the unit's digit represents the column number of the next cell you should visit. So the number 64 would mean you should examine row 6, column 4 next. When you reach a negative number, you've found the treasure.
+        </p>
+        
+        <h2>Example</h2>
+        <p>Starting at position 43 in the below treasure map, the sequence of cells visited is: 43, 56, 14, 31, 79, 39, 84, 71. We stop at cell 71 since it contains a negative value. So the treasure is -74.</p>
+        
+        <img style="width:50%;display: block;margin-left: auto;margin-right: auto;" src="map1.png">
+
+        <h2>Input File</h2>
+        You program will need to read a map and starting position from a text file named <code>map.txt</code>. The text file contains ten lines. The first nine lines each contain nine numbers, separated by white space. This is the treasure map. The ten<sup>th</sup> line contains a single number, which is the starting location for the map. The file for our example is shown below. When I grade your program I will use a different input file, and thus a different map and starting location.
+        
+        <pre><code>
+          45   53  -22   31   91  -69  -92   81  -36 
+          54  -91  -19   59   57   19   73   96   64 
+          79  -84  -68  -49  -64   32  -13   85   84 
+         -14   35   56  -29   80  -84   59   10   52 
+         -26   97  -77  -76  -19   14  -28  -31   40 
+         -33   95   77   64   52   62  -16  -67  -23 
+         -74  -14   97  -11  -86  -29  -38  -86   39 
+          76   43   62   71   84  -37   42   91  -65 
+         -27  -16   34  -73  -72   13  -63  -10  -11 
+          43
+        </code></pre> 
+
+        <h2>Required Data Structure</h2>
+        You are required to read the entire input file into <em>a single int array</em>. The array will be a jagged 2-dimensional array, where the first nine rows each have length nine and the 10<sup>th</sup> row has length 1.
+
+        <h2>Required Output</h2>
+        Your program is to display the treasure map, formatted as shown in the Sample Run below (note the row and column numbers). Below the map the sequence of locations examined are to be displayed. At the end should be a message saying what the value of the treasure is. The format your your output should match the format of the Sample Run (but the actual values will be different).
+
+        <h2>Sample Run</h2>
+        <p>
+            Below is an example of how your program output should be formatted when it runs (your values will be different though).
+        </p>
+
+        <table border="0" bordercolor="#000000">
+           <tr>
+            <td valign="middle" width="635" bgcolor="#000000">
+             <code><pre><font color="#FFFFFF">
+                 1     2     3     4     5     6     7     8     9  
+              +-----------------------------------------------------+
+            1 |  45 |  53 | -22 |  31 |  91 | -69 | -92 |  81 | -36 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            2 |  54 | -91 | -19 |  59 |  57 |  19 |  73 |  96 |  64 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            3 |  79 | -84 | -68 | -49 | -64 |  32 | -13 |  85 |  84 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            4 | -14 |  35 |  56 | -29 |  80 | -84 |  59 |  10 |  52 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            5 | -26 |  97 | -77 | -76 | -19 |  14 | -28 | -31 |  40 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            6 | -33 |  95 |  77 |  64 |  52 |  62 | -16 | -67 | -23 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            7 | -74 | -14 |  97 | -11 | -86 | -29 | -38 | -86 |  39 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            8 |  76 |  43 |  62 |  71 |  84 | -37 |  42 |  91 | -65 |
+              +-----+-----+-----+-----+-----+-----+-----+-----+-----+
+            9 | -27 | -16 |  34 | -73 | -72 |  13 | -63 | -10 | -11 |
+              +-----------------------------------------------------+
+
+            43
+            56
+            14
+            31
+            79
+            39
+            84
+            71
+            Treasure is -74
+         </font>
+             </pre></code>
+            </td>
+          </tr>
+        </table>
+
+        <h2>What to Turn In</h2>
+	    <p>
+            Create a zip file containing your entire NetBeans folder and submit the zip file through Blackboard.
+        </p>
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	</div>
+</div>
+</body>
+</html>
