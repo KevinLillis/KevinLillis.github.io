@@ -1,0 +1,7 @@
+public class Triple<E1 extends Comparable, E2 extends Comparable, E3 extends Comparable> implements MyTriple<E1, E2, E3> {
+    private E1 first;
+    private E2 second;
+    private E3 third;
+    
+    
+}
