@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","url":"allclasses-index.html"},{"p":"<Unnamed>","l":"MyAbstractList"},{"p":"<Unnamed>","l":"MyArrayList"},{"p":"<Unnamed>","l":"MyArrayListOp"},{"p":"<Unnamed>","l":"MyList"}]
