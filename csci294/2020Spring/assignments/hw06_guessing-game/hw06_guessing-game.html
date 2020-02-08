@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 294 - Spring 2020</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 294 A</a></h1>
+			<br>
+			C++ Programming Topics<br>
+			Spring 2020<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 06 &ndash; Guessing Game</h1>
+
+In class we wrote a <a href="../../inclass/wk04_2020-02-07_fri/GuessingGame.cpp">Guessing Game</a> program. For this assignment you are to write an enhanced Guessing Game program.
+<ol>
+   <li>You program should only accept guesses that are from 1 to 100, inclusive.</li>
+   <li>At the end of a game the program should show how many tries it took guess the number. Notice that in the example programs provided below the message for 1 guess is slightly different than for more than 1 guess.</li>
+   <li>At the end of a game the program should rate the player based on the how many tries it took to guess the number. Invalid guesses are not be counted.
+      <ol type="a">
+         <li>1 - 3 &quot;Lucky&quot;</li>
+         <li>5 - 6 &quot;Awesome&quot;</li>
+         <li>7 - 9 &quot;Good&quot;</li>
+         <li>10 - 12 &quot;Meh&quot;</li>
+         <li>13 - 15 &quot;Poor&quot;</li>
+         <li>More than 15 &quot;Pathetic&quot;
+         </li>
+      </ol>
+   </li>
+   <li>When a game ends, the program should ask if the user wants to play again. They should enter 1 to play again or 2 to quit. The program should only accept entries of 1 or 2.</li>
+   <li>When the player quits a &quot;Thank you for playing...&quot; is displayed.
+</ol>
+
+        <h3>Example Programs</h3>
+        <p>
+            Below are two compiled executable programs (one for PC and one for Mac) that demonstrate <em>exactly</em> how your program is to behave.
+            <ul>
+                <li>PC Windows: <a href = "GuessingGame.exe">GuessingGame.exe</a></li>
+                <li>Mac OS X: <a href = "GuessingGame.o">GuessingGame.o</a>
+            </ul>
+        </p>
+
+    <h3>Required Functions</h3>
+    <p>
+        Your program is to include the following functions:
+    </p>
+        <code style="padding-left:4em">int getGuess(string prompt)</code><br>
+    <p style="padding-left:6em">
+     	Displays the given prompt, which should include instructions to enter a 
+     	number from 1 to 100. Reads a number from the keyboard. Performs input
+     	validation to ensure a number from 1 to 100 is entered. Returns the number
+     	once it has been accepted.    
+    </p>
+    
+    <code style="padding-left:4em">string getRank(int guessCount)</code>
+    <p style="padding-left:6em">
+    	Given the number of tries it took to guess the secrete number, returns
+    	one of the following rankings:<pre>
+    		    1 -  3 Guesses: &quot;Lucky&quot;
+    		    4 -  6 Guesses: &quot;Awesome&quot;
+    		    7 -  9 Guesses: &quot;Good&quot;
+    		   10 - 12 Guesses: &quot;Meh&quot;
+    		   13 - 15 Guesses: &quot;Poor&quot;
+    		      > 15 Guesses: &quot;Pathetic&quot;
+        </pre>
+    </p>
+    
+    <code style="padding-left:4em">bool getPlayAgain(string prompt)</code>
+    <p style="padding-left:6em">
+	Displays the given prompt, which should include instructions to enter  
+	to enter 1 to play again or 2 to quit and reads a number from the keyboard.
+	Performs input validation to ensure only 1 or 2 is entered. Returns <code>true</code> or <code>false</code> based on the number entered.
+    </p>
+    
+    <code style="padding-left:4em">void playOneGame()</code>
+    <p style="padding-left:6em">
+    	Plays one round of the Guessing Game.
+    </p>
+    
+    <code style="padding-left:4em">int main()</code>
+    <p style="padding-left:6em">
+        The <code>main</code> function should:
+        <ol style="padding-left:10em">
+            <li>Seed the random number generator</li>
+            <li>Contain a loop that repeatedly plays the game until the user decides to quit</li>
+            <li>Print the &quot;Thank you for playing...&quot; message.
+        </ol>
+    </p>
+    
+
+
+    <h3>Strings</h3>
+    <p>
+        This assignment requires that you pass strings to functions and return strings from functions. There is a lot to say about C++ strings. For now let's keep it simple. This program, <a href="../../handouts/Strings1.cpp">Strings1.cpp</a>, provides a simple example of using strings. You should look at this program to see how to use strings for this assignment.
+    </p>
+
+
+        <h3>What to Turn In</h3>
+	    <p>
+            <ol>
+                <li>Name your C++ source files <code>hw06.cpp</code>.</li>
+                <li>Create a zip file containing your source file.</li>
+                <li>Submit the zip file through Blackboard.</li>
+            </ol>
+        </p>
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	</div>
+</div>
+</body>
+</html>
