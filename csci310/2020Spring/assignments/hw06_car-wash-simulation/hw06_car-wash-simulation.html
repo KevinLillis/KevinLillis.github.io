@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 310 - Spring 2020</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 310 A</a></h1>
+			<br>
+			Data Structures<br>
+			Spring 2020<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 06 &mdash; Car Wash Simulation</h1>
+
+        <p>
+            As we discussed in class, this assignment involves creating a car wash simulation. The simulation should be set up as follows:
+            <ul>
+                <li>The car wash takes <em>s</em> minutes to wash a car.</li>
+                <li>The probability that a car arrives during any particular minute is given by <em>p</em>, where <em>0 &le; p &le; 1</em>.</li>
+                <li>The simulation runs for a minimum of <em>d</em> simulated minutes, during which time a car arrives  each minute with probability <em>p</em>. After the initial <em>d</em> minutes have elapsed, the simulation continues to run until all cars have been washed.</li>
+                <li>At the end of the simulation a log is printed to the standard output device.</li>
+    </ul>
+    </p>
+
+	<h2>Additional Details</h2>
+    <h3>JavaDoc</h3>
+    <p>
+        Here are <a href="javaDoc/package-summary.html">JavaDoc pages</a> I've generated for this assignment.
+    </p>
+
+	<h3>Generic Queue</h3>
+    <p>For this part of the assignment you are to write generic queue class as follows:
+    <ul>
+      <li>The name of your class must be <code>LinkedQueue</code>.</li>
+      <li>Your class must implement this <a href="QueueInterface.java">QueueInterface.java</a> interface.</li>
+      <li>Your class must use a linked structure to store the items in the queue. You can use the <code>SNode</code> class from <a href="../hw04_singly-linked-list/hw04_singly-linked-list.html">Homework 04</a>.</li>
+      <li>The instance variables are two <code>SNode</code> references named <code>front</code> and <code>rear</code> and an <code>int</code> named <code>size</code>.
+      <li>The only constructor is the default constructor which sets <code>front</code> and <code>rear</code> to <code>null</code> and sets <code>size</code> to zero.
+      <li>The queue interface requires an <code>EmptyQueueException</code> to be thrown. This is a custom exception that you'll have to write</li>
+
+    </ul>
+    </p>
+
+    <h3>Car Class</h3>
+    <p>Your simulation will need to have a class to represent each car as an object.
+    <ul>
+        <li>The name of this class should be <code>Car</code>.</li>
+        <li>The <code>Car</code> class must implement the <a href="CarInterface.java">CarInterface.java</a> interface.</li>
+        <li>The <code>Car</code> class has three <code>int</code> instance variables: <code>arrivalTime</code>, <code>startWashTime</code>, and <code>id</code>.</li>
+        <li>There is just one constructor for the <code>Car</code> class. It takes initial values for the arrival time and the ID.
+        </li>
+        
+    </ul>
+    </p>
+
+    <p style="padding-left:8em"><code>public Car(int arrivalTime, int id){ ... }</code></p>
+    
+    <h3>CarWashSimulator Class</h3>
+    <p>This is the class that actually performs the simulation. It has only one constructor that takes parameters for <em>d</em>, <em>s</em>, and <em>p</em> (see discussion above).
+    
+    </p>
+    
+    <p style="padding-left:4em"><code>public CarWashSimulator(int duration, int washTime, double arrivalProb){ ... }</code>
+    </p>
+    
+    <p>This class must  implement the <a href="SimulatorInterface.java">SimulatorInterface.java</a> interface.
+    </p>
+    
+    <p>Note that the <code>CarWashSimulator</code> does not actually print anything while the simulation is running. Instead, it saves the log in an instance variable that can be retrieved using the <code>getLog</code> method once the simulation is complete.</p>
+    
+    <h3>Main Program</h3>
+    <p>Your main program should be in a class called <code>SimRunner</code>. The main method for this program will be very small. It should:
+    <ol>
+      <li>Create a <code>CarWashSimulator</code>.</li>
+      <li>Call the simulator's <code>runSimulation</code> method.</li>
+      <li>Print the log returned from the simulator's <code>getLog</code> method.</li>
+    </ol>
+    </p>
+    
+    
+    <h3>Required Output and Sample Run</h3>
+    <p>The log should contain two parts: (i) a minute by minute status, and (ii) a summary. Below is a sample run using the following parameters:
+    <ul>
+      <li>Duration: 20 minutes</li>
+      <li>Wash time: 4 minutes</li>
+      <li>Arrival probability: 0.09</li>
+      <li>Random generator seed: 1234</li>
+    </ul>
+    </p>
+    
+    <p>Here are a few things to note about the output:
+    <ul>
+      <li>Even though only 20 minutes were specified, the simulation ran for 22 minutes, allowing all cars to be washed.</li>
+      <li>Each car is given a unique number to help follow what's going on.</li>
+      <li>The values in the summary are formatted so that only one digit is used to the right of the decimal point.</li>
+    </ul>
+    </p>
+    
+<table border="0" bordercolor="#000000">
+  
+  <tr>
+
+    <td valign="middle" width="635" bgcolor="#000000">
+     <pre style="padding-left:4em"><font color="#FFFFFF">
+Minute 1
+Minute 2
+Minute 3
+Minute 4
+Minute 5
+Minute 6
+Minute 7
+Minute 8
+Minute 9
+Minute 10, car 1 arrived, Started washing car 1
+Minute 11
+Minute 12, car 2 arrived
+Minute 13, car 3 arrived
+Minute 14, Finished washing car 1, Started washing car 2
+Minute 15
+Minute 16
+Minute 17
+Minute 18, Finished washing car 2, Started washing car 3
+Minute 19
+Minute 20
+Minute 21
+Minute 22, Finished washing car 3
+
+===========================================
+                  SUMMARY                  
+===========================================
+Simulated time: 22 minutes
+Cars Washed: 3
+Max wait time: 5 minutes
+Average wait time: 2.3 minutes
+Cars with zero wait: 1 (33.3%)
+     </font>
+     </pre>
+    </td>
+  </tr>
+
+</table>    
+
+        <h2>What to Turn In</h2>
+	    <p>
+            Create a zip file containing your entire NetBeans folder and submit the zip file through Blackboard.
+        </p>
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	</div>
+</div>
+</body>
+</html>
