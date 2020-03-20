@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 294 - Spring 2020</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 294 A</a></h1>
+			<br>
+			C++ Programming Topics<br>
+			Spring 2020<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 09 &ndash; Temperature Class</h1>
+
+	<p>For this assignment you will write a class that represents a temperature.</p>
+	<h2>A Little History</h2>
+    
+<p><a href="https://en.wikipedia.org/wiki/Daniel_Gabriel_Fahrenheit">Daniel
+Gabriel Fahrenheit</a> <span class="nobreak">(1686-1736)</span> devoted most of
+his life to creating precision meteorological instruments. Fahrenheit invented
+the mercury thermometer in 1714. Fahrenheit sought to create a practical
+temperature scale in which 0 corresponded with the coldest temperature normally
+encountered in Western Europe and 100 corresponded to the hottest temperature.
+Fahrenheit initially created a temperature scale in which 0 represented the
+temperature of a salt and ice mixture, 30 represented the freezing point of
+water, and 90 represented the mean human body
+temperature. Fahrenheit later adjusted his
+temperature scale so that 32 represented the freezing point of water and 212
+represented the boiling point of water. The units of
+the Fahrenheit temperature scale were designated &quot;degree Fahrenheit&quot;
+(symbol &deg;F). The Fahrenheit temperature scale is still used today
+in many countries, including the United States.</p>
+
+<p>In 1742, 
+<a href="https://en.wikipedia.org/wiki/Anders_Celsius">Anders
+Celsius</a> (1701-1744) created an inverted
+centigrade temperature scale in which 0 represented the boiling point of water
+and 100 represented the freezing point.</p>
+
+<p>In 1744, <a href="https://en.wikipedia.org/wiki/Carl_Linnaeus">Carl
+Linnaeus</a> (1707-1778) suggested reversing the
+temperature scale of Anders Celsius so that 0 represented the freezing point of
+water and 100 represented the boiling point. The centigrade relative temperature scale gradually became popular throughout
+the world. The units of the centigrade temperature scale were designated
+&quot;degree Celsius&quot; (symbol &deg;C).</p>
+
+<p>In 1848, <a href="https://en.wikipedia.org/wiki/William_Thomson,_1st_Baron_Kelvin">William
+Thomson</a> (1824-1907) proposed a thermodynamic
+temperature scale which assigned 0 to thermodynamic absolute zero and used the
+degree centigrade as its base unit. This absolute scale was later named the
+centigrade thermodynamic temperature scale (after Thomson's paper title) and its
+unit designated &quot;degree Kelvin&quot; (symbol &deg;K).</p>
+
+<p>In 1859, <a href="https://en.wikipedia.org/wiki/William_John_Macquorn_Rankine">William
+John Macquorn Rankine</a> (1820-1872) proposed
+another thermodynamic temperature scale which also assigned 0 to thermodynamic
+absolute zero, but used the degree Fahrenheit as its base unit. This absolute
+scale was later named the Rankine thermodynamic temperature scale and its unit
+designated &quot;degree Rankine&quot; (symbol &deg;R).</p>
+
+
+<h2>Some Formulas</h2>
+
+<p>The following table shows how to convert among these four standard temperature scales</p>
+
+  <table>
+  <tbody>
+    <tr>
+      <th>From</th>
+      <th>To</th>
+      <th>Formula</th>
+    </tr>
+    <tr>
+      <td>Fahrenheit</td>
+      <td>Celsius</td>
+
+      <td>&deg;C = (&deg;F - 32) * 5/9</td>
+    </tr>
+    <tr>
+      <td>Fahrenheit</td>
+      <td>Kelvin</td>
+      <td>&deg;K = (&deg;F + 459.67) * 5/9</td>
+    </tr>
+
+    <tr>
+      <td>Fahrenheit</td>
+      <td>Rankine</td>
+      <td>&deg;R = &deg;F + 459.67</td>
+    </tr>
+    <tr>
+      <td>Celsius</td>
+
+      <td>Fahrenheit</td>
+      <td>&deg;F = (&deg;C * 9/5) + 32</td>
+    </tr>
+    <tr>
+      <td>Celsius</td>
+      <td>Kelvin</td>
+      <td>&deg;K = &deg;C + 273.15</td>
+
+    </tr>
+    <tr>
+      <td>Celsius</td>
+      <td>Rankine</td>
+      <td>&deg;R = (&deg;C * 9/5) + 32 + 459.67</td>
+    </tr>
+    <tr>
+
+      <td>Kelvin</td>
+      <td>Fahrenheit</td>
+      <td>&deg;F = (&deg;K * 9/5) - 459.67</td>
+    </tr>
+    <tr>
+      <td>Kelvin</td>
+      <td>Celsius</td>
+
+      <td>&deg;C = &deg;K - 273.15</td>
+    </tr>
+    <tr>
+      <td>Kelvin</td>
+      <td>Rankine</td>
+      <td>&deg;R = &deg;K * 9/5</td>
+    </tr>
+
+    <tr>
+      <td>Rankine</td>
+      <td>Fahrenheit</td>
+      <td>&deg;F = &deg;R - 459.67</td>
+    </tr>
+    <tr>
+      <td>Rankine</td>
+
+      <td>Celsius</td>
+      <td>&deg;C = (&deg;R - 459.67 - 32) * 5/9</td>
+    </tr>
+    <tr>
+      <td>Rankine</td>
+      <td>Kelvin</td>
+      <td>&deg;K = &deg;R / (9/5)</td>
+
+    </tr>
+  </tbody>
+  </table>
+
+<h2>Instance Variables</h2>
+<p>The Temperature class will have only one instance variable called <code>degK</code>, which is of type <code>double</code>. This will represent the temperature in degrees Kelvin.</p>
+
+<h2>Constructors</h2>
+<p>There will be three constructors for the Temperature class:
+<ol style="padding-left: 4em;">
+  <li>The default constructor, which sets the temperature to 0 &deg;K.</li>
+  <li>A constructor that takes one <code>double</code> representing the temperature in degrees Kelvin.</li>
+  <li>A constructor that takes a temperature of type <code>double</code> and a <code>char</code> representing the scale. The valid scale values are:</li>
+</ol></p>
+
+<p>
+  <table>
+  <tbody>
+      <tr>
+          <th>Parameter Value</th>
+          <th>Scale</th>
+      </tr>
+    <tr>
+      <td><code>'F'</code> or <code>'f'</code></td>
+      <td>Fahrenheit</td>
+    </tr>
+    <tr>
+      <td><code>'C'</code> or <code>'c'</code></td>
+      <td>Celsius</td>
+    </tr>
+    <tr>
+      <td><code>'R'</code> or <code>'r'</code></td>
+
+      <td>Rankine</td>
+    </tr>
+    <tr>
+      <td><code>'K'</code> or <code>'k'</code></td>
+      <td>Kelvin</td>
+
+    </tr>
+    </tbody>
+  </table>
+</p>  
+<p>Since the temperature is stored in degrees Kelvin, when working with a
+temperature in a different scale, it will need to be converted before it is
+stored or retrieved. You program will need to make the following conversions:</p>
+  <table>
+
+    <tr>
+        <th>When Saving</th>
+        <th>When Retrieving</th>
+    </tr>
+    <tr>
+      <td><code>&deg;F</code> &rarr; <code>&deg;K</code></td>
+      <td><code>&deg;K</code> &rarr; <code>&deg;F</code></td>
+    </tr>
+    <tr>
+      <td><code>&deg;R</code> &rarr; <code>&deg;K</code></td>
+      <td><code>&deg;K</code> &rarr; <code>&deg;R</code></td>
+    </tr>
+    <tr>
+      <td><code>&deg;C</code> &rarr; <code>&deg;K</code></td>
+      <td><code>&deg;K</code> &rarr; <code>&deg;C</code></td>
+    </tr>
+  </table>
+
+<h2>Public Methods</h2>
+<p>Your class should provide the following methods to allow users to interface with your class</p>
+
+<table>
+    <tr>
+        <th>Method</th>
+        <th>Description</th>
+    </tr>
+    <tr><td width="362"><code>void set(double temp, char scale)</code></td>
+       <td width="493">sets the temperature (you will need to convert the temperature to Kelvin)</td></tr>
+    <tr>
+       <td><code>double get()</code></td>
+       <td>Returns the temperature in Kelvin</td>
+    </tr>
+    <tr><td><code>double get(char scale)</code></td>
+       <td>returns the temperature (you will need to convert to the  scale indicated)</td></tr>
+    <tr>
+       <td><code>boolean isLessThan(Temperature t)</code></td>
+       <td>returns true if this temperature < t</td></tr>
+    <tr><td><code>boolean isLessThanOrEqual(Temperature t)</code></td><td>returns true if this temperature <= t</td></tr>
+    <tr><td><code>boolean isEqual(Temperature t)</code></td><td><p>returns true if this temperature == t</p>
+       <p>Note that two temperatures that differ by less than 10E-12 should be considered equal.</p></td></tr>
+    <tr><td><code>boolean isGreaterThanOrEqual(Temperature t)</code></td><td>returns true if this temperature >= t</td></tr>
+    <tr><td><code>boolean isGreaterThan(Temperature t)</code></td><td>returns true if this temperature > t</td></tr>
+    <tr><td><code>boolean isNotEqualTo(Temperature t)</code></td><td>returns true if this temperature != t</td></tr>
+</table>
+
+<h2>Tester Program</h2>
+To help you evaluate whether or not your class is working properly you may use this <code><a href="TemperatureTester.cpp">TemperatureTester.cpp</a></code> program. It everything is working, the program should display the message <code>No Errors Found</code>.
+<h2>What to Turn In </h2>
+<p>
+   You should create a zip file containing the below two file and submit the zip file through Blackboard.
+   <ul>
+       <li><code>Temperature.h</code>, which contains the class definition.</li>
+       <li><code>Temperature.cpp</code>, which contains the class implementation.</li>
+   </ul> 
+</p>
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	</div>
+</div>
+</body>
+</html>
