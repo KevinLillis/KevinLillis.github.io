@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" media="all" href="../../../inland.css">
+	<link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+	<title>CSCI 310 - Spring 2020</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix"> <!-- entire body -->
+	<div id="toplinks"> <!-- toplinks -->
+		<ul class="toplinks_links">
+			<li><a href="https://www.sau.edu/">SAU</a></li>
+			<li><a href="https://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li> 
+			<li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+		</ul>
+	</div> <!-- End toplinks -->
+	
+	<div id="header" class="clearfix shadow"> <!-- Top stuff including header image -->
+		<div id="sitetitle" class="clearfix"> <!-- Site Title -->
+			<h1><a href="../../index.html">CSCI 310 A</a></h1>
+			<br>
+			Data Structures<br>
+			Spring 2020<br>
+            3 Credits
+		</div> <!-- End Site Title -->
+
+		<div id="nav" class="clearfix"> <!-- nav -->
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+			</ul>
+		</div> <!--End nav -->
+		
+		<div id="extended"> <!-- Header Image -->
+			<img src="../../images/header.png">
+		</div> <!-- End Header Image -->
+
+		
+	</div> <!-- End Top stuff including header image -->
+	
+	<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333"> <!-- HW Assignment -->
+        
+		<h1>Homework 10 &mdash; String Graph, Part 1</h1>
+        	<p>In class we discussed the <a href="Graph.java">Graph.java</a> interface. For this assignment you will begin to implement this interface.
+        <h2>Instance Variables</h2>
+        <p>Your class should contain the following instance variables:
+            <code>
+            <ul>
+                <li>protected String[] labels;	       // 1D array to store the vertices</li>
+                <li>protected boolean[][] edgeMatrix;  // 2D array to store adjacencies between vertices</li>
+                <li>protected int numVertices;</li>
+                <li>protected int numEdges;</li>
+                <li>protected int capacity;</li>
+            </ul>
+        </code>
+            </p>
+        <h2>Methods</h2>
+        <p>
+            At this point, we haven't discussed how to implement all of the methods required by the Graph interface. So for this assignment you are only required to implement the methods indicated below. For now, the bodies of the remaining methods can throw the following exception: <code>throw new UnsupportedOperationException("Not supported yet.");</code>. The required methods are:
+            <code>
+            <ul>
+                <li>int numberOfVertices()</li>
+                <li>int numberOfEdges()</li>
+                <li>String[] getVertexLabels()</li>
+                <li>void addVertex(string newVertex)</li>
+                <li>boolean vertexExists(String vertex)</li>
+                <li>boolean edgeExists(String vertex1, String vertex2)</li>
+                <li>void deleteVertex(String vertex)</li>
+                <li>void addEdge(String vertex1, String vertex2)</li>
+                <li>void deleteEdge(String vertex1, String vertex2)</li>
+                <li>void addVertices(String[] newVertices)</li>
+                <li>void addEdges(String[][] newEdges)</li>
+                <li>void resize(int newCapacity)</li>
+            </ul>
+            </code>
+        </p>
+        
+        <h2>Constructors</h2>
+        <p>
+            Your implementation is required to include the following constructors:
+            <ul>
+                <li>public StringGraph()</li>
+                <li>public StringGraph(int initCapacity)</li>
+                <li>public StringGraph(String[] initVertices)</li>
+                <li>public StringGraph(String[] initVertices, String[][] initEdges)</li>
+            </ul>
+        </p>
+
+        <h2>toString() Methods</h2>
+        <p>
+            Your class should contain several &quot;<em>toString</em>&quot; methods, named <code>toString1()</code>, <code>toString2()</code>, etc. There should also an actual <code>toString()</code> methods that simply calls one of the other <em>toString</em> methods. The different required <em>toString</em> methods should:
+            <ol>
+                <li>Show the order, size, maximum degree, minimum degree, and average degree of the graph</li>
+                <li>Show the order and size of the graph, then list each vertex along with its adjacent vertices</li>
+                <li>Show the order and size of the graph, then list each vertex in sorted order, along with each vertex's neighbors, in sorted order</li>
+                <li>Show the adjacency matrix (see sample runs below for details)l
+            </ol>
+        </p>
+
+        <h2>Tester Program</h2>
+            <p>Write a tester program that creates a default <code>StringGraph</code> object and then performs the operations listed below. After each operation, your program should display information about the graph. Your output must <em><strong>exactly match</strong></em> the Sample Output shown below. Most of the output can be achieved using the appropriate <code>toStirng</code> method. Your program should:
+            <ol>
+                <li>Individually add three vertices labeled <code>"A"</code>, <code>"B"</code>, and <code>"C"</code> by calling the <code>addVertex</code> method three times. </li>
+        
+                <li>Add vertices <code>"D"</code>, <code>"E"</code>, and <code>"F"</code> all at once using the <code>addVertices</code> method.</li>
+        
+                <li>Remove vertex <code>"B"</code>.</li>
+        
+                <li>Individually add the three edges <code>{"A", "C"}</code>, <code>{"A", "D"}</code>, and <code>{"C", "E"}</code> by calling the <code>addEdge</code> method three times.</li>
+        
+                <li>Add the edges <code>{"F", "A"}</code>, <code>{"F", "D"}</code>, and <code>{"F", "E"}</code> all at once using the <code>addEdges</code> method.</li>
+        
+                <li>Remove vertex <code>"A"</code>.</li>
+        
+                <li>Remove edge <code>{"E", "C"}</code>.</li>
+            </ol>
+            </p>
+
+<h2>Hand-Drawn Graphs</h2>
+<p>
+    For <em>each operation</em> listed under the tester, hand-draw a picture of the graph.
+</p>
+           
+        <h2>What to Turn In</h2>
+	    <p>
+            For the programming portion of this assignment:<br>
+            <span style="padding-left:4em">Create a zip file containing your entire NetBeans</span><br>
+            <br>
+            For the hand-drawn graphs:<br>
+            <span style="padding-left:4em">Create a single PDF file with your drawing (only PDF files will be accepted)</span><br>
+            <br>
+            Upload the above <strong><em>two files</em></strong> to Blackboard.
+        </p>           
+            
+<h2>Sample Output</h2>
+<table border="0" bordercolor="#000000">
+
+  <tr>
+
+    <td valign="middle" width="635" bgcolor="#000000">
+     <code><pre><font color="#FFFFFF">
+
+            ------------------------------------
+            Part 1
+
+                  A  B  C
+                  0  1  2
+
+            A 0   -  -  -
+            B 1   -  -  -
+            C 2   -  -  -
+            vertices:3   edges:0
+
+            ------------------------------------
+            Part 2
+
+                  A  B  C  D  E  F
+                  0  1  2  3  4  5
+
+            A 0   -  -  -  -  -  -
+            B 1   -  -  -  -  -  -
+            C 2   -  -  -  -  -  -
+            D 3   -  -  -  -  -  -
+            E 4   -  -  -  -  -  -
+            F 5   -  -  -  -  -  -
+            vertices:6   edges:0
+
+            ------------------------------------
+            Part 3
+
+                  A  F  C  D  E
+                  0  1  2  3  4
+
+            A 0   -  -  -  -  -
+            F 1   -  -  -  -  -
+            C 2   -  -  -  -  -
+            D 3   -  -  -  -  -
+            E 4   -  -  -  -  -
+            vertices:5   edges:0
+
+            ------------------------------------
+            Part 4
+
+                  A  F  C  D  E
+                  0  1  2  3  4
+
+            A 0   -  -  T  T  -
+            F 1   -  -  -  -  -
+            C 2   T  -  -  -  T
+            D 3   T  -  -  -  -
+            E 4   -  -  T  -  -
+            vertices:5   edges:3
+
+            ------------------------------------
+            Part 5
+
+                  A  F  C  D  E
+                  0  1  2  3  4
+
+            A 0   -  T  T  T  -
+            F 1   T  -  -  T  T
+            C 2   T  -  -  -  T
+            D 3   T  T  -  -  -
+            E 4   -  T  T  -  -
+            vertices:5   edges:6
+
+            ------------------------------------
+            Part 6
+
+                  E  F  C  D
+                  0  1  2  3
+
+            E 0   -  T  T  -
+            F 1   T  -  -  T
+            C 2   T  -  -  -
+            D 3   -  T  -  -
+            vertices:4   edges:3
+
+            ------------------------------------
+            Part 7
+
+                  E  F  C  D
+                  0  1  2  3
+
+            E 0   -  T  -  -
+            F 1   T  -  -  T
+            C 2   -  -  -  -
+            D 3   -  T  -  -
+            vertices:4   edges:2
+
+     </font>
+     </pre></code>
+    </td>
+  </tr>
+
+</table>
+            
+
+
+
+	</div> <!-- End HW Assignment -->
+    
+	<div id="footer" class="shadow">
+	</div>
+</div>
+</body>
+</html>
