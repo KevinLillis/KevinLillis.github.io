@@ -2,7 +2,7 @@
 # Passes indexes instead of making copies of the smaller lists
 def sumList(L, low = None, high = None):
     if low == None:
-        # if now equals None, then both low and high equal None
+        # if low equals None, then both low and high equal None
         low = 0
         high = len(L) - 1
         
