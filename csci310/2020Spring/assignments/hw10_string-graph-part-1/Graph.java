@@ -25,11 +25,18 @@ public interface Graph {
     
     /**
      * Adds a new vertex to the graph
-     * @param newVertex the new vertex to be added
+     * @param vertex the new vertex to be added
      * @throws RuntimeException if vertex already exists
      */
-    void addVertex(String newVertex);
+    void addVertex(String vertex);
 
+    /**
+     * Adds one or more vertices to the graph
+     * @param vertices the vertices to be added
+     * @throws RuntimeException if any of the vertices already exist
+     */
+    void addVertices(String[] vertices);
+    
     
     /**
      * Determines if a vertex with the given label exists.
@@ -66,6 +73,14 @@ public interface Graph {
      */
     void addEdge(String vertex1, String vertex2);
 
+    /**
+     * Adds one or more edges. Each row i in the edges parameter represents
+     * the pair of vertices edges[i][0] and edges[i][1] for a new edge.
+     * @param edges a 2 x w array of vertices
+     * @throws RuntimeException any of the edges already exist or if any of
+     * the specified vertices do not exist.
+     */
+    void addEdges(String[][] edges);    
     
     /**
      * Deletes an edge
@@ -93,6 +108,15 @@ public interface Graph {
      * @throws RuntimeException if the vertex does not exist.
      */
     int degree(String vertex);
+    
+    /**
+     * Resizes the array of labels and the adjacency matrix to a new capacity.
+     * Make the capacity either larger or smaller, depending on the value 
+     * of newCapacity.
+     * @param newCapacity The new capacity. 
+     * Can be either larger or smaller than current capacity.
+     */
+    public void resize(int newCapacity);    
 
     
     /**
