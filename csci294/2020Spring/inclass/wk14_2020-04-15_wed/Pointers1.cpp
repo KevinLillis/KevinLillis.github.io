@@ -1,4 +1,5 @@
 // File: Pointers1.cpp
+// Declaring and dereferencing pointers
 # include <iostream>
 using namespace std;
 

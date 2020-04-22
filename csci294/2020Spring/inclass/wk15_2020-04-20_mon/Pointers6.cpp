@@ -1,4 +1,5 @@
 // File: Pointers6.cpp
+// Pointer arithmetic
 # include <iostream>
 using namespace std;
 

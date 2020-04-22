@@ -1,4 +1,5 @@
 // File: Pointers4.cpp
+// Pass by reference with pointers
 # include <iostream>
 using namespace std;
 

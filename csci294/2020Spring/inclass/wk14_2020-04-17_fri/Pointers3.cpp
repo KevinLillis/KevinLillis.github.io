@@ -1,6 +1,5 @@
 // File: Pointers3.cpp
-
-/* Doing "pass by reference" using pointers */
+// Pass by reference with pointers
 # include <iostream>
 using namespace std;
 
