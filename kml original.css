@@ -48,7 +48,7 @@ td.weeknum {
 	border-bottom-width:5px;
 }
 
-td.gradweeknum, td.onedaynumthick {
+td.gradweeknum {
 	font-weight:bold;
 	text-align: center;
 	vertical-align: middle;
@@ -58,19 +58,9 @@ td.gradweeknum, td.onedaynumthick {
 	border-bottom-width:5px;
 }
 
-td.onedaynumthin, td.oneday-num-thin {
-	font-weight:bold;
-	text-align: center;
-	vertical-align: middle;
-	width:10%;
-	border-left-width:1px;
-	border-top-width:1px;
-	border-bottom-width:1px;
-}
-
 /* --------------- Date Column --------------- */
 
-td.topdate, td.mondate, td.tuedate  {
+td.topdate  {
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
@@ -78,21 +68,58 @@ td.topdate, td.mondate, td.tuedate  {
 	border-top-width: 5px;
 }
 
-td.middledate, td.weddate {
+td.mondate  {
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	width: 10%;
+	border-top-width: 5px;
+}
+
+td.tuedate {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    width: 10%;
+    border-top-width: 5px;
+}
+
+
+td.middledate {
 	font-weight:bold;
 	text-align:center;
 	vertical-align: middle;
 }
 
-td.bottomdate, td.thudate, td.fridate  {
+td.weddate {
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+}
+
+td.thudate  {
 	font-weight:bold;
 	text-align:center;
 	vertical-align: middle;
 	border-bottom-width:5px;
 }
 
+td.bottomdate  {
+	font-weight:bold;
+	text-align:center;
+	vertical-align: middle;
+	border-bottom-width:5px;
+}
 
-td.onedaydate, td.finaldate{
+td.fridate {
+    font-weight:bold;
+    text-align:center;
+    vertical-align: middle;
+    border-bottom-width:5px;
+}
+
+
+td.finaldate{
 	font-weight:bold;
 	text-align:center;
 	vertical-align: middle;
@@ -100,61 +127,111 @@ td.onedaydate, td.finaldate{
 	border-bottom-width:5px;
 }
 
-td.onedaydatethin {
+td.onddaydate{
 	font-weight:bold;
 	text-align:center;
 	vertical-align: middle;
-	border-top-width:1px;
-	border-bottom-width:1px;
+	border-top-width:5px;
+	border-bottom-width:5px;
 }
 
 /* --------------- Announcement Column --------------- */
 
-td.topann, td.monann, td.tueann  {
+td.topann  {
 	border-top-width: 5px;
 	width: 40%;
 }
 
-td.middleann, td.wedann {
+td.monann  {
+	border-top-width: 5px;
+	width: 40%;
 }
 
-td.bottomann, td.thuann, td.friann {
+td.tueann {
+    border-top-width: 5px;
+    width: 40%;
+}
+
+
+td.middleann {
+}
+
+td.wedann {
+}
+
+td.bottomann {
 	border-bottom-width:5px;
 }
 
-td.onedayann, td.finalann {
+td.thuann {
+	border-bottom-width:5px;
+}
+
+td.friann {
+    border-bottom-width:5px;
+}
+
+
+td.finalann {
 	border-top-width:5px;
 	border-bottom-width:5px;
 	border-right-width:5px;
 }
 
-td.oneday-activities-thin {
-	padding-left: 0.5em;
-	border-top-width:1px;
-	border-bottom-width:1px;
-	border-right-width:1px;
+
+td.onedayann{
+    border-top-width:5px;
+    border-bottom-width:5px;
+    border-right-width:5px;
 }
+
 
 
 /* --------------- Homework Column --------------- */
 
-td.tophw, td.monhw, td.tuehw  {
+td.tophw  {
 	border-top-width:5px;
 	border-right-width:5px;
 }
 
-td.middlehw, td.wedhw {
+td.monhw {
+	border-top-width:5px;
 	border-right-width:5px;
 }
 
-td.bottomhw, td.onedayhw, td.thuhw, td.frihw {
+
+td.tuehw {
+    border-top-width:5px;
+    border-right-width:5px;
+}
+
+td.middlehw td.wedhw {
+	border-right-width:5px;
+}
+
+td.wedhw {
+	border-right-width:5px;
+}
+
+td.bottomhw {
 	border-right-width:5px;
 	border-bottom-width:5px;
 }
 
-td.onedayhwthin {
-	border-right-width:1px;
-	border-bottom-width:1px;
+td.thuhw {
+	border-right-width:5px;
+	border-bottom-width:5px;
+}
+
+td.frihw {
+    border-right-width:5px;
+    border-bottom-width:5px;
+}
+
+
+td.onedayhw {
+    border-right-width:5px;
+    border-bottom-width:5px;
 }
 
 /* --------------- No Class --------------- */
@@ -184,7 +261,7 @@ table.withBorders {
 	border-spacing: 1px;
 }
 	
-th.withBorders {
+th.withBorders, td.withBorders {
 	border: 1px #181818 solid;
 	padding: 3px;
 }
@@ -247,7 +324,7 @@ ul.a {
 	padding:0;
 }
 
-ul.a, li {
+ul.a li {
 	background:none!important;
 	display:list-item;
 	text-align:left;
@@ -264,7 +341,7 @@ ul.b{
 	padding:0;
 }
 
-ul.b, li {
+ul.b li {
 	background:none!important;
 	display:list-item;
 	text-align:left;
