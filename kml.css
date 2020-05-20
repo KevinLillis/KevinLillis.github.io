@@ -208,16 +208,7 @@ td.gradeTable {
 
 
 table.noBorders {
-	text-align: left;
-    align: right;
-	font-family: Verdana;
-	font-weight: normal;
-	font-size: 11px;
-	color: #404040;
 	width: 180px;
-	border: none;
-	border-collapse: collapse;
-	border-spacing: 1px;
 }
 	
 td.noBorders {
