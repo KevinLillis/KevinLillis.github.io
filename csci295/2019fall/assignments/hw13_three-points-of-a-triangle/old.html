@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="description" content="Your description goes here" />
+	<meta name="keywords" content="your,keywords,goes,here" />
+	<meta name="author" content="Your Name" />
+	<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz|Droid+Sans' rel='stylesheet' type='text/css' />
+	<link rel="stylesheet" type="text/css" media="all" href="../../inland.css" />
+	<link rel="stylesheet" type="text/css" media="all" href="../../../../courseNew.css" />
+    <script type="text/javascript" src="../HW02/js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="../HW02/js/jquery.nivo.slider.js"></script>
+	<style>
+		ul.a{list-style-type:disc;margin-top:-15px;padding:0;}
+		ul.a li{background:none!important;display:list-item;text-align:left;height:auto;line-height:25px;margin-bottom:0;margin-left:25px;position:relative;}
+	</style>
+	<style>
+		ul.b{list-style-type:disc;margin-bottom:0px;padding:0;}
+		ul.b li{background:none!important;display:list-item;text-align:left;height:auto;line-height:25px;margin-bottom:0;margin-left:25px;position:relative;}
+	</style>
+	<style>
+		table.grades
+		{text-align: center;
+		font-family: Verdana;
+		font-weight: normal;
+		font-size: 11px;
+		color: #404040;
+		width: 260px;
+		background-color: #fafafa;
+		border: 1px #181818 solid;
+		border-collapse: collapse;
+		border-spacing: 0px;}
+		
+		table.grades,th, td
+		{border: 1px #181818 solid;}
+
+	</style>
+    <title>CSCI 295</title>
+</head>
+
+<body>
+<div id="wrapper960" class="clearfix">
+<div id="toplinks">
+		<ul class="toplinks_links">
+		<li><a href="http://www.sau.edu/">SAU</a></li>
+			<li><a href="http://www.sau.edu/cis/">CIS</a></li>
+			<li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+			<li><a href="http://www.sau.edu/Student_Success_Center.html">Success</a></li>
+   			<li><a href="http://web.sau.edu/LillisKevinM/">Dr. Lillis</a></li>	
+		</ul>
+	</div>
+
+	<div id="header" class="clearfix shadow">
+		<div id="sitetitle" class="clearfix">
+			<h1><a href="../HW02/index.html">CSCI 295</a></h1><br>Object Oriented Programming II<br>
+			Fall 2015</div>
+
+		<div id="nav" class="clearfix">
+			<ul>
+				<li><a href="../../index.html">Home</a></li>
+				<li><a href="../../syllabus.html">Syllabus</a></li>
+				<li><a href="../../assignments.html">Assignments</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="extended">
+		<img src="../../images/header.png" alt="" />
+	</div>
+
+
+<div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+	<h1>HW 04 - Three Points of a Triangle</h1>
+    
+
+	<p>In this assignment you will create a class implements an interface. The class holds three points, (<i>x</i><sub>0</sub>,
+<i>y</i><sub>0</sub>), (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>), and (<i>x</i><sub>2</sub>,
+<i>y</i><sub>2</sub>), that represent the three points of a triangle. The class 
+will provide various methods that have to do with triangles. In addition to creating the class itself, you must also provide a tester program that thoroughly tests all methods and constructors of your class. The class must be called <code>ThreePoints</code> and must implement the interface <a href="ThreePointsInterface.java">ThreePointsInterface.java</a>.</p>
+
+<h2>Detailed Requirements for the Class</h2>
+    
+<h3>Name of Class and Instance Variables</h3>
+
+    <p>Create a class called <code>ThreePoints</code> that holds six floating 
+point numbers representing the coordinates of three points. You 
+can think of the three points as (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>), (<i>x</i><sub>1</sub>,
+<i>y</i><sub>1</sub>), and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>). The 
+<em>only</em> instance variables for this class are six floating point numbers,
+named something like <code>x0</code>, <code>y0</code>, <code>x1</code>,
+<code>y2</code>, <code>x2</code>, <code>y2</code>. </p>
+
+<h3>Constructors</h3>
+    
+<p>This class should have two constructors. The default (no-argument) 
+constructor should set all instance variables to zero. The second constructor 
+should take six parameters corresponding to the six instance variables. </p>    
+    
+<h3>A Helper Method You Will Need</h3>
+
+<p>Because values are calculated using floating point numbers, rounding errors 
+may occur. For example, a right angle may me stored as 89.999999999999. A Boolean expression that tests to see if this angle is equal to 90 
+would return <code>false</code>. To get around this problem you should use the 
+method <code>approxEqual</code> that we'll discuss in class. This method 
+takes two <code>double</code> values and returns <code>true</code> of the 
+values are approximately equal and returns <code>false</code> otherwise. Here 
+is the method:</p>
+<pre><code><font color="#008080">
+    /**
+        Tests whether two floating-point numbers are approximately equal.
+    */</font>
+    private boolean approxEqual(double x, double y) {
+        return Math.abs(x - y) &lt;= 1E-12;
+    }
+</code></pre>    
+    
+<h3>Required Methods</h3>
+
+<p>The class <code>ThreePoints</code> should have the following methods:</p>
+ 
+ <hline>
+ 
+<p><code>double getLength(int side)</code></p>
+	<p class="myIndent1">The parameter <code>side</code> should be <code>0</code>, <code>1</code>, or <code>2</code> and is used to specify side <em>s<sub>0</sub></em>, <em>s<sub>1</sub></em>, or <em>s<sub>2</sub></em> (see <a href="#Firuge_1">Figure 1</a>). The method returns the length of the 
+	specified side. If the three points do not form a triangle, this method 
+	should return zero. To determine the length of a side you can use the 
+	formula for the distance between two points. The distance <em>d</em> between two 
+	points (<i>x</i><sub>1</sub>, <i>y</i><sub>1</sub>) and (<i>x</i><sub>2</sub>,
+	<i>y</i><sub>2</sub>) is given by: </p>
+
+<p><img class="myIndent2" src="distance.png" width="231"></p>
+    
+
+
+
+<p><code>double getAngle(int vertex)</code> </p>
+	<p class="myIndent1">The parameter <tcode>
+	vertex</code> should be <code>0</code>, <code>1</code>, or
+	<code>2</code> and is used to specify vertes <em>v<sub>0</sub></em>, <em>v<sub>1</sub></em>, or <em>v<sub>2</sub></em> (see <a href="#Firuge_1">Figure 1</a>). The method returns the angle of the 
+	specified vertex. If the three points do not form a triangle, this method 
+	should return zero. To determine the angles of the triangle you can use the 
+	law of cosines.<br>For the triangle shown in <a href="#Firuge_1">Figure 1</a> 
+	 angles <i>a</i><sub>0</sub>, <i>a</i><sub>1</sub>, and <i>a</i><sub>2</sub> 
+  are given by the following formulas.</p>
+	<p><img class="myIndent2" src="angles.png" width="204"></p>
+    
+
+
+
+
+<p><code>boolean isTriangle()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle, 
+	returns <code>false</code> otherwise. To test if three points form a 
+	triangle, you only need to make sure they do not lie on the same line. Three 
+	points that lie on the same line are said to be <i>collinear</i>. Three 
+	points (<i>x</i><sub>0</sub>, <i>y</i><sub>0</sub>), (<i>x</i><sub>1</sub>,
+	<i>y</i><sub>1</sub>), and (<i>x</i><sub>2</sub>, <i>y</i><sub>2</sub>) are 
+	collinear if and only if:</p>
+
+		<p><img class="myIndent2" src="collinear.png" width="340"></p>
+	
+
+
+
+<p><code>boolean isEquilateral()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is equilateral, returns <code>false</code> otherwise. A triangle 
+	is an equilateral triangle if all three sides are of equal length. </p>
+
+<p><code>boolean isIsosceles()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is isosceles, returns <code>false</code> otherwise. A triangle 
+	is an isosceles triangle if at least two sides are of equal length. </p>
+
+<p><code>boolean isScalene()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is scalene, returns <code>false</code> otherwise. A triangle is 
+	a scalene triangle if all three sides are of unequal length. </p>
+
+
+
+<p><code>boolean isAcute()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is acute, returns <code>false</code> otherwise. A triangle is an 
+	acute triangle if all three angles are acute angles (less than 90&deg;). </p>
+
+
+<p><code>boolean isObtuse()</code> </p>
+	<p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is obtuse, returns <code>false</code> otherwise. A triangle is 
+	an obtuse triangle if one of the angles is an obtuse angle (greater than 
+	90&deg;). </p>
+
+<p><code>boolean isRight()</code> </p>
+    <p class="myIndent1">Returns <code>true</code> if the three points form a triangle and that 
+	triangle is a right triangle, returns <code>false</code> otherwise. A 
+	triangle is a right triangle if one of the angles is a right angle (equal to 
+	90&deg;). </p>
+
+<p><code>double getPerimeter() </code></p>
+
+	<p class="myIndent1">Returns the perimeter of the triangle as a <code>double</code>. If the three points do not form a triangle, this method 
+	should return zero. The 
+	perimeter of a triangle is equal to the sum of the three sides.</p>
+
+
+<p><code>double getArea()</code> </p>
+
+	<p class="myIndent1">Returns the area of the triangle. If the three points do not form a triangle, this method 
+	should return zero. The area of 
+	a triangle can be calculated using Heron's Formula. In the triangle shown in
+	<a href="#Firuge_1">Figure 1</a>, the area is given by the formula</p>
+  <p><img class="myIndent2" src="area.png" width="242"></p>
+	<p class="myIndent1">Where <i>s</i> is the <i>semiperimeter</i> which is equal to one half of 
+	the perimeter
+    
+    
+ <h3><a name="Firuge_1">Figure 1</a> - Example Triangle Illustrating the Required Methods</h3>
+
+<p class="indent"><img class="myIndent2" src="triangle-BW.png" width="446"></p>
+
+
+</div>  
+
+<div id="content">
+<h2>What to Turn In</h2>
+<p>Create a single zip file containing the complete directory created by NetBeans and submit your zip file through <a href="https://blackboard.sau.edu">Blackboard</a>.</p>
+</div>
+
+<div id="footer" class="shadow">&nbsp;</div>
+</div>
+</body>
+</html>
