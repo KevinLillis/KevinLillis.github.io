@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+    <title>CS:1210 - Summer 2020</title>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="http://www.uiowa.edu">U Iowa</a></li>
+                <li><a href="http://www.cs.uiowa.edu">CS</a></li>
+                <li><a href="https://icon.uiowa.edu/">ICON</a></li>
+                <li><a href="../../../../">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="../../index.html">CS:1210:0AAA</a></h1>
+                <br> Computer Science I: Fundamentals<br> Summer 2020<br>
+                <br> The University of Iowa<br> The College of Liberal Arts and Sciences<br> Department of Computer
+                Science
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../syllabus.html">Syllabus</a></li>
+                    <li><a href="../../rubric.html">Rubric</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="../../images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>HW bb &ndash; Pixel Averaging</h1>
+            <h2>Overview</h2>
+            <p>In astronomy, people take pictures of objects they can see in the sky &dash; stars, planets, galaxies,
+                Klingons, etc. Unfortunately, due to the distance of these objects, the pictures are often grainy and
+                noisy. In order to compensate for this noise problem, photographers will sometimes take multiple
+                pictures of the same object in quick succession and then process all of those images to create a final,
+                noise-free image. We'll call this process <strong><em>Pixel Averaging</em></strong>.</p>
+
+            <h3>What is Pixel Averaging?</h3>
+            <p>The light from distance stars, nebula, and other objects in the sky is very dim when it finally arrives
+                here on Earth. The Earth's atmosphere can affect image quality. Camera hardware can be quirky at times.
+                All of these problems add up to create noisy images. Pixel Averaging is a simple algorithm to overcome
+                these issues and create good output from not-so-good input.</p>
+
+            <p>The trick to making Pixel Averaging work is to capture multiple photos of a single object. Because of the
+                issues mentioned above, each of these photos will be noisy. It turns out that this noise can be removed
+                by averaging all of the noisy images together into one final high-quality image.</p>
+
+            <p>How it works: An image is basically a big two-dimensional grid. We can think of each pixel in an image
+                having an (<em>x</em>, <em>y</em>) coordinate. Suppose we have <em>n</em> noisy images, all with the
+                same height and width. Then each image <em>i</em>, where <em>i</em> is from 1 to <em>n</em>, has the
+                same set of pixel coordinates. Since all the images have the same coordinates, we can go through
+                each image, pixel-by-pixel, and access the <em>same pixel location</em> in each image. For each pixel
+                location,
+                we need to look at all of the noisy input images and calculate the average red, green, and blue values.
+                These averages will be used for that pixel location in the clean image.
+            </p>
+
+            <h3>Data Sets</h3>
+
+            <p>
+                A photographer has given you image data for 4 astronomical objects that she would like you to process.
+                For each object, she took
+                10 photographs and placed them in a directory named raw_images. The contents of that directory can be <a
+                    href="raw_images.zip">downloaded here</a>. All of the photographs are very noisy. For example,
+                here is one of the photographs of the Interstellar Bubble N44F: <br>
+            </p>
+            <img style="margin-left:10%" src="n44f_01.jpeg" alt="noisy image of the Interstellar Bubble N44F">
+            <br><br>
+            <p>
+                The photographer would like you to process the images and create final images that are much higher in
+                quality.
+            </p>
+
+            <p>
+                For example, if you look in the <b><em>n44f</em></b> folder, you will find these files:
+
+            <ul style="padding-left: 4em;">
+                <li>n44f/n44f_01.jpeg</li>
+                <li>n44f/n44f_02.jpeg</li>
+                <li>n44f/n44f_03.jpeg</li>
+                <li>n44f/n44f_04.jpeg</li>
+                <li>n44f/n44f_05.jpeg</li>
+                <li>n44f/n44f_06.jpeg</li>
+                <li>n44f/n44f_07.jpeg</li>
+                <li>n44f/n44f_08.jpeg</li>
+                <li>n44f/n44f_09.jpeg</li>
+                <li>n44f/n44f_10.jpeg</li>
+            </ul>
+            </p>
+
+            <p>
+                All of the images within an image set are the same size, but different image sets have different sizes.
+                So all the images for <b><em>n44f</em></b>
+                are the same size, but the images in the <b><em>cone_nebula</em></b>, <em><strong>orion</strong></em>,
+                and <b><em>wfc3_uvis</em></b> directories may be different.
+            </p>
+
+            <h3>Your Task</h3>
+            <p>Ask the user for an image set to process, and then process the images in that directory, averaging their
+                pixels to create the final image. For example, if the user asked you to process the
+                <em><strong>n44f</strong></em> image set, you would read all the files in that directory, create the
+                final image
+                <em><strong>n44f_clean.jpeg</strong></em>, and store it in the <strong><em>n44f</em></strong> directory.
+            </p>
+
+
+
+            <h2>Assignment</h2>
+            <p>Write a Python program that provides the text-based menu shown below that allows the user to select which
+                image set to process. Once selected, your program should process the images as described above.
+                <code><pre>
+                    Which image set do you want to process?
+                    1) cone_nebula  (The Cone Nebula - NGC 2264)
+                    2) n44f  (Interstellar Bubble N44F)
+                    3) orion  (The Orion Nebula)
+                    4) wfc3_uvis  (Carina Nebula)
+
+                 Selection: 
+
+                </pre></code>
+            </p>
+
+
+            <h3>File Names &amp; Location</h3>
+            <p>
+                The data files should be stored in the separate <code>raw_images</code> folder. Just download and unzip
+                the raw_images dataset and save the resulting folder with your program.
+            </p>
+
+            <p>
+                The name of your program must be <code>pixelAveraging.py</code>.
+            </p>
+
+
+            <h3>Program Demo</h3>
+            Here is a short video showing how your program should work: <a
+                href="https://youtu.be/_GvadjBSL5o">youtu.be/_GvadjBSL5o</a>
+
+            <h3>Grading</h3>
+            <p>
+                Please review the <a href="../../rubric.html">Grading Rubric for Programming Assignments</a>. I would
+                especially like to draw your attention to the Documentation section which describes the header
+                information that should be included at the beginning of your program.
+            </p>
+
+            <h3>What to Turn In / Required File Name</h3>
+
+            <p>
+                A Dropbox Folder has been created for this assignment in ICON. Please submit your Python program through
+                ICON using that folder.<br>Please <strong>DO NOT</strong> upload that data files with your program. Only
+                upload
+                your python program.
+            </p>
+
+
+        </div>
+        <!-- Main Points -->
+
+        <!--
+        <div id="footer" class="shadow">
+        -->
+        <!-- Footer -->
+        <!-- &nbsp; -->
+        <!-- </div> -->
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+
+
+</body>
+
+</html>
