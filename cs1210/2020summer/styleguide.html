@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../../inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="thisclass.css">
+    <title>CS:1210 - Summer 2020</title>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="http://www.uiowa.edu">U Iowa</a></li>
+                <li><a href="http://www.cs.uiowa.edu">CS</a></li>
+                <li><a href="https://icon.uiowa.edu/">ICON</a></li>
+                <li><a href="../../">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="index.html">CS:1210:0AAA</a></h1>
+                <br> Computer Science I: Fundamentals<br> Summer 2020<br>
+                <br> The University of Iowa<br> The College of Liberal Arts and Sciences<br> Department of Computer
+                Science
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="syllabus.html">Syllabus</a></li>
+                    <li><a href="rubric.html">Rubric</a></li>
+                    <li><a class="current" href="styleguide.html">Style Guide</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>Programming Style Guide</h1>
+
+            <h3>Docstrings</h3>
+            <p>Each file, function, class, and method should include a docstring (<code>"""</code>). that
+                succinctly describes the overall purpose of your code.</p>
+            <p>
+                The docstring at the top of each file should include:
+            <ul>
+                <li>Your name</li>
+                <li>The name of the file</li>
+                <li>The homework assignment number</li>
+                <li>The date with the file was most recently modified</li>
+                <li>A description of what the file does</li>
+                <li>A list of known problems with your code (<q>bugs</q>). Ideally, you wouldn't want turn in code with
+                    bugs. However, if your code contains errors you need to document them to let whoever reads your code
+                    know of the situation.</li>
+            </ul>
+            </p>
+
+            <h3>Variable &amp; Function Names</h3>
+            <p>
+                Names should should have meaning, not be too short, and not be too long. Variable and function names
+                should
+                be all lower case with words separated by underscores. You should avoid using <a
+                    href="https://docs.python.org/3/reference/lexical_analysis.html#keywords">Python keywords</a>.
+                Global variables should be avoided, but if you must use them, they should be all upper case with words
+                separated by underscores, such as <code>LINES_PER_PAGE</code>.
+            <dl>
+                <dt>Have meaning</dt>
+                <dd>Variable names like <code>result</code> or <code>answer</code> tell the reader nothing about the
+                    value stored in the variable. Names like <code>average</code> and <code>user_id</code> are much
+                    better. Likewise, a function name like <code>myFunction</code> is pretty much useless. A
+                    good rule of thumb is to have a function name describe the action performed, like
+                    <code>get_total</code> for example.</dd>
+
+                <dt>Not be too short</dt>
+                <dd>Use <code>temperature</code> instead of <code>tmp</code> or <code>total</code> rather than
+                    <code>tot</code>.</dd>
+
+                <dt>Not be too long</dt>
+                <dd>
+                    A name like <code>average_individual_monthly_percent_increase</code> is just too long.
+                </dd>
+            </dl>
+            </p>
+
+            <p>One Exception: Loop variables are a common exception to this idea, and loop variables named
+                <code>i</code>, <code>j</code>, <code>j</code> etc.
+                are OK.</p>
+
+            <h3>Code Organization</h3>
+            <p>
+                Your code should be well organized. Functions should be defined in one section of the program, code
+                should be organized into functions so that blocks of code that need to be reused are contained within
+                functions to enable that, and functions should have meaningful names.
+            </p>
+            <h3>Comments</h3>
+            <p>
+                You must strike a balance between commenting everything and commenting nothing, both of which make the
+                code hard to read. A good rule of thumb is to comment code that you might not understand if you looked
+                at it in six months from now.
+            </p>
+
+            <h3>Maximum Line Length</h3>
+            <p>
+                No line of code should be more than 79 characters.
+            </p>
+
+            <h3>White Space</h3>
+            <p>
+                Whitespace (blank lines, spaces) should be used make your code easier to read. Whitespace
+                can be use effectively to separate distinct parts of the code (e.g., space after commas in lists,
+                blank lines between functions or between blocks of related lines within functions, etc.)
+            </p>
+
+            <h3>Code Reuse</h3>
+            <p>
+                As much as possible, try to avoid copying and pasting large chunks of code in your program. If you are
+                tempted to do so, consider writing a function that contains the code you need to repeat.
+            </p>
+
+            </p>
+
+        </div>
+        <!-- Main Points -->
+
+
+        <div id="footer" class="shadow">
+            <!-- Footer -->
+            &nbsp;
+        </div>
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+</body>
+
+</html>
