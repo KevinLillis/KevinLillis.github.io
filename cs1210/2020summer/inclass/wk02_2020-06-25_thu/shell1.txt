@@ -1,0 +1,49 @@
+Python 3.8.3 (tags/v3.8.3:6f8c832, May 13 2020, 22:37:02) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+
+range(10)range(0, 10)
+type(range(10))<class 'range'>
+list(range(10))[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+for i in range(5):   print('hello')
+hello
+hello
+hello
+hello
+hello
+
+for i in range(5):   print(f'{i}) hello')
+0) hello
+1) hello
+2) hello
+3) hello
+4) hello
+
+list(range(2, 11))[2, 3, 4, 5, 6, 7, 8, 9, 10]
+list(range(2, 11, 2))[2, 4, 6, 8, 10]
+
+list(range(10, 10))[]
+
+list(range(10, 5))[]
+
+# Negative steplist(range(5, 10, -1))[]
+list(range(10, 5, -1))[10, 9, 8, 7, 6]
+
+# Larger stepslist(range(5, 15, 3))[5, 8, 11, 14]
+
+list(range(5, 15, 50))[5]
+
+# to get numbers from 0 to nn = 7list(range(n+1))[0, 1, 2, 3, 4, 5, 6, 7]
+# to get numbers from 1 to nlist(range(1, n+1))[1, 2, 3, 4, 5, 6, 7]
+
+for x in range(1, n+1):   print(x)
+1
+2
+3
+4
+5
+6
+7
+# to get numbers from n to 0n = 7
+list(range(n, -1, -1))[7, 6, 5, 4, 3, 2, 1, 0]
+
+# to get numbers from n to 1list(range(n, 0, -1))[7, 6, 5, 4, 3, 2, 1]
