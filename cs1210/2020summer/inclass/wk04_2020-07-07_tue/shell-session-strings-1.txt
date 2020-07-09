@@ -1,0 +1,89 @@
+Python 3.8.4rc1 (tags/v3.8.4rc1:6c38841, Jun 30 2020, 15:17:30) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+# More on Strings# Concatenationname = 'Bob'age = 22
+message = name + ' is ' + str(age) + 'years old'
+message'Bob is 22years old'
+message = name + ' is ' + str(age) + ' years old'
+message'Bob is 22 years old'
+
+# This is a bit easiermessage = f'{name} is {age} years old'
+message'Bob is 22 years old'
+
+firstName = 'Ron'lastName = 'Obvious'fullName = firstName + ' ' + lastName
+fullName'Ron Obvious'
+
+fullName = f'{firstName} {lastName}'
+fullName'Ron Obvious'
+
+# Repetition'go' * 3'gogogo'
+'=============================================='
+
+'=' * 40'========================================'
+
+# Indexingtown = 'Davenport'
+town[0]'D'
+
+town[3]'e'
+
+town[-6]'e'
+
+town[-1]'t'
+
+town[9]Traceback (most recent call last):
+  Python Shell, prompt 28, line 1
+builtins.IndexError: string index out of range
+
+len(town)9
+
+# Iterating over a string# Using an indextown'Davenport'
+
+for i in range(10):   print(i, end = ' ')
+0 1 2 3 4 5 6 7 8 9 
+for i in range(len(town)):   print(i, end = ' ')
+0 1 2 3 4 5 6 7 8 
+for i in range(len(town)):   print(town[i], end = ' ')
+D a v e n p o r t 
+for i in range(len(town)):
+   print(town[i])
+D
+a
+v
+e
+n
+p
+o
+r
+t
+town = 'New Haven'
+for i in range(len(town)):   print(town[i])
+N
+e
+w
+ 
+H
+a
+v
+e
+n
+for ch in town:   print(ch)
+N
+e
+w
+ 
+H
+a
+v
+e
+n
+
+
+for i in range(len(town)):   print(f'{i+1}) {town[i]}')
+1) N
+2) e
+3) w
+4)  
+5) H
+6) a
+7) v
+8) e
+9) n

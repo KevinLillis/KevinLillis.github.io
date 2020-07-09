@@ -1,0 +1,193 @@
+Python 3.8.4rc1 (tags/v3.8.4rc1:6c38841, Jun 30 2020, 15:17:30) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+# Continue looking as strings
+# rfind / indexriver = 'Mississippi'
+river.find('ss')2
+
+river.index('ss')2
+
+river.find('dog')-1
+river.index('dog')Traceback (most recent call last):
+  Python Shell, prompt 7, line 1
+builtins.ValueError: substring not found
+
+
+# rfind / rindexriver = 'Mississippi'
+river.rfind('ss')5
+
+river.rindex('ss')5
+
+river.rfind('cat')-1
+
+river.rindex('cat')Traceback (most recent call last):
+  Python Shell, prompt 13, line 1
+builtins.ValueError: substring not found
+
+# startswith / endswithquote = 'Peace starts with a smile'
+quote.startswith('Peace')True
+
+quote.startswith('peace')False
+
+quote.lower().startswith('peace')True
+
+quote.endswith('smile')True
+
+
+# expandtabsheader = 'date\tsales'
+header'date\tsales'
+
+print(header)date	sales
+
+var = header
+var'date\tsales'
+header.expandtabs()'date    sales'
+var = header.expandtabs()
+var'date    sales'
+header'date\tsales'
+
+var = header.expandtabs(12)
+var'date        sales'
+
+# Predicate methods - ask True/False questiosn about the string
+# isalphaname = 'winston churchill'
+name.isalpha()False
+
+name = 'churchill'
+name.isalpha()True
+
+number = '0xfe'
+number.isalpha()False
+
+# isdigitbook = '1984'
+book.isdigit()True
+
+dates = '1993-2000'
+dates.isdigit()False
+
+
+# isalnumname = 'winstin churchill'
+name.isalnum()False
+
+name = 'churchill'
+name.isalnum()True
+
+book = '1984'
+book.isalnum()True
+
+number = '0xfe'
+number.isalnum()True
+
+# islower / isupperbook = '2001: a space odysse'
+book.islower()True
+
+book.isupper()False
+
+book = '2001: A Space Odysse'
+book.islower()False
+
+book.isupper()False
+
+gear = 'SCUBA'
+gear.islower()False
+
+gear.isupper()True
+
+# istitlebook = 'Pebble in the Sky'
+book.istitle()False
+
+book = 'Pebble In The Sky'
+book.istitle()True
+
+book = 'PEBBLE IN THE SKY'
+book.istitle()False
+
+# isspacemessage = '     \n\n  \t\t  \n  '
+message.isspace()True
+
+
+# zfillamount = '15.82'
+amount.zfill(10)'0000015.82'
+
+
+# lstrip / rstrip / stripbook = '    \t The Manchurian Candidate\n'
+book.lstrip()'The Manchurian Candidate\n'
+
+book.rstrip()'    \t The Manchurian Candidate'
+
+book.strip()'The Manchurian Candidate'
+
+###### The string module ################import string
+string.ascii_letters'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+string.ascii_lowercase'abcdefghijklmnopqrstuvwxyz'
+
+string.ascii_uppercase'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+string.digits'0123456789'
+
+string.hexdigits'0123456789abcdefABCDEF'
+
+string.octdigits'01234567'
+
+string.punctuation'!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+
+string.whitespace' \t\n\r\x0b\x0c'
+
+
+# built-in functions to work with charactersord('D')68
+
+ord('Dog')Traceback (most recent call last):
+  Python Shell, prompt 98, line 1
+builtins.TypeError: ord() expected a character, but string of length 3 found
+
+oct(ord('D'))'0o104'
+
+hex(ord('D'))'0x44'
+
+bin(ord('D'))'0b1000100'
+
+chr(67)'C'
+
+for code in range(65, 91):   print(chr(code), end='')
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+x = 255
+bin(x)'0b11111111'
+
+oct(x)'0o377'
+
+str(x)'255'
+
+hex(x)'0xff'
+
+userInput = '42'
+int(userInput)42
+
+userInput = '101010'
+int(userInput)101010
+
+int(userInput, 2)42
+
+binStrin = '101010'
+int(binStrin, 2)42
+
+octString = '57'
+int(octString, 8)47
+
+decString = '42562'
+int(decString)42562
+
+hexString = '2af3'
+int(hexString, 16)10995
+
+
+# Differnt radix integer literalsdecValue = 42
+decValue42
+
+binValue = 0b101010
+binValue42
+
+octValue = 0o52
+octValue42
+
+hexValue = 0x2a
+hexValue42
