@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
+    <title>CS:1210 - Summer 2020</title>
+
+    <style>
+        td,
+        th {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        table {
+            width: 60%;
+            margin-left: 4em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="http://www.uiowa.edu">U Iowa</a></li>
+                <li><a href="http://www.cs.uiowa.edu">CS</a></li>
+                <li><a href="https://icon.uiowa.edu/">ICON</a></li>
+                <li><a href="../../../../">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="../../index.html">CS:1210:0AAA</a></h1>
+                <br> Computer Science I: Fundamentals<br> Summer 2020<br>
+                <br> The University of Iowa<br> The College of Liberal Arts and Sciences<br> Department of Computer
+                Science
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../syllabus.html">Syllabus</a></li>
+                    <li><a href="../../rubric.html">Rubric</a></li>
+                    <li><a href="../../styleguide.html">Style Guide</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="../../images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>HW 16 &ndash; USPS Bar Codes</h1>
+
+            <p>The United States Postal System (USPS) often uses bar codes denoting the zip code, as shown in the
+                following
+                label:</p>
+            <p><img class="indent" src="USPSLabel.png" width="400"></p>
+
+            <h3>On-Line Bar Code Generator</h3>
+            <p>Here is a link to the <a href="http://www.keepautomation.com/online_barcode_generator/postnet">on-line
+                    bar code
+                    generator</a> I used it to make the bar code in the above example. You can use this link to check if
+                your program
+                is working correctly.</p>
+
+            <h3>How a Bar Code is Constructed</h3>
+            <p>The encoding scheme for the bar code is as follows:</p>
+            <ul>
+                <li>The code is made up of <em>tall</em> bars and <em>short</em> bars.
+                    <br>
+                </li>
+                <li>The first bar and the last bar are always tall. These called the <em>Frame Bars</em>.
+                    <br>
+                </li>
+                <li>The rest of the bars (the ones in between the Frame Bars) represent six digits. Each digit is made
+                    up of five
+                    bars (see below).
+                    <br>
+                </li>
+                <li>The six digits consist of the 5-digit zip code plus one additional <em>Check Digit</em>.
+                    <br>
+                </li>
+                <li>The Check Digit is calculated from the zip code. It is the number that must be added to the sum
+                    of the zip code digits to bring that sum up to the the next multiple of 10. For example, the Check
+                    Digit for zip code 06498 is calculated as follows:
+                    <br>
+                    <ul>
+                        <li>0 + 6 + 4 + 9 + 8 = 27<br>
+                        </li>
+                        <li>The next multiple of 10 is 30.<br>
+                        </li>
+                        <li>So the Check Digit is 3, since 27 + 3 = 30 </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>How to Represent a Digit with Five Bars</h3>
+            <p>The five bars used for a digit are defined as follows:</p>
+            <table>
+                <tr>
+                    <th>Digit</th>
+                    <th>Bar 1</th>
+                    <th>Bar 2</th>
+                    <th>Bar 3</th>
+                    <th>Bar 4</th>
+                    <th>Bar 5</th>
+                </tr>
+                <tr>
+                    <th>1</th>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Tall</td>
+                </tr>
+                <tr>
+                    <th>2</th>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                </tr>
+                <tr>
+                    <th>3</th>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <th>4</th>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                </tr>
+                <tr>
+                    <th>5</th>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <th>6</th>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <th>7</th>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                </tr>
+                <tr>
+                    <th>8</th>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <th>9</th>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                </tr>
+                <tr>
+                    <th>0</th>
+                    <td>Tall</td>
+                    <td>Tall</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                    <td>Short</td>
+                </tr>
+            </table>
+
+            <h3>Completing the Example</h3>
+            <p>Putting all these pieces together, we can now understand the bar code shown in the label above:</p>
+            <p><img class="indent" src="description.png" width="500"></p>
+
+            <h2>Assignment, Part I</h2>
+            <p>Write a program that prompts the user to enter a zip code and then displays its bar code as a string.
+                Your program should use the vertical bar character <code>|</code> for tall bars and the colon character
+                <code>:</code> for short bars.</p>
+
+            <p>Below is a sample run of the program. The output of your program should match the sample (without the
+                color).
+
+            </p>
+
+            <table style="margin-left:4em; text-align: left;" width="87%" bordercolor="#000000">
+                <tr>
+                    <td style="text-align: left; padding-left: 4em;" width="188%" bgcolor="#000000">
+                        <p>
+                            <font color="#FFFFFF">
+                                <code>
+<pre>
+Please enter a zip code: <font color="#00FF00">06498</font>
+The bar code is    |||::::||:::|::||:|::|::|:::||:|
+
+</pre></code>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>Required Functions</h3>
+            <p>Your program <em>must</em> use the following functions:</p>
+            <ul>
+                <li><code>main()</code>
+                    <ul>
+                        <li>This is where your high-level logic for your program is located.</li>
+                    </ul>
+                </li>
+                <li><code>getBarCode(zipCode)</code>
+                    <ul>
+                        <li>This function takes an integer zip code as a parameter and returns its bar code as a String.
+                        </li>
+                        <li>This is the function that should be called from your <code>main</code>
+                            function.</li>
+                        <li>You can assume the zip code will consist of exactly five digits. You don't have to check for
+                            this.
+                        </li>
+                    </ul>
+                </li>
+                <li><code>getBarCodeDigit(digit)</code>
+                    <ul>
+                        <li>This function takes a single digit (<em>0</em> - <em>9</em>) as a parameter and returns its
+                            bar code
+                            (five bars) as a String.</li>
+                        <li>This function should be called multiple times form the <code>getBarCode</code>
+                            function.
+                        </li>
+                        <li>You can assume that the parameter is a single digit from <em>0</em> to <em>9</em>. You don't
+                            have to
+                            check for this.
+                        </li>
+                    </ul>
+                </li>
+                <li><code>getCheckDigit(zipCode)</code>
+                    <ul>
+                        <li>This function takes an integer zip code then computes and returns the integer Check Digit.
+                        </li>
+                        <li>This function should be called from the <code>getBarCode</code> function.</li>
+                        <li>You can assume the zip code will consist of exactly five digits. You don't have to check for
+                            this.
+                        </li>
+                    </ul>
+                </li>
+                <li><code>sumDigits(n):</code>
+                    <ul>
+                        <li>This function takes a positive integer <em>n</em> as a parameter and then computes and
+                            returns the sum
+                            of the individual digits in <em>n</em>.</li>
+                        <li>This function should be called from the <code>getCheckDigit</code> function.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Assignment, Part II</h2>
+            <p>Modify your program from Part I so that is uses Python's turtle read the user input and to draw the bar
+                code. Below is an example of what the bar code for 06498 would look like. The specific dimensions of
+                your drawing don't need to match this example.
+            </p>
+
+            <p><img src="example.png" width="834" height="818"></p>
+
+            <h3>Grading</h3>
+            <p>
+                Please review the <a href="../../rubric.html">Grading Rubric</a> for Programming Assignments and the
+                Programming <a href="../../styleguide.html">Style Guide</a>.
+            </p>
+
+            <h3>What to Turn In</h3>
+            <p>
+                A Dropbox Folder has been created for this assignment in ICON. Please submit your Python program through
+                ICON using that folder.
+            </p>
+        </div>
+        <!-- Main Points -->
+
+        <!--
+        <div id="footer" class="shadow">
+        -->
+        <!-- Footer -->
+        <!-- &nbsp; -->
+        <!-- </div> -->
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+</body>
+
+</html>
