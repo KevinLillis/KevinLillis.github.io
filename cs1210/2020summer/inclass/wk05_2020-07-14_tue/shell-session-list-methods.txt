@@ -1,0 +1,116 @@
+Python 3.8.4rc1 (tags/v3.8.4rc1:6c38841, Jun 30 2020, 15:17:30) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+# List Methods
+L = [10, 20, 30]
+
+# Append
+L.append(40)
+
+L
+[10, 20, 30, 40]
+
+# insert(i , item)
+L
+[10, 20, 30, 40]
+L.insert(3, 35)
+
+L
+[10, 20, 30, 35, 40]
+
+L.insert(-2, 32)
+
+L
+[10, 20, 30, 32, 35, 40]
+
+# pop()
+value = L.pop()
+
+L
+[10, 20, 30, 32, 35]
+
+value
+40
+
+# pop(i)
+value = L.pop(2)
+
+L
+[10, 20, 32, 35]
+
+value
+30
+
+# sort()
+L = [3, 4, 7, 5, 45, 3, 5, 19]
+
+L
+[3, 4, 7, 5, 45, 3, 5, 19]
+
+L.sort()
+
+L
+[3, 3, 4, 5, 5, 7, 19, 45]
+
+L.reverse()
+
+L
+[45, 19, 7, 5, 5, 4, 3, 3]
+
+# index(item)
+L.index(5)
+3
+
+L.index(11)
+Traceback (most recent call last):
+  Python Shell, prompt 29, line 1
+builtins.ValueError: 11 is not in list
+
+# count(item)
+L
+[45, 19, 7, 5, 5, 4, 3, 3]
+
+L.count(5)
+2
+
+L.count(19)
+1
+
+L.count(11)
+0
+
+# remove(item)
+L = [4, 5, 3, 6, 5, 6, 3]
+
+L.remove(5)
+
+L
+[4, 3, 6, 5, 6, 3]
+
+L.remove(11)
+Traceback (most recent call last):
+  Python Shell, prompt 39, line 1
+builtins.ValueError: list.remove(x): x not in list
+
+# clear()
+L.clear()
+
+L
+[]
+
+# extend
+L1 = [3, 4, 5]
+L2 = [8, 9]
+
+L1.extend(L2)
+L1
+[3, 4, 5, 8, 9]
+
+L1 = L1 + L2
+
+L1
+[3, 4, 5, 8, 9, 8, 9]
+
+L1 += L2
+
+L1
+[3, 4, 5, 8, 9, 8, 9, 8, 9]

@@ -1,0 +1,271 @@
+Python 3.8.4rc1 (tags/v3.8.4rc1:6c38841, Jun 30 2020, 15:17:30) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+# Lists
+[4, 8, 12]
+[4, 8, 12]
+
+['Iowa', 19, [123]]
+['Iowa', 19, [123]]
+
+myList = [2, 4, 6, 8, 10]
+yourList = ['newt', 'stone', 'witch']
+
+yourList[1]
+'stone'
+
+len(myList)
+5
+
+myList + yourList
+[2, 4, 6, 8, 10, 'newt', 'stone', 'witch']
+
+yourList * 3
+['newt', 'stone', 'witch', 'newt', 'stone', 'witch', 'newt', 'stone', 'witch']
+
+'newt' in yourList
+True
+
+'stone' in myList
+False
+
+myList
+[2, 4, 6, 8, 10]
+
+myList[2:]
+[6, 8, 10]
+
+# Lists are mutable (they can be changed)
+yourList
+['newt', 'stone', 'witch']
+
+yourList[2] = 'shrubbery'
+
+yourList
+['newt', 'stone', 'shrubbery']
+
+# doesn't work with a string
+name = 'lancelot'
+
+name[0] = 'L'
+Traceback (most recent call last):
+  Python Shell, prompt 20, line 1
+builtins.TypeError: 'str' object does not support item assignment
+
+yourList
+['newt', 'stone', 'shrubbery']
+
+del yourList[1]
+
+yourList
+['newt', 'shrubbery']
+
+# Iterating over a list
+L = [1, 2, 3, 'a', 'b', 'c']
+
+for item in L:
+   print(item, end = ' ')
+
+1 2 3 a b c 
+
+
+for i in range(len(L)):
+   print(L[i], end = ' ')
+
+1 2 3 a b c 
+
+
+for i in range(len(L)):
+   L[i] = L[i] + L[i]
+
+L
+[2, 4, 6, 'aa', 'bb', 'cc']
+
+# 2D Lists - Lists of Lists
+# A square list
+L = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L
+[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+L[1]
+[4, 5, 6]
+
+L[1][0]
+4
+
+for item in L:
+   print(item)
+
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
+
+
+for i in range(len(L)):
+   for j in range(len(L[i])):
+      print(L[i][j], end = ' ')
+   print()
+
+1 2 3 
+4 5 6 
+7 8 9 
+
+
+# print rectangular 2D list
+L = [[1,2,3,4],[5,6,7,8]]
+
+for i in range(len(L)):
+   for j in range(len(L[i])):
+      print(L[i][j], end = ' ')
+   print()
+
+1 2 3 4 
+5 6 7 8 
+
+
+L = [[1,2], [3,4], [5,6], [7,8]]
+
+for i in range(len(L)):
+   for j in range(len(L[i])):
+      print(L[i][j], end = ' ')
+   print()
+
+1 2 
+3 4 
+5 6 
+7 8 
+
+
+# Print a "Jagged" list
+L = [[0,1,2], [], [4, 5, 6, 7], [8,9]]
+
+for i in range(len(L)):
+   for j in range(len(L[i])):
+      print(L[i][j], end = ' ')
+   print()
+
+0 1 2 
+
+4 5 6 7 
+8 9 
+
+
+for subL in L:
+   for item in subL:
+      print(item, end = ' ')
+   print()
+
+0 1 2 
+
+4 5 6 7 
+8 9 
+
+# Multiple references to mutable objects
+L1 = [10, 20, 30]
+L2 = [L1, L1, L1, L1]
+
+L1
+[10, 20, 30]
+
+L2
+[[10, 20, 30], [10, 20, 30], [10, 20, 30], [10, 20, 30]]
+
+L1[1] = 19
+
+L1
+[10, 19, 30]
+
+L2
+[[10, 19, 30], [10, 19, 30], [10, 19, 30], [10, 19, 30]]
+
+# Copying Lists
+# assignment doesn't really make a copy
+L1 = [1, 2, 3, 4]
+L2 = L1
+
+L1
+[1, 2, 3, 4]
+
+L2
+[1, 2, 3, 4]
+
+L1[3] = 'X'
+
+L1
+[1, 2, 3, 'X']
+
+L2
+[1, 2, 3, 'X']
+
+# Use Copy Slice
+L1 = [1, 2, 3, 4]
+L2 = L1[:]
+
+L1
+[1, 2, 3, 4]
+
+L2
+[1, 2, 3, 4]
+
+L1[3] = 'X'
+
+L1
+[1, 2, 3, 'X']
+
+L2
+[1, 2, 3, 4]
+
+# copy slice doesn't work for lists of mutable objects
+
+L1 = [[1, 2, 3], [4, 5, 6]]
+L2 = L1[:]
+
+L1
+[[1, 2, 3], [4, 5, 6]]
+
+L2
+[[1, 2, 3], [4, 5, 6]]
+
+L1[0] = 'X'
+
+L1
+['X', [4, 5, 6]]
+
+L2
+[[1, 2, 3], [4, 5, 6]]
+
+L1[1][2] = 'Y'
+
+L1
+['X', [4, 5, 'Y']]
+
+L2
+[[1, 2, 3], [4, 5, 'Y']]
+
+# Deep Copy
+import copy
+
+L1 = [[1, 2, 3], [4, 5, 6]]
+L2 = copy.deepcopy(L1)
+
+L1
+[[1, 2, 3], [4, 5, 6]]
+
+L2
+[[1, 2, 3], [4, 5, 6]]
+
+L1[0] = 'X'
+
+L1
+['X', [4, 5, 6]]
+
+L2
+[[1, 2, 3], [4, 5, 6]]
+
+L1[1][2] = 'Y'
+
+L1
+['X', [4, 5, 'Y']]
+
+L2
+[[1, 2, 3], [4, 5, 6]]
