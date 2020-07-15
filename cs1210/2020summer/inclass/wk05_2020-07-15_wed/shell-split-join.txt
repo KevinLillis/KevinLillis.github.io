@@ -1,0 +1,51 @@
+Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+
+# Shuffling a list
+import random
+L = list(range(1, 11))
+L[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+random.shuffle(L)
+L[7, 9, 5, 3, 10, 8, 6, 2, 1, 4]
+
+# splitevent = 'Mississippi Blues Festival'
+event.split()['Mississippi', 'Blues', 'Festival']
+
+event.split()[0]'Mississippi'
+
+river = event.split()[0]
+river'Mississippi'
+
+river.split()['Mississippi']
+river.split('ss')['Mi', 'i', 'ippi']
+
+river.split('i')['M', 'ss', 'ss', 'pp', '']
+
+
+# split with multiple assignmentx, y, z = [1, 2, 3]
+x1
+
+y2
+
+z3
+
+x, y, z = 'python is great'.split()
+x'python'
+y'is'
+z'great'
+
+# the join() function'-'.join(['cat', 'dog', 'mouse'])'cat-dog-mouse'
+
+''.join(['p', 'a', 'r', 'r', 'o', 't'])'parrot'
+
+# Shuffle a stringimport random
+message = 'lumberjack'
+L = list(message)
+L['l', 'u', 'm', 'b', 'e', 'r', 'j', 'a', 'c', 'k']
+
+random.shuffle(L)
+L['l', 'm', 'k', 'b', 'c', 'u', 'j', 'a', 'r', 'e']
+
+s = ''.join(L)
+s'lmkbcujare'
+
