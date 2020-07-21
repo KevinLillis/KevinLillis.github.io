@@ -1,0 +1,49 @@
+Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
+Type "help", "copyright", "credits" or "license" for more information.
+
+T = (1, 2, 3)
+type(T)<class 'tuple'>
+T[0]1
+T[-1]3
+len(T)3
+T[0] = 10Traceback (most recent call last):
+  Python Shell, prompt 6, line 1
+builtins.TypeError: 'tuple' object does not support item assignment
+D = {[1,2,3]:'abc'}Traceback (most recent call last):
+  Python Shell, prompt 7, line 1
+builtins.TypeError: unhashable type: 'list'
+
+D = {(1, 2, 3):'abc'}
+D{(1, 2, 3): 'abc'}
+D[(1,2,3)]'abc'
+T = (1, 2, 3)
+T(1, 2, 3)
+T = (1)
+type(T)<class 'int'>
+x = (1 + 8) * 2
+x18
+x = (9) * 2
+x18
+x = (9)x9
+type(x)<class 'int'>
+T = (1, 2)
+type(T)<class 'tuple'>
+
+T = (1,)
+type(T)<class 'tuple'>
+len(T)1
+T[0]1
+T = 4, 5, 6
+type(T)<class 'tuple'>
+T(4, 5, 6)
+T = 1,
+T(1,)
+ a, b, c = 1, 2, 3
+T = 1, 2, 3type(T)<class 'tuple'>
+
+a, b, c = 1, 2, 3
+(a, b, c) = (1, 2, 3)
+T = (2, 3,1, 6, 4)
+sorted(T)[1, 2, 3, 4, 6]
+T = tuple(sorted(T))
+T(1, 2, 3, 4, 6)
