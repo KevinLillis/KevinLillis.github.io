@@ -86,7 +86,7 @@
                 <li>Must be named <code>recursion.py</code></li>
                 <li>Must include exactly three methods, which have the following signatures:
                     <ul>
-                        <li><code>def def strDist(message, mark):(message, substring):</code></li>
+                        <li><code>def removeSubstrings(message, substring):</code></li>
                         <li><code>def closest(L):</code></li>
                         <li><code>def strDist(message, mark):</code></li>
                     </ul>
@@ -98,14 +98,172 @@
 
             <h2>Problem 1 &ndash; Remove Substrings</h2>
             <p>
-                For this problem, you are given a message and a substring, both of which are strings. The
-                <code>strDist</code> function is to return a new string which is a copy of <code>message</code> with
-                each occurrence
+                For this problem, your function is given a message and a substring, both of which are strings. The
+                <code>removeSubstrings</code> function is to return a new string which is a copy of <code>message</code>
+                only
+                with
+                each occurrence of <code>substring</code> removed. Below are some examples of how this should work.
+            <table style="text-align:center; width:50%; margin-left: 25%; margin-right: 25%;">
+                <tr>
+                    <th style="text-align:center"><code>message</code></th>
+                    <th style="text-align:center"><code>substring</code></th>
+                    <th style="text-align:center"><code>result</code></th>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >abcdef</q></code></td>
+                    <td style="text-align:center"><code><q >abc</q></code></td>
+                    <td style="text-align:center"><code><q >def</q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>abcdef</code></td>
+                    <td style="text-align:center"><code><q >def</q></code></td>
+                    <td style="text-align:center"><code><q >abc</q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >abcdef</q></code></td>
+                    <td style="text-align:center"><code><q >bcd</q></code></td>
+                    <td style="text-align:center"><code><q >aef</q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >abcdef</q></code></td>
+                    <td style="text-align:center"><code><q >abcdef</q></code></td>
+                    <td style="text-align:center"><code><q></q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >aabbaabb</q></code></td>
+                    <td style="text-align:center"><code><q >aa</q></code></td>
+                    <td style="text-align:center"><code><q>bbbb</q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >aabbaabb</q></code></td>
+                    <td style="text-align:center"><code><q >a</q></code></td>
+                    <td style="text-align:center"><code><q>bbbb</q></code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >abcdef</q></code></td>
+                    <td style="text-align:center"><code><q >xyz</q></code></td>
+                    <td style="text-align:center"><code><q>abcdef</q></code></td>
+                </tr>
+            </table>
             </p>
 
             <h2>Problem 2 &ndash; Closest Numbers in A List</h2>
+            <p>
+                For this problem your function is given a list <code>L</code> of sorted integers. The
+                <code>closest</code> function should return a list containing the two numbers that are the closest. If
+                there are more than one pair of closest numbers, the last pair should be returned. You
+                can assume the given list contains at least two numbers.
+                Below are some examples of how this should work.
+            <table style="text-align:center; width:50%; margin-left: 25%; margin-right: 25%;">
+                <tr>
+                    <th style="text-align:center"><code>List L</code></th>
+                    <th style="text-align:center"><code>result</code></th>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[3, 7, 67, 68, 210, 215]</code></td>
+                    <td style="text-align:center"><code>[67, 68]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[3, 7, 67, 168, 210, 215]</code></td>
+                    <td style="text-align:center"><code>[3, 7]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[3, 47, 67, 168, 210, 215]</code></td>
+                    <td style="text-align:center"><code>[210, 215]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[3, 7]</code></td>
+                    <td style="text-align:center"><code>[3, 7]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[3, 3, 3, 3, 3, 3]</code></td>
+                    <td style="text-align:center"><code>[3, 3]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[1, 2, 3, 4, 5, 6]</code></td>
+                    <td style="text-align:center"><code>[5, 6]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[5, 10, 100, 105, 305, 310]</code></td>
+                    <td style="text-align:center"><code>[305, 310]</code></td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code>[5, 10, 15]</code></td>
+                    <td style="text-align:center"><code>[10, 15]</code></td>
+                </tr>
+            </table>
 
+            </p>
             <h2>Problem 3 &ndash; String Distance</h2>
+            <p>
+                For this problem your function is given two strings, called <code>message</code> and <code>mark</code>.
+                The
+                <code>strDist</code> function returns the length of the longest substring of <code>message</code> that
+                begins and ends with the string <code>mark</code>. Below are some examples of how this should work.a
+            <table style="text-align:center; width:50%; margin-left: 25%; margin-right: 25%;">
+                <tr>
+                    <th style="text-align:center"><code>message</code></th>
+                    <th style="text-align:center"><code>mark</code></th>
+                    <th style="text-align:center">result</th>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >cat dog cat dog cat</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">19</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >cat dog cat dog ca</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">11</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >at dog cat dog cat</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">11</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >dog cat dog</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">3</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >dog dog</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">0</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">3</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >ca</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">0</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >c</q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">0</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q ></q></code></td>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center">0</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q >cat</q></code></td>
+                    <td style="text-align:center"><code><q ></q></code></td>
+                    <td style="text-align:center">3</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><code><q ></q></code></td>
+                    <td style="text-align:center"><code><q ></q></code></td>
+                    <td style="text-align:center"><code>0</code></td>
+                </tr>
+            </table>
+
+            </p>
 
             <h3>Grading</h3>
             <p>
@@ -117,10 +275,9 @@
             <h3>What to Turn In / Required File Name</h3>
 
             <p>
-                A Dropbox Folder has been created for this assignment in ICON. Please submit your Python program through
-                ICON using that folder.<br>Please <strong>DO NOT</strong> upload that data files with your program. Only
-                upload
-                your python program.
+                A Dropbox Folder has been created for this assignment in ICON. Please submit your Python program , named
+                <code>recursion.py</code> through
+                ICON using that folder.
             </p>
 
 
