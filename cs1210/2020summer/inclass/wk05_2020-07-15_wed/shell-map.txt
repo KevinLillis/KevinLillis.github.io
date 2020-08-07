@@ -1,24 +1,0 @@
-Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-# map(function, sequence)def square(x):    return x * x
-def double(x):    return x + x
-square<function square at 0x000001D492BF64C0>
-
-double<function double at 0x000001D492BF65E0>
-
-double(3)6
-M = map(square, [1, 2, 3])
-M<map object at 0x000001D4931C8B20>
-list(M)[1, 4, 9]
-
-M = map(double, [1, 2, 3])
-list(M)[2, 4, 6]
-M = map(double, [1, 2, 3, 'a', 'b', 'c'])
-list(M)[2, 4, 6, 'aa', 'bb', 'cc']
-
-a = input('Enter numbers separated by spaces: ')Enter numbers separated by spaces: 1 5 3 5 6 5 4 2 1
-a'1 5 3 5 6 5 4 2 1'
-b = a.split()
-b['1', '5', '3', '5', '6', '5', '4', '2', '1']
-c = map(int, b)
-list(c)[1, 5, 3, 5, 6, 5, 4, 2, 1]

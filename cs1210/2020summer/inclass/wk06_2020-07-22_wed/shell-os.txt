@@ -1,19 +1,0 @@
-Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-import os
-os.getcwd()
-'C:\\'
-os.chdir('kevin/data')
-os.getcwd()'C:\\kevin\\data'
-os.listdir()['01-Jan', '02-Feb', '03-Mar', 'print-cwd.py']
-os.chdir('02-Feb')
-os.getcwd()'C:\\kevin\\data\\02-Feb'
-
-os.chdir(os.pardir)
-os.getcwd()'C:\\kevin\\data'
-
-os.chdir('03-Mar')
-os.getcwd()'C:\\kevin\\data\\03-Mar'
-dataFile = open('myNewDataFile.txt', 'w')
-print('This is stuff in my data file', file=dataFile)
-dataFile.close()

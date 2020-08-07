@@ -1,13 +1,0 @@
-Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-# Filterdef isPositive(number):    return number > 0
-F = filter(isPositive, [1, 2, 0, -4, 5, 2, -8, 10, 0, 9])
-list(F)[1, 2, 5, 2, 10, 9]
-def isConsonant(ch):    return ch not in 'aeiouAEIOU'
-F = filter(isConsonant, 'You were not made for comfort, you were made for greatness')
-F = list(F)
-F['Y', ' ', 'w', 'r', ' ', 'n', 't', ' ', 'm', 'd', ' ', 'f', 'r', ' ', 'c', 'm', 'f', 'r', 't', ',', ' ', 'y', ' ', 'w', 'r', ' ', 'm', 'd', ' ', 'f', 'r', ' ', 'g', 'r', 't', 'n', 's', 's']
-
-''.join(F)'Y wr nt md fr cmfrt, y wr md fr grtnss'
-# using built-in functionF = filter(str.isdigit, 'one 1 two 2 x3x 456!')
-list(F)['1', '2', '3', '4', '5', '6']

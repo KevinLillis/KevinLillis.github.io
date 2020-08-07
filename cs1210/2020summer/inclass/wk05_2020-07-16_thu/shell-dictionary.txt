@@ -1,78 +1,0 @@
-Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-# Dictionariesages = {'sean':27, 'rebekah':33, 'connor':20}
-type(ages)<class 'dict'>
-
-ages['rebekah']33
-
-# change a valueages['connor'] += 1
-ages{'sean': 27, 'rebekah': 33, 'connor': 21}
-
-ages['sean'] = 23
-ages{'sean': 23, 'rebekah': 33, 'connor': 21}
-
-# Adding a new key:value pairages['grace'] = 25
-ages{'sean': 23, 'rebekah': 33, 'connor': 21, 'grace': 25}
-
-len(ages)4
-
-# Dictinary methods# getting the keysages.keys()dict_keys(['sean', 'rebekah', 'connor', 'grace'])
-
-# get the valuesages.values()dict_values([23, 33, 21, 25])
-
-# key (key, value) pairsages.items()dict_items([('sean', 23), ('rebekah', 33), ('connor', 21), ('grace', 25)])
-# Iterating over the key:value pairsfor key in ages:    print(key, end = ' ')
-sean rebekah connor grace 
-for key in ages:    print(f'{key} is {ages[key]} years old')
-sean is 23 years old
-rebekah is 33 years old
-connor is 21 years old
-grace is 25 years old
-
-# Iterating using multiple assignmentfor key, value in ages.items():    print(f'{key} is {value} years old')
-sean is 23 years old
-rebekah is 33 years old
-connor is 21 years old
-grace is 25 years old
-
-for name, age in ages.items():    print(f'{name} is {age} years old')
-sean is 23 years old
-rebekah is 33 years old
-connor is 21 years old
-grace is 25 years old
-
-# get the value for a given keyages['sean']23
-
-ages['marie']
-Traceback (most recent call last):
-  Python Shell, prompt 30, line 1
-builtins.KeyError: 'marie'
-
-ages.get('sean')23
-
-print(ages.get('marie'))None
-
-ages.get('sean', 'not found')23
-
-ages.get('marie', 'not found')'not found'
-
-# dictionary containment'sean' in agesTrue
-
-'marie' not in agesTrue
-
-# removing something from a dictionaryages{'sean': 23, 'rebekah': 33, 'connor': 21, 'grace': 25}
-del ages['rebekah']
-ages{'sean': 23, 'connor': 21, 'grace': 25}
-# Different ways to create a dictionary# Dictionary literal (what we've already seen)ages = {'sean':27, 'rebekah':33, 'connor':20, 'grace':25}
-ages{'sean': 27, 'rebekah': 33, 'connor': 20, 'grace': 25}
-# Use the initializertype(ages)<class 'dict'>
-
-ages = dict([('molly',31), ('pat',29), ('grace',25)])ages{'molly': 31, 'pat': 29, 'grace': 25}
-
-# Using zipkeys = ['molly', 'pat', 'grace']values = [31, 29, 25]
-zip(keys, values)<zip object at 0x000001AFB0F7A480>
-list(zip(keys, values))[('molly', 31), ('pat', 29), ('grace', 25)]
-ages = dict(zip(keys, values))ages{'molly': 31, 'pat': 29, 'grace': 25}
-# More at zip# First list is shorter than second listlist(zip([1, 2, 3], ['a', 'b', 'c', 'd']))[(1, 'a'), (2, 'b'), (3, 'c')]
-list(zip([1, 2, 3, 4], ['a', 'b', 'c']))[(1, 'a'), (2, 'b'), (3, 'c')]
-# more than one listlist(zip([1, 2, 3], ['a', 'b', 'c'], ['x', 'y', 'z']))[(1, 'a', 'x'), (2, 'b', 'y'), (3, 'c', 'z')]

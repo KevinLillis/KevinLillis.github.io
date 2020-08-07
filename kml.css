@@ -190,16 +190,8 @@ th.withBorders {
 }
 
 table.gradeTable {
-	text-align: left;
-    align: right;
-	font-family: Verdana;
-	font-weight: normal;
 	font-size: 11px;
-	color: #404040;
-	width: 220px;
-	border: none;
-	border-collapse: collapse;
-	border-spacing: 1px;
+	width: 180px;
 }
 
 td.gradeTable {
@@ -208,7 +200,7 @@ td.gradeTable {
 
 
 table.noBorders {
-	width: 180px;
+	width: 250px;
 }
 	
 td.noBorders {

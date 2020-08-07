@@ -1,18 +1,0 @@
-Python 3.8.4 (tags/v3.8.4:dfa645a, Jul 13 2020, 16:46:45) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-# Lambda expressions - anonymous functionsmyLambda = lambda a, b: a + b
-myLambda<function <lambda> at 0x00000187557765E0>
-myLambda(1, 2)3
-myLambda('hello', ' world')'hello world'
-# Really is anonymousL = [] # L will be a list of functions
-L.append(lambda a, b : a + b)
-L.append(lambda ch: ch not in 'aeiouAEIOU')
-len(L)2
-L[<function <lambda> at 0x00000187557764C0>, <function <lambda> at 0x0000018755776700>]
-
-L[0](1, 2)3
-L[1]('W')True
-L[1]('U')False
-L = [4, 34, 5, 6, 5, 4, 5, 65, 24, 8]
-F = filter(lambda x: x%2 == 0, L)
-list(F)[4, 34, 6, 4, 24, 8]

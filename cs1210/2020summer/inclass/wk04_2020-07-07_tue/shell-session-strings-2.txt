@@ -1,57 +1,0 @@
-Python 3.8.4rc1 (tags/v3.8.4rc1:6c38841, Jun 30 2020, 15:17:30) [MSC v.1924 64 bit (AMD64)]
-Type "help", "copyright", "credits" or "license" for more information.
-# Containment, in and not intown = 'davenport'
-'port' in townTrue
-
-'rapid' in townFalse
-
-'port' not in townFalse
-
-'rapid' not in townTrue
-
-# String slicing# slice operator town [start : stop : step]town = 'Davenport'
-town[5 : 8]'por'
-
-town[:8]'Davenpor'
-
-town[0:8]'Davenpor'
-
-town[5:]'port'
-
-town[5:len(town)]'port'
-
-town[:]'Davenport'
-
-town[0:len(town)]'Davenport'
-
-town[::2]'Dvnot'
-
-town[::3]'Deo'
-
-
-# Negative steptown'Davenport'
-
-town[7:3:-1]'ropn'
-
-
-# Negative Indexestown[-8:-5]'ave'
-town[-8:-5:]'ave'
-town[-8:-5:1]'ave'
-
-# Reversing a Stringtown[0:len(town)]'Davenport'
-
-town[0:9]'Davenport'
-
-town[-9:-1]'Davenpor'
-
-town[-9:0]''
-
-town[0:9]'Davenport'
-
-# Can't use positive indexes to reverse the stringtown'Davenport'
-
-town[8 : 0 : -1]'tropneva'
-
-town[-1:-10:-1]'tropnevaD'
-
-town[::-1]'tropnevaD'
