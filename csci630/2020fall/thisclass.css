@@ -3,3 +3,15 @@
 	/* This style specification starts in KML.css */
 	background-color: #365870;
 }
+
+inClass {
+	color: green;
+}
+
+dueDate {
+	color: red;
+}
+
+presentation {
+	color: blue;
+}

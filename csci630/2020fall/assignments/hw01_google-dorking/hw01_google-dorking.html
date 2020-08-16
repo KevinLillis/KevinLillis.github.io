@@ -22,9 +22,9 @@
     <meta name="theme-color" content="#ffffff">
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
-    <link rel="stylesheet" type="text/css" media="all" href="../../../../inland.css">
-    <link rel="stylesheet" type="text/css" media="all" href="../../thisclass.css">
-    <title>CSCI 281 - Fall 2020</title>
+    <link rel="stylesheet" type="text/css" media="all" href="/inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/csci630/2020fall/thisclass.css">
+    <title>CSCI 630 - Fall 2020</title>
 </head>
 
 <body>
@@ -45,23 +45,23 @@
             <!-- Top stuff including header image -->
             <div id="sitetitle" class="clearfix">
                 <!-- Site Title -->
-                <h1><a href="../../index.html">CSCI 281 A</a></h1>
-                <br>Discrete Structures<br>Fall 2020<br>3 Credits
+                <h1><a href="/csci630/2020fall/index.html">CSCI 630 M</a></h1>
+                <br>Information Assurance<br>Fall 2020<br>3 Credits
             </div>
             <!-- End Site Title -->
 
             <div id="nav" class="clearfix">
                 <!-- nav -->
                 <ul>
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../../syllabus.html">Syllabus</a></li>
+                    <li><a href="/csci630/2020fall/index.html">Home</a></li>
+                    <li><a href="/csci630/2020fall/syllabus.html">Syllabus</a></li>
                 </ul>
             </div>
             <!--End nav -->
 
             <div id="extended">
                 <!-- Header Image -->
-                <img src="../../images/header.png">
+                <img src="/csci630/2020fall/images/header.png">
             </div>
             <!-- End Header Image -->
 
@@ -71,10 +71,50 @@
 
         <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
             <!-- Main Points -->
-            <h1>HW 01 &ndash; First Homework</h1>
+            <h1>HW 01 &ndash; Google Dorking</h1>
+            <p><strong>Due Date:</strong> Sun 8/30</p>
+
             <p>
-                Instructions for the first homework assignment.
-            </p>
+                Perform Google searches using various search operators to see if you can find documents that might be
+                sensitive in nature.
+                By selecting different operators and combining them together you can see Google hacking can be effective
+                in exposing sensitive materials.
+
+                Start by looking at this article: <a
+                    href="https://securitytrails.com/blog/google-hacking-techniques">Exploring Google Hacking
+                    Techniques</a>
+
+                Here are some examples from the article:
+            <ul>
+                <li><strong>
+                        <pre>allintext:username filetype:log myBB sql</pre></strong>
+                    Exposes user names and passwords
+                </li>
+
+
+                <li><strong>
+                        <pre>inurl:/proc/self/cwd</pre></strong>
+                    Vulnerable server results will appear, along with their exposed directories that can be surfed from
+                    your own browser.
+                </li>
+
+                <li><strong>
+                        <pre>intitle:"index of" inurl:ftp</pre></strong>
+                    Lists public FTP servers
+                </li>
+
+
+                <li><strong>
+                        <pre>filetype:log username putty</pre></strong>
+                    The PUTTY SSH client on windows always logs username. This shows them.
+                </li>
+
+
+                <li><strong>
+                        <pre>filetype:xls inurl:"email.xls"</pre></strong>
+                    Look for email lists
+                </li>
+            </ul>
 
         </div>
         <!-- Main Points -->
