@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="/inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/csci195/2020fall/thisclass.css">
+    <title>CSCI 195 - Fall 2020</title>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="https://www.sau.edu/">SAU</a></li>
+                <li><a href="https://www.sau.edu/cis/">CIS</a></li>
+                <li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+                <li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li>
+                <li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="/csci195/2020fall/index.html">CSCI 195 A</a></h1>
+                <br>Programming I<br>Fall 2020<br>3 Credits
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="/csci195/2020fall/index.html">Home</a></li>
+                    <li><a href="/csci195/2020fall/syllabus.html">Syllabus</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="/csci195/2020fall/images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>HW 11 &ndash; Rock, Paper, Scissors, Lizard, Spock (RPSLS)</h1>
+
+            <p>A variation of the traditional Rock, Paper, Scissors game was created by Sam Kass because it seems like
+                when two players know each other well enough, 75 - 80% of games end in a tie. In this variation:</p>
+            <ul style="padding-left: 4em;">
+                <li>Scissors cut Paper</li>
+                <li>Paper covers Rock</li>
+                <li>Rock crushes Lizard</li>
+                <li>Lizard poisons Spock</li>
+                <li>Spock smashes Scissors</li>
+                <li>Scissors decapitate Lizard</li>
+                <li>Lizard eats Paper</li>
+                <li>Paper disproves Spock</li>
+                <li>Spock vaporizes Rock</li>
+                <li>Rock crushes Scissors</li>
+            </ul>
+            <p>Here is a graphic of the rules rules and an explanation on YouTube.</p>
+            <table width="80%" border="0">
+                <tr>
+                    <td><img src="rpsls.jpg" width="529" height="423"></td>
+                </tr>
+                <tr>
+                    <td><object style="height: 390px; width: 640px">
+                            <param name="movie"
+                                value="http://www.youtube.com/v/iapcKVn7DdY?version=3&feature=player_detailpage">
+                            <param name="allowFullScreen" value="true">
+                            <param name="allowScriptAccess" value="always">
+                            <embed src="http://www.youtube.com/v/iapcKVn7DdY?version=3&feature=player_detailpage"
+                                type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always"
+                                width="640" height="360">
+                        </object></td>
+                </tr>
+            </table>
+            <h2>How Your Program Should Work</h2>
+            <p>The program randomly generates a number 1, 2, 3, 4, or 5 representing Rock, Paper, Scissors, Lizard, and
+                Spock. The program then prompts you to enter a number 1, 2, 3, 4, or 5 and decides who wins, you or the
+                computer. Below are a few sample runs. Please pay attention to the messages that are displayed. Also
+                note how invalid entries are handled. The numbers I typed are shown in green. Your program<em> does
+                    not</em> need to produce any color.</p>
+
+            <h2>Program Organization</h2>
+            <p>
+                Your program must include the following functions:
+            <dl>
+                <dt>getComputer()</dt>
+                <dd>This function takes no arguments. It generates a random number from 1 to 5 and returns the
+                    corresponding string: <q>Rock</q>, <q>Paper</q>, <q>Scissors</q>, <q>Lizard</q>, or <q>Spock</q>.
+                    This function calls the <code>getName</code> function.
+                </dd>
+
+                <dt>getHuman()</dt>
+                <dd>This function takes no arguments. It prompts the user to make a selection by showing a menu. It than
+                    reads the user input and returns the corresponding string: <q>Rock</q>, <q>Paper</q>,
+                    <q>Scissors</q>, <q>Lizard</q>, <q>Spock</q> or <q>Undefined</q>. Undefined is included because the
+                    user may enter a number other than 1, 2, 3, 4, or 5. This function calls the <code>getName</code>
+                    function.
+                </dd>
+
+                <dt>getName(value)</dt>
+                <dd>This function takes one argument, that you can assume is an integer. The function returns one of
+                    the following strings, depending on the number given: <q>Rock</q>, <q>Paper</q>, <q>Scissors</q>,
+                    <q>Lizard</q>, <q>Spock</q> or <q>Undefined</q>.</dd>
+
+                <dt>getMessage(winner, loser)</dt>
+                <dd>This function takes two arguments, winner and loser. This function should only be called for games
+                    where there is a winner and a loser. It will not be called for games that end in a tie or for games
+                    whose outcome is undefined. This function returns the message to be displayed in the form <q>winner
+                        verb loser</q>, such as <q>Paper covers Rock</q>.</dd>
+
+                <dt>playGame(computer, human)</dt>
+                <dd>This function plays one game of PRSLS. It takes two arguments, one for the computer and one for the
+                    human. You can assume that <em>each</em> input will be one of the following: <q>Rock</q>,
+                    <q>Paper</q>,
+                    <q>Scissors</q>, <q>Lizard</q>, <q>Spock</q> or <q>Undefined</q>. The function determines if there
+                    is a winner, if the game is a tie, or if the game outcome is undefined. The resulting message is
+                    printed from this function. This function calls the <code>getMessage</code> function.</dd>
+
+                <dt>main()</dt>
+                <dd>The main function is very short. It calls the <code>getComputer</code> and <code>getHuman</code>
+                    functions to get the selections and then passes those selections to the <code>playGame</code>
+                    function. The <code>main</code> function does not actually read any input, generate any random
+                    numbers, or print any
+                    output.</dd>
+            </dl>
+
+
+            </p>
+            <h2>Sample Run</h2>
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter one of the following:
+                1) Rock
+                2) Paper
+                3) Scissors
+                4) Lizard
+                5) Spock
+           
+                Entry: <font color="#00FF00">5</font>
+                The computer is Lizard. You are Spock. Lizard poisons Spock. The computer wins.      
+                 
+                 </pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter one of the following:
+                1) Rock
+                2) Paper
+                3) Scissors
+                4) Lizard
+                5) Spock
+           
+                Entry: <font color="#00FF00">1</font>
+                The computer is Rock. You are Rock. Draw. Neither wins.      
+                 
+                 </pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter one of the following:
+                1) Rock
+                2) Paper
+                3) Scissors
+                4) Lizard
+                5) Spock
+           
+                Entry: <font color="#00FF00">6</font>
+                The computer is Paper. You are Undefined. Invalid game. Outcome is undefined.      
+                 
+                 </pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+
+
+            <h3>What to Turn in</h3>
+            <p>
+                Submit your single Python program file ending with a <code>.py</code> file extension.
+            </p>
+
+        </div>
+        <!-- Main Points -->
+
+
+        <div id="footer" class="shadow">
+            <!-- Footer -->
+            &nbsp;
+        </div>
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+</body>
+
+</html>
