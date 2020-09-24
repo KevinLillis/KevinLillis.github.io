@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="/inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/csci195/2020fall/thisclass.css">
+    <title>CSCI 195 - Fall 2020</title>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="https://www.sau.edu/">SAU</a></li>
+                <li><a href="https://www.sau.edu/cis/">CIS</a></li>
+                <li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+                <li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li>
+                <li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="/csci195/2020fall/index.html">CSCI 195 A</a></h1>
+                <br>Programming I<br>Fall 2020<br>3 Credits
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="/csci195/2020fall/index.html">Home</a></li>
+                    <li><a href="/csci195/2020fall/syllabus.html">Syllabus</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="/csci195/2020fall/images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>HW 14 &ndash; Palindromes</h1>
+            <p>For this assignment, a palindrome is defined to be a character string such that, if all non-alphabetic
+                characters are ignored, and if upper-case and lower-case versions of the same letter are counted as
+                equal, it is the same as its reverse. An alphabetic character is a character from ’A’ to ’Z’ or from ’a’
+                to ’z’. Thus punctuation marks, digits, spaces, tabs, carriage returns, hyphens, underscores, and any
+                other characters are not considered alphabetic characters.</p>
+
+            <h2>Assignment</h2>
+
+            <p>Write a program that prompts the user for a string and reports whether or not the string is a palindrome.
+                Your program should include a function named <code>isPalindrome</code> that takes a string as a
+                parameter and returns <code>True</code> if the string is a palindrome and returns <code>False</code> if
+                the string is not a palindrome.</p>
+
+            <h2>Sample Runs</h2>
+            <p>Below are several sample runs that show how your program should operate. The first example shows that an
+                empty string is a palindrome.</p>
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00"></font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">a</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">aa</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">aba</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">abba</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">A Man, A Plan, A Canal-Panama!</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">Mr. Owl Ate My Metal Worm.</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">Was It A Rat I Saw?</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+            <br>
+
+
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">Des Moines Iowa</font>
+		 Your string is NOT a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+
+
+            <br>
+            <table border="2" width="87%" bordercolor="#000000">
+                <tr>
+                    <td width="188%" bgcolor="#000000">
+                        <p class="indent">
+                            <font color="#FFFFFF"><br>
+                                <pre>     Enter a string: <font color="#00FF00">--++}[.>a$#B`c$#~@bA   $</font>
+		 Your string is a palindrome
+			
+			</pre>
+                            </font>
+                    </td>
+                </tr>
+            </table>
+
+            <h3>What to Turn in</h3>
+            <p>
+                Submit your single Python program file ending with a <code>.py</code> file extension.
+            </p>
+
+        </div>
+        <!-- Main Points -->
+
+
+        <div id="footer" class="shadow">
+            <!-- Footer -->
+            &nbsp;
+        </div>
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+</body>
+
+</html>
