@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" media="all" href="/inland.css">
+    <link rel="stylesheet" type="text/css" media="all" href="/csci195/2020fall/thisclass.css">
+    <title>CSCI 195 - Fall 2020</title>
+</head>
+
+<body>
+    <div id="wrapper960" class="clearfix">
+        <!-- entire body -->
+        <div id="toplinks">
+            <ul class="toplinks_links">
+                <li><a href="https://www.sau.edu/">SAU</a></li>
+                <li><a href="https://www.sau.edu/cis/">CIS</a></li>
+                <li><a href="https://blackboard.sau.edu/">Blackboard</a></li>
+                <li><a href="https://www.sau.edu/Student_Success_Center.html">Success</a></li>
+                <li><a href="https://kevinlillis.github.io/">Dr. Lillis</a></li>
+            </ul>
+        </div>
+        <!-- End toplinks -->
+
+        <div id="header" class="clearfix shadow">
+            <!-- Top stuff including header image -->
+            <div id="sitetitle" class="clearfix">
+                <!-- Site Title -->
+                <h1><a href="/csci195/2020fall/index.html">CSCI 195 A</a></h1>
+                <br>Programming I<br>Fall 2020<br>3 Credits
+            </div>
+            <!-- End Site Title -->
+
+            <div id="nav" class="clearfix">
+                <!-- nav -->
+                <ul>
+                    <li><a href="/csci195/2020fall/index.html">Home</a></li>
+                    <li><a href="/csci195/2020fall/syllabus.html">Syllabus</a></li>
+                </ul>
+            </div>
+            <!--End nav -->
+
+            <div id="extended">
+                <!-- Header Image -->
+                <img src="/csci195/2020fall/images/header.png">
+            </div>
+            <!-- End Header Image -->
+
+
+        </div>
+        <!-- End Top stuff including header image -->
+
+        <div id="extended" style="font-family: verdana,arial,sans-serif; color: #333333">
+            <!-- Main Points -->
+            <h1>HW 18 &ndash; Quiz Grader</h1>
+            <p>For this assignment you will write a program that automatically grades true/false quizzes. Your program
+                will read from an input file with a specific structure (described below) and produces an output file
+                containing the individual quiz scores and a summary for the class. The structure for the output file is
+                also described below.</p>
+            <h2>The Input File</h2>
+            <p>Information about the quiz and the answers given by each student are contained in a text file. The
+                program should prompt the user to enter the name of the text file. The text file will have the following
+                structure:</p>
+            <ul>
+                <li>The first line of the file contains a brief description of the quiz. For example something like
+                    &quot;Section A - Quiz # 5 - Covers Chapter 2&quot;.</li>
+                <li>The second line of the input file contains a single integer <em>m</em> that tells how many questions
+                    are on the quiz.</li>
+                <li>The third line contains the correct answer for each question. This will consist of <em>m</em>
+                    characters, all separated by a single space. Each character is either <em>T</em> or <em>F</em>.</li>
+                <li>The fourth line contains a single integer <em>n</em> that tells how many students are in the class.
+                </li>
+                <li>This is followed by two lines for each of the <em>n</em> student:
+                    <ul>
+                        <li>The student's ID, which contains no spaces.</li>
+                        <li>The student's answers which are all separated by a single space. There are <em>m</em>
+                            answers for each student. Each answer is either <em>T</em>, <em>F</em>, or the word
+                            <em>blank</em>, spelled out.</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Example Input file</h3>
+            <p>Below is an example input file for a quiz consisting of three questions given in a class with five
+                students. You can download this file to test your program: <a
+                    href="ScoresAssignment.txt">ScoresAssignment.txt</a>.</p>
+            <pre><code>    
+                Section A - Quiz # 5 - Covers Chapter 2
+                3
+                T F T 
+                5
+                GHBT339294
+                T F T
+                ts3390493
+                T blank T 
+                Baker123
+                blank blank F
+                Steiner
+                T F T
+                2983
+                T F T</code></pre>
+            <h2>The Output File</h2>
+            <p>The program produces an output file containing the results of the exam. The name of the output file is
+                based on the name of the input file. The output file has the same name as the input file, only with
+                &quot;<em>results-</em>&quot; added to the front. The structure of your output file must be as follows:
+            </p>
+            <ul>
+                <li>The first line of the output file contains the quiz description that was read in from line 1 of the
+                    input file.</li>
+                <li>This is followed by one line for each student, consisting of the student's ID, followed by a colon,
+                    a single space, and the number of correct answers.</li>
+                <li>At the end of the output file there is one additional line containing the class average. This line
+                    contains the words <em>Class Average</em>, followed by a colon, a single space, and the average
+                    number of correct answers, which is a floating point number. After that is a single space and the
+                    class average as a percent, in parentheses. The percent has one place after the decimal point and
+                    includes a percent sign.</li>
+            </ul>
+            <h3>Example Output File</h3>
+            <p>Below is the output file produced when the program is executed with the example input file shown above.
+                You can also download this file: <a href="results-ScoresAssignment.txt">results-ScoresAssignment.txt</a>
+            </p>
+            <pre><code>    
+                Section A - Quiz # 5 - Covers Chapter 2
+                GHBT339294: 3
+                ts3390493: 2
+                Baker123: 0
+                Steiner: 3
+                2983: 3
+                Class Average: 2.2</code></pre>
+
+            <h3>What to Turn in</h3>
+            <p>
+                Submit your single Python program file ending with a <code>.py</code> file extension.
+            </p>
+
+        </div>
+        <!-- Main Points -->
+
+
+        <div id="footer" class="shadow">
+            <!-- Footer -->
+            &nbsp;
+        </div>
+        <!-- End footer -->
+
+
+    </div>
+    <!-- End entire body -->
+</body>
+
+</html>
