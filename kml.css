@@ -1,18 +1,18 @@
-@import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans");
+/* @import url("http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CDroid+Sans"); */
 @import "inland.css";
 
-sup{
+sup {
 	vertical-align: super;
 	font-size: 80%;
 }
 
-sub{
-    vertical-align: sub;
-    font-size: 80%;
+sub {
+	vertical-align: sub;
+	font-size: 80%;
 }
 
 table {
-	font-family: verdana,arial,sans-serif;
+	font-family: verdana, arial, sans-serif;
 	/*color:#333333;*/
 	width: 100%;
 	border-width: 1px;
@@ -22,9 +22,9 @@ table {
 }
 
 th {
-	font-weight:bold;
-	vertical-align:bottom;
-	height:50px;
+	font-weight: bold;
+	vertical-align: bottom;
+	height: 50px;
 }
 
 td {
@@ -39,38 +39,42 @@ td {
 /* --------------- Week Number --------------- */
 
 td.weeknum {
-	font-weight:bold;
+	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
-	width:5%;
-	border-left-width:5px;
-	border-top-width:5px;
-	border-bottom-width:5px;
+	width: 5%;
+	border-left-width: 5px;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
 }
 
-td.gradweeknum, td.onedaynumthick {
-	font-weight:bold;
+td.gradweeknum,
+td.onedaynumthick {
+	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
-	width:10%;
-	border-left-width:5px;
-	border-top-width:5px;
-	border-bottom-width:5px;
+	width: 10%;
+	border-left-width: 5px;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
 }
 
-td.onedaynumthin, td.oneday-num-thin {
-	font-weight:bold;
+td.onedaynumthin,
+td.oneday-num-thin {
+	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
-	width:10%;
-	border-left-width:1px;
-	border-top-width:1px;
-	border-bottom-width:1px;
+	width: 10%;
+	border-left-width: 1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
 }
 
 /* --------------- Date Column --------------- */
 
-td.topdate, td.mondate, td.tuedate  {
+td.topdate,
+td.mondate,
+td.tuedate {
 	font-weight: bold;
 	text-align: center;
 	vertical-align: middle;
@@ -78,92 +82,108 @@ td.topdate, td.mondate, td.tuedate  {
 	border-top-width: 5px;
 }
 
-td.middledate, td.weddate {
-	font-weight:bold;
-	text-align:center;
+td.middledate,
+td.weddate {
+	font-weight: bold;
+	text-align: center;
 	vertical-align: middle;
 }
 
-td.bottomdate, td.thudate, td.fridate  {
-	font-weight:bold;
-	text-align:center;
+td.bottomdate,
+td.thudate,
+td.fridate {
+	font-weight: bold;
+	text-align: center;
 	vertical-align: middle;
-	border-bottom-width:5px;
+	border-bottom-width: 5px;
 }
 
 
-td.onedaydate, td.finaldate{
-	font-weight:bold;
-	text-align:center;
+td.onedaydate,
+td.finaldate {
+	font-weight: bold;
+	text-align: center;
 	vertical-align: middle;
-	border-top-width:5px;
-	border-bottom-width:5px;
+	border-top-width: 5px;
+	border-bottom-width: 5px;
 }
 
 td.onedaydatethin {
-	font-weight:bold;
-	text-align:center;
+	font-weight: bold;
+	text-align: center;
 	vertical-align: middle;
-	border-top-width:1px;
-	border-bottom-width:1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
 }
 
 /* --------------- Announcement Column --------------- */
 
-td.topann, td.monann, td.tueann  {
+td.topann,
+td.monann,
+td.tueann {
 	border-top-width: 5px;
 	width: 40%;
 }
 
-td.middleann, td.wedann {
+td.middleann,
+td.wedann {}
+
+td.bottomann,
+td.thuann,
+td.friann {
+	border-bottom-width: 5px;
 }
 
-td.bottomann, td.thuann, td.friann {
-	border-bottom-width:5px;
-}
-
-td.onedayann, td.finalann {
-	border-top-width:5px;
-	border-bottom-width:5px;
-	border-right-width:5px;
+td.onedayann,
+td.finalann {
+	border-top-width: 5px;
+	border-bottom-width: 5px;
+	border-right-width: 5px;
 }
 
 td.oneday-activities-thin {
 	padding-left: 0.5em;
-	border-top-width:1px;
-	border-bottom-width:1px;
-	border-right-width:1px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-right-width: 1px;
 }
 
 
 /* --------------- Homework Column --------------- */
 
-td.tophw, td.monhw, td.tuehw  {
-	border-top-width:5px;
-	border-right-width:5px;
+td.tophw,
+td.monhw,
+td.tuehw {
+	border-top-width: 5px;
+	border-right-width: 5px;
 }
 
-td.middlehw, td.wedhw {
-	border-right-width:5px;
+td.middlehw,
+td.wedhw {
+	border-right-width: 5px;
 }
 
-td.bottomhw, td.onedayhw, td.thuhw, td.frihw {
-	border-right-width:5px;
-	border-bottom-width:5px;
+td.bottomhw,
+td.onedayhw,
+td.thuhw,
+td.frihw {
+	border-right-width: 5px;
+	border-bottom-width: 5px;
 }
 
 td.onedayhwthin {
-	border-right-width:1px;
-	border-bottom-width:1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
 }
 
 /* --------------- No Class --------------- */
 
 .noClass {
-	/* background-color: #FFE577; */ /*see individual page for color*/
-	text-align:center;
-    vertical-align:middle;
-	font-weight:bold;		
+	/* background-color: #FFE577; */
+	/*see individual page for color*/
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
 }
 
 /* Prayer Before Study */
@@ -183,7 +203,7 @@ table.withBorders {
 	border-collapse: collapse;
 	border-spacing: 1px;
 }
-	
+
 th.withBorders {
 	border: 1px #181818 solid;
 	padding: 3px;
@@ -202,7 +222,7 @@ td.gradeTable {
 table.noBorders {
 	width: 250px;
 }
-	
+
 td.noBorders {
 	border: none;
 }
@@ -225,41 +245,43 @@ td.officeHours {
 
 
 ul.a {
-	list-style-type:disc;
-	margin-top:0px;
-	padding:0;
+	list-style-type: disc;
+	margin-top: 0px;
+	padding: 0;
 }
 
-ul.a, li {
-	background:none!important;
-	display:list-item;
-	text-align:left;
-	height:auto;
-	line-height:25px;
-	margin-bottom:0;
-	margin-left:25px;
-	position:relative;
+ul.a,
+li {
+	background: none !important;
+	display: list-item;
+	text-align: left;
+	height: auto;
+	line-height: 25px;
+	margin-bottom: 0;
+	margin-left: 25px;
+	position: relative;
 }
 
-ul.b{
-	list-style-type:circle;
-	margin-bottom:0px;
-	padding:0;
+ul.b {
+	list-style-type: circle;
+	margin-bottom: 0px;
+	padding: 0;
 }
 
-ul.b, li {
-	background:none!important;
-	display:list-item;
-	text-align:left;
-	height:auto;
-	line-height:25px;
-	margin-bottom:0;
-	margin-left:25px;
-	position:relative;
+ul.b,
+li {
+	background: none !important;
+	display: list-item;
+	text-align: left;
+	height: auto;
+	line-height: 25px;
+	margin-bottom: 0;
+	margin-left: 25px;
+	position: relative;
 }
-	
+
 table.calendar {
-	color:#333333;
+	color: #333333;
 	width: 70%;
 	border-width: 1px;
 	border-color: #666666;
@@ -272,8 +294,9 @@ th.calendar {
 	border-style: solid;
 	border-color: #666666;
 	font-weight: bold;
-	
+
 }
+
 td.calendar {
 	text-align: center;
 	border-width: 1px;
@@ -282,7 +305,7 @@ td.calendar {
 	border-color: #666666;
 	height: 40px;
 	vertical-align: middle;
-}	
+}
 
 .hangingindent {
 	padding-left: 8em;
@@ -305,6 +328,4 @@ dt {
 dd {
 	margin-left: 0px;
 	padding: 0 0 1em 0;
-}	
-
-
+}
