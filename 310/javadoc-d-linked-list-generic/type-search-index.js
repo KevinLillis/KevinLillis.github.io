@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"DLinked_ListGeneric"},{"p":"<Unnamed>","l":"DNode_Generic"},{"p":"<Unnamed>","l":"ListGeneric_Interface"}];updateSearchResults();
