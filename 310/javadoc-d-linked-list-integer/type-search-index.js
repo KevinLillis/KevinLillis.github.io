@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"DLinked_ListOfInteger"},{"p":"<Unnamed>","l":"DNode_Integer"},{"p":"<Unnamed>","l":"ListOfInteger_Interface"}];updateSearchResults();
