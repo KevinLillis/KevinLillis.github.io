@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"<Unnamed>","l":"Array_ListGeneric"},{"p":"<Unnamed>","l":"Array_ListGeneric_Interface"},{"p":"<Unnamed>","l":"ListGeneric_Interface"}];updateSearchResults();
